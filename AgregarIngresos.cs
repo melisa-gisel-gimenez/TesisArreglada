@@ -78,18 +78,18 @@ namespace Iglesia
 
         private void GuardarBD()
         {
-            if ((txtMONTO.Text == "" || txtTotal.Text == "" || txtDetalle.Text == ""))
+            if ((txtMONTO.Text == "" || comboBox1TipoIngreso.Text == "" || txtDetalle.Text == ""))
             {
                 MessageBox.Show("Los campos son obligatorios. Por favor completelos");
             }
             else
             {
-                DateTime fechaAlta = DateTime.Now;
+                //DateTime fechaAlta = DateTime.Now;
 
                 OleDbConnection cn = new OleDbConnection(connectionString);
                  
                 cn.Open();
-                String consulta = "insert into Ingresos ( id_tipoIngreso, MONTO, TOTAL ,DETALLE, FECHA) values ('"+ idTipoIngreso +"','"+ int.Parse(txtMONTO.Text) + "', '" + int.Parse(txtTotal.Text) + "', '" + txtDetalle.Text + "', '" + dateTimePicker1.Value + "' )";
+                String consulta = "insert into Ingresos ( id_tipoIngreso, MONTO, DETALLE, FECHA) values ('"+ idTipoIngreso +"','"+ int.Parse(txtMONTO.Text) + "', "  + " '" + txtDetalle.Text + "', '" + dateTimePicker1.Value + "' )";
 
 
                 OleDbCommand comando1 = new OleDbCommand(consulta, cn);
@@ -112,9 +112,9 @@ namespace Iglesia
 
         private void button3Limpiar_Click(object sender, EventArgs e)
         {
-            //txtTipoIngreso.Text = "";
+            comboBox1TipoIngreso.Text = "";
             txtMONTO.Text = "";
-            txtTotal.Text = "";
+            //txtTotal.Text = "";
             txtDetalle.Text = "";
             dateTimePicker1.Text = "";
 

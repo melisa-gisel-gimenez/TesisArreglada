@@ -37,10 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDetalle = new System.Windows.Forms.TextBox();
-            this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtMONTO = new System.Windows.Forms.TextBox();
             this.button3Limpiar = new System.Windows.Forms.Button();
             this.button1Guardar = new System.Windows.Forms.Button();
@@ -56,17 +54,15 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtDetalle);
-            this.groupBox2.Controls.Add(this.txtTotal);
             this.groupBox2.Controls.Add(this.txtMONTO);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox2.Location = new System.Drawing.Point(36, 53);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(731, 292);
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
@@ -75,8 +71,8 @@
             // comboBox1TipoIngreso
             // 
             this.comboBox1TipoIngreso.FormattingEnabled = true;
-            this.comboBox1TipoIngreso.Location = new System.Drawing.Point(253, 58);
-            this.comboBox1TipoIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1TipoIngreso.Location = new System.Drawing.Point(7, 60);
+            this.comboBox1TipoIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1TipoIngreso.Name = "comboBox1TipoIngreso";
             this.comboBox1TipoIngreso.Size = new System.Drawing.Size(160, 25);
             this.comboBox1TipoIngreso.TabIndex = 35;
@@ -134,7 +130,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label3.Location = new System.Drawing.Point(389, 186);
+            this.label3.Location = new System.Drawing.Point(257, 111);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 17);
@@ -146,22 +142,10 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(9, 206);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(136, 23);
             this.dateTimePicker1.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label5.Location = new System.Drawing.Point(580, 186);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Total";
             // 
             // label7
             // 
@@ -180,27 +164,17 @@
             this.txtDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDetalle.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtDetalle.Location = new System.Drawing.Point(0, 137);
-            this.txtDetalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDetalle.Margin = new System.Windows.Forms.Padding(4);
             this.txtDetalle.Name = "txtDetalle";
             this.txtDetalle.Size = new System.Drawing.Size(181, 23);
             this.txtDetalle.TabIndex = 2;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtTotal.Location = new System.Drawing.Point(572, 206);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(132, 23);
-            this.txtTotal.TabIndex = 5;
             // 
             // txtMONTO
             // 
             this.txtMONTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMONTO.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtMONTO.Location = new System.Drawing.Point(393, 206);
-            this.txtMONTO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMONTO.Location = new System.Drawing.Point(252, 137);
+            this.txtMONTO.Margin = new System.Windows.Forms.Padding(4);
             this.txtMONTO.Name = "txtMONTO";
             this.txtMONTO.Size = new System.Drawing.Size(132, 23);
             this.txtMONTO.TabIndex = 3;
@@ -208,7 +182,7 @@
             // button3Limpiar
             // 
             this.button3Limpiar.Location = new System.Drawing.Point(859, 154);
-            this.button3Limpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3Limpiar.Margin = new System.Windows.Forms.Padding(4);
             this.button3Limpiar.Name = "button3Limpiar";
             this.button3Limpiar.Size = new System.Drawing.Size(84, 39);
             this.button3Limpiar.TabIndex = 47;
@@ -225,7 +199,7 @@
             this.button1Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1Guardar.Location = new System.Drawing.Point(829, 89);
-            this.button1Guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1Guardar.Margin = new System.Windows.Forms.Padding(4);
             this.button1Guardar.Name = "button1Guardar";
             this.button1Guardar.Size = new System.Drawing.Size(131, 47);
             this.button1Guardar.TabIndex = 46;
@@ -242,7 +216,7 @@
             this.Controls.Add(this.button3Limpiar);
             this.Controls.Add(this.button1Guardar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AgregarIngresos";
             this.Text = "AgregarIngresos";
             this.groupBox2.ResumeLayout(false);
@@ -260,10 +234,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDetalle;
-        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.TextBox txtMONTO;
         private System.Windows.Forms.Button button3Limpiar;
         private System.Windows.Forms.Button button1Guardar;
