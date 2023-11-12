@@ -61,7 +61,7 @@ namespace Iglesia
             this.acercaDeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(743, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(738, 36);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -73,7 +73,7 @@ namespace Iglesia
             this.inhabilitarPersonasToolStripMenuItem,
             this.asignarMentorToolStripMenuItem1});
             this.personasToolStripMenuItem.Name = "personasToolStripMenuItem";
-            this.personasToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
+            this.personasToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
             this.personasToolStripMenuItem.Text = "Personas";
             // 
             // agregarPersonasToolStripMenuItem
@@ -112,34 +112,34 @@ namespace Iglesia
             this.altaMentoresToolStripMenuItem,
             this.modificarMentoresToolStripMenuItem});
             this.gestionPastorToolStripMenuItem.Name = "gestionPastorToolStripMenuItem";
-            this.gestionPastorToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
+            this.gestionPastorToolStripMenuItem.Size = new System.Drawing.Size(77, 32);
             this.gestionPastorToolStripMenuItem.Text = "Pastor";
             // 
             // altaUsuariosToolStripMenuItem
             // 
             this.altaUsuariosToolStripMenuItem.Name = "altaUsuariosToolStripMenuItem";
-            this.altaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.altaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
             this.altaUsuariosToolStripMenuItem.Text = "Alta usuarios";
             this.altaUsuariosToolStripMenuItem.Click += new System.EventHandler(this.altaUsuariosToolStripMenuItem_Click);
             // 
             // revisarPostuladosToolStripMenuItem
             // 
             this.revisarPostuladosToolStripMenuItem.Name = "revisarPostuladosToolStripMenuItem";
-            this.revisarPostuladosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.revisarPostuladosToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
             this.revisarPostuladosToolStripMenuItem.Text = "Revisar Postulados";
             this.revisarPostuladosToolStripMenuItem.Click += new System.EventHandler(this.revisarPostuladosToolStripMenuItem_Click);
             // 
             // altaMentoresToolStripMenuItem
             // 
             this.altaMentoresToolStripMenuItem.Name = "altaMentoresToolStripMenuItem";
-            this.altaMentoresToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.altaMentoresToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
             this.altaMentoresToolStripMenuItem.Text = "Alta mentor";
             this.altaMentoresToolStripMenuItem.Click += new System.EventHandler(this.altaMentoresToolStripMenuItem_Click);
             // 
             // modificarMentoresToolStripMenuItem
             // 
             this.modificarMentoresToolStripMenuItem.Name = "modificarMentoresToolStripMenuItem";
-            this.modificarMentoresToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.modificarMentoresToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
             this.modificarMentoresToolStripMenuItem.Text = "Modificar mentor";
             this.modificarMentoresToolStripMenuItem.Click += new System.EventHandler(this.modificarMentoresToolStripMenuItem_Click);
             // 
@@ -148,29 +148,30 @@ namespace Iglesia
             this.ministeriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaMinisteriosToolStripMenuItem});
             this.ministeriosToolStripMenuItem.Name = "ministeriosToolStripMenuItem";
-            this.ministeriosToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
+            this.ministeriosToolStripMenuItem.Size = new System.Drawing.Size(114, 32);
             this.ministeriosToolStripMenuItem.Text = "Ministerios";
             // 
             // altaMinisteriosToolStripMenuItem
             // 
             this.altaMinisteriosToolStripMenuItem.Name = "altaMinisteriosToolStripMenuItem";
-            this.altaMinisteriosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.altaMinisteriosToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
             this.altaMinisteriosToolStripMenuItem.Text = "Alta ministerios";
             this.altaMinisteriosToolStripMenuItem.Click += new System.EventHandler(this.altaMinisteriosToolStripMenuItem_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(105, 29);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(105, 32);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, -63);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(714, 577);
+            this.pictureBox1.Size = new System.Drawing.Size(738, 524);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -178,10 +179,11 @@ namespace Iglesia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 524);
+            this.ClientSize = new System.Drawing.Size(738, 524);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(760, 580);
             this.MinimumSize = new System.Drawing.Size(760, 580);
             this.Name = "paginaprincipal";
             this.Text = "MCD Gestion";

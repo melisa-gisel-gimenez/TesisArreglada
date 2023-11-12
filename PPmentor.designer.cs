@@ -50,7 +50,7 @@ namespace Iglesia
             this.acercaDeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(738, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(738, 36);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,7 +60,7 @@ namespace Iglesia
             this.reunionesDeMentoriasToolStripMenuItem,
             this.postulacionesToolStripMenuItem});
             this.mentoresToolStripMenuItem.Name = "mentoresToolStripMenuItem";
-            this.mentoresToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.mentoresToolStripMenuItem.Size = new System.Drawing.Size(103, 32);
             this.mentoresToolStripMenuItem.Text = "Mentores";
             // 
             // reunionesDeMentoriasToolStripMenuItem
@@ -80,7 +80,7 @@ namespace Iglesia
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(105, 29);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(105, 32);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
