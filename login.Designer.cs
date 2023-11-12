@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginJuli));
             this.btnIniciarSesion = new System.Windows.Forms.Button();
-            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.buttonCerrar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,31 +60,31 @@
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(300, 169);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(338, 211);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(236, 52);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(266, 65);
             this.btnIniciarSesion.TabIndex = 3;
             this.btnIniciarSesion.Text = "Iniciar Sesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
-            // txtNombreUsuario
+            // txtUsername
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(281, 70);
-            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(277, 22);
-            this.txtNombreUsuario.TabIndex = 1;
+            this.txtUsername.Location = new System.Drawing.Point(316, 88);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(311, 26);
+            this.txtUsername.TabIndex = 1;
             // 
-            // txtPass
+            // txtPassword
             // 
-            this.txtPass.Location = new System.Drawing.Point(281, 119);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(277, 22);
-            this.txtPass.TabIndex = 2;
-            this.txtPass.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtPassword.Location = new System.Drawing.Point(316, 149);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(311, 26);
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // buttonCerrar
             // 
@@ -93,10 +93,10 @@
             this.buttonCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.buttonCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.buttonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCerrar.Location = new System.Drawing.Point(567, 0);
+            this.buttonCerrar.Location = new System.Drawing.Point(638, 0);
             this.buttonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCerrar.Name = "buttonCerrar";
-            this.buttonCerrar.Size = new System.Drawing.Size(53, 38);
+            this.buttonCerrar.Size = new System.Drawing.Size(60, 48);
             this.buttonCerrar.TabIndex = 10;
             this.buttonCerrar.Text = "X";
             this.buttonCerrar.UseVisualStyleBackColor = false;
@@ -105,9 +105,9 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(408, 149);
+            this.linkLabel1.Location = new System.Drawing.Point(459, 186);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(141, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(168, 20);
             this.linkLabel1.TabIndex = 11;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Recuperar contraseña";
@@ -120,7 +120,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(623, 38);
+            this.panel1.Size = new System.Drawing.Size(701, 48);
             this.panel1.TabIndex = 12;
             // 
             // pictureBox2
@@ -131,7 +131,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(225, 240);
+            this.pictureBox2.Size = new System.Drawing.Size(253, 300);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -140,10 +140,10 @@
             // pbOcultar
             // 
             this.pbOcultar.Image = ((System.Drawing.Image)(resources.GetObject("pbOcultar.Image")));
-            this.pbOcultar.Location = new System.Drawing.Point(563, 119);
+            this.pbOcultar.Location = new System.Drawing.Point(633, 149);
             this.pbOcultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbOcultar.Name = "pbOcultar";
-            this.pbOcultar.Size = new System.Drawing.Size(36, 26);
+            this.pbOcultar.Size = new System.Drawing.Size(40, 32);
             this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbOcultar.TabIndex = 7;
             this.pbOcultar.TabStop = false;
@@ -152,10 +152,10 @@
             // pbMostrar
             // 
             this.pbMostrar.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrar.Image")));
-            this.pbMostrar.Location = new System.Drawing.Point(563, 119);
+            this.pbMostrar.Location = new System.Drawing.Point(633, 149);
             this.pbMostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbMostrar.Name = "pbMostrar";
-            this.pbMostrar.Size = new System.Drawing.Size(36, 23);
+            this.pbMostrar.Size = new System.Drawing.Size(40, 29);
             this.pbMostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMostrar.TabIndex = 6;
             this.pbMostrar.TabStop = false;
@@ -164,10 +164,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(231, 113);
+            this.pictureBox4.Location = new System.Drawing.Point(260, 141);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 33);
+            this.pictureBox4.Size = new System.Drawing.Size(45, 41);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -175,25 +175,25 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(231, 63);
+            this.pictureBox3.Location = new System.Drawing.Point(260, 79);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(45, 42);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
             // LoginJuli
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(849, 316);
+            this.ClientSize = new System.Drawing.Size(955, 395);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtNombreUsuario);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pbOcultar);
             this.Controls.Add(this.pbMostrar);
             this.Controls.Add(this.pictureBox4);
@@ -202,7 +202,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginJuli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "login";
@@ -224,8 +224,8 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pbMostrar;
         private System.Windows.Forms.PictureBox pbOcultar;
-        private System.Windows.Forms.TextBox txtNombreUsuario;
-        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button buttonCerrar;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel1;
