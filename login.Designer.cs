@@ -127,6 +127,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.SandyBrown;
             this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.Image = global::arreglarTesis.Properties.Resources.logo;
             this.pictureBox2.InitialImage = null;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -187,9 +188,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(955, 395);
+            this.ClientSize = new System.Drawing.Size(700, 300);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtPassword);
@@ -203,6 +203,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(700, 300);
+            this.MinimumSize = new System.Drawing.Size(700, 300);
             this.Name = "LoginJuli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "login";

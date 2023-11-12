@@ -224,6 +224,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegistroReunionesMentor.resx">
       <DependentUpon>RegistroReunionesMentor.cs</DependentUpon>
@@ -243,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Recursos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
