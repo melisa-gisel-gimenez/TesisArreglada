@@ -94,12 +94,6 @@
     <Compile Include="AsignarMentor.Designer.cs">
       <DependentUpon>AsignarMentor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Iglesia Adm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Iglesia Adm.Designer.cs">
-      <DependentUpon>Iglesia Adm.cs</DependentUpon>
-    </Compile>
     <Compile Include="InhabilitarPersonas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,9 +179,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AsignarMentor.resx">
       <DependentUpon>AsignarMentor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Iglesia Adm.resx">
-      <DependentUpon>Iglesia Adm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InhabilitarPersonas.resx">
       <DependentUpon>InhabilitarPersonas.cs</DependentUpon>

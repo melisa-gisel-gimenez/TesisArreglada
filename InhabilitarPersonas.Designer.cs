@@ -112,7 +112,7 @@
             // buttonAceptar
             // 
             this.buttonAceptar.Enabled = false;
-            this.buttonAceptar.Location = new System.Drawing.Point(61, 378);
+            this.buttonAceptar.Location = new System.Drawing.Point(107, 378);
             this.buttonAceptar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(109, 70);
@@ -123,14 +123,18 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.BackColor = System.Drawing.Color.Red;
-            this.buttonCancelar.Location = new System.Drawing.Point(350, 378);
+            this.buttonCancelar.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancelar.Location = new System.Drawing.Point(295, 378);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCancelar.MaximumSize = new System.Drawing.Size(110, 70);
+            this.buttonCancelar.MinimumSize = new System.Drawing.Size(110, 70);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(111, 70);
+            this.buttonCancelar.Size = new System.Drawing.Size(110, 70);
             this.buttonCancelar.TabIndex = 10;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonBuscarDNI
             // 
@@ -178,7 +182,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 481);
+            this.CancelButton = this.buttonCancelar;
+            this.ClientSize = new System.Drawing.Size(508, 474);
             this.ControlBox = false;
             this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.label5);
@@ -193,8 +198,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(530, 530);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(530, 530);
             this.Name = "InhabilitarPersonas";
             this.Text = "InhabilitarPersonas";
             this.Load += new System.EventHandler(this.InhabilitarPersonas_Load);

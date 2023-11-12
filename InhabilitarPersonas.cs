@@ -156,5 +156,10 @@ namespace Iglesia
             checkBoxInhabilitado.Checked = false;
             buttonAceptar.Enabled = false;
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

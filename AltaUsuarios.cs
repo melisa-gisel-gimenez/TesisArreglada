@@ -15,7 +15,8 @@ namespace Iglesia
     public partial class AltaUsuarios : Form
     {
         private OleDbConnection conexion;
-        private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
+        //private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
+        private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\juli_\OneDrive\Escritorio\pepe\BaseIglesiaproduccion.mdb";
         public AltaUsuarios()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace Iglesia
 
             if (!string.IsNullOrEmpty(dniABuscar))
             {
-                string consulta = "SELECT * FROM miembros WHERE DNI = @DNI";
+                string consulta = "SELECT * FROM Usuarios WHERE DNI = @DNI";
 
                 using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
                 {
@@ -41,8 +42,8 @@ namespace Iglesia
 
                         if (reader.Read())
                         {
-                            txtNombre.Text = reader["NOMBRE"].ToString();
-                            txtApellido.Text = reader["APELLIDO"].ToString();
+                            txtNombre.Text = reader["NombreUsuario"].ToString();
+                            txtApellido.Text = reader["Contraseña"].ToString();
                             checkBoxInhabilitado.Checked = Convert.ToBoolean(reader["inhabilitado"]);
                             buttonAceptar.Enabled = true;
                         }
@@ -117,6 +118,11 @@ namespace Iglesia
             checkBoxInhabilitado.Checked = false;
             comboBoxTipoUsuario.Text = string.Empty;
             checkBoxAltaUser.Checked = false;
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
