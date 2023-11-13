@@ -159,7 +159,7 @@ namespace Iglesia
                     MessageBox.Show("Se aprobo la postulación con exito!");
                 }
 
-                string cadenaFecha = "UPDATE CAMBIOETAPAS SET fecha_fin_etapa ='" + fecha + "'" + " WHERE id_miembro = @IdMiembro";
+                string cadenaFecha = "UPDATE CambioEtapas SET fecha_fin_etapa ='" + fecha + "'" + " WHERE id_miembro = @IdMiembro";
                 OleDbCommand comando2 = new OleDbCommand(cadenaFecha, conexion);
 
                 comando2.Parameters.AddWithValue("@IdMiembro", labelIDMiembro.Text);
@@ -189,6 +189,9 @@ namespace Iglesia
                     MessageBox.Show("Se registro la fecha de la nueva etapa con exito!");
                 }
                 conexion.Close();
+                cargarDGV();
+                ConfigurarDGV1();
+
             }
 
             if (labelIDProxEtapa.Text == "2")
@@ -242,8 +245,15 @@ namespace Iglesia
                     MessageBox.Show("Se registro la fecha de la nueva etapa con exito!");
                 }
                 conexion.Close();
+                cargarDGV();
+                ConfigurarDGV1();
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

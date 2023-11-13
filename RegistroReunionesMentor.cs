@@ -122,5 +122,10 @@ namespace Iglesia
             richTextBox1.Text = string.Empty;
             buttonGuardar.Enabled = false;
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

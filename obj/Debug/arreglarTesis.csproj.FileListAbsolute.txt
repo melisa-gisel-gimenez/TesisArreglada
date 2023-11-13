@@ -14,7 +14,6 @@ C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\Iglesia.AltaMentores.resourc
 C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\Iglesia.AltaMinisterios.resources
 C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\Iglesia.AltaUsuarios.resources
 C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\Iglesia.AsignarMentor.resources
-C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\Iglesia.Form1.resources
 C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\Iglesia.InhabilitarPersonas.resources
 C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\Iglesia.LoginJuli.resources
 C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\Iglesia.ModificarMentor.resources
