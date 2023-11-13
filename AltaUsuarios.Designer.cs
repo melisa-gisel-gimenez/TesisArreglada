@@ -35,8 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.comboBoxTipoUsuario = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.checkBoxInhabilitado = new System.Windows.Forms.CheckBox();
@@ -117,21 +117,21 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Tipo de Usuario:";
             // 
-            // txtNombre
+            // txtNombreUsuario
             // 
-            this.txtNombre.Location = new System.Drawing.Point(157, 186);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 26);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombreUsuario.Location = new System.Drawing.Point(157, 186);
+            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(200, 26);
+            this.txtNombreUsuario.TabIndex = 7;
             // 
-            // txtApellido
+            // txtPassword
             // 
-            this.txtApellido.Location = new System.Drawing.Point(157, 232);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(200, 26);
-            this.txtApellido.TabIndex = 8;
+            this.txtPassword.Location = new System.Drawing.Point(157, 232);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(200, 26);
+            this.txtPassword.TabIndex = 8;
             // 
             // comboBoxTipoUsuario
             // 
@@ -238,8 +238,8 @@
             this.Controls.Add(this.checkBoxInhabilitado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxTipoUsuario);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtNombreUsuario);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -265,8 +265,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombreUsuario;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.ComboBox comboBoxTipoUsuario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBoxInhabilitado;

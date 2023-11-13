@@ -118,11 +118,17 @@
     <Compile Include="Modificar_Personas.Designer.cs">
       <DependentUpon>Modificar_Personas.cs</DependentUpon>
     </Compile>
-    <Compile Include="paginaprincipal.cs">
+    <Compile Include="PPAdministracion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="paginaprincipal.designer.cs">
-      <DependentUpon>paginaprincipal.cs</DependentUpon>
+    <Compile Include="PPAdministracion.Designer.cs">
+      <DependentUpon>PPAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPPastor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPPastor.designer.cs">
+      <DependentUpon>PPPastor.cs</DependentUpon>
     </Compile>
     <Compile Include="PostulacionesRevisar.cs">
       <SubType>Form</SubType>
@@ -192,8 +198,8 @@
     <EmbeddedResource Include="Modificar_Personas.resx">
       <DependentUpon>Modificar_Personas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="paginaprincipal.resx">
-      <DependentUpon>paginaprincipal.cs</DependentUpon>
+    <EmbeddedResource Include="PPPastor.resx">
+      <DependentUpon>PPPastor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PostulacionesRevisar.resx">
       <DependentUpon>PostulacionesRevisar.cs</DependentUpon>

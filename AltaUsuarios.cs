@@ -29,11 +29,11 @@ namespace Iglesia
 
             if (!string.IsNullOrEmpty(dniABuscar))
             {
-                string consulta = "SELECT * FROM Usuarios WHERE DNI = @DNI";
+                string consulta = "SELECT * FROM Usuarios WHERE DNI = @DNI_User";
 
                 using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
                 {
-                    comando.Parameters.AddWithValue("@DNI", dniABuscar);
+                    comando.Parameters.AddWithValue("@DNI_User", dniABuscar);
 
                     try
                     {
@@ -42,8 +42,8 @@ namespace Iglesia
 
                         if (reader.Read())
                         {
-                            txtNombre.Text = reader["NombreUsuario"].ToString();
-                            txtApellido.Text = reader["Contraseña"].ToString();
+                            txtNombreUsuario.Text = reader["NombreUsuario"].ToString();
+                            txtPassword.Text = reader["Contraseña"].ToString();
                             checkBoxInhabilitado.Checked = Convert.ToBoolean(reader["inhabilitado"]);
                             buttonAceptar.Enabled = true;
                         }
@@ -94,7 +94,7 @@ namespace Iglesia
         }
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            string consulta2 = "INSERT INTO Usuarios (tipo_usuario, DNI_User, habilitado) values ('" + comboBoxTipoUsuario.Text + "', " + textBoxDNIBuscar.Text + ", " + checkBoxAltaUser.Checked + ")";
+            string consulta2 = "INSERT INTO Usuarios ( DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values ('" + textBoxDNIBuscar.Text + "', " + txtNombreUsuario + ", " + txtPassword + ", " + comboBoxTipoUsuario.Text + ", " + checkBoxAltaUser.Checked + ")";
 
             OleDbCommand comando = new OleDbCommand(consulta2, conexion);
             conexion.Open();
@@ -107,14 +107,15 @@ namespace Iglesia
             else
             {
                 MessageBox.Show("Se registró el usuario con exito");
+                this.Close();
             }
         }
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
             textBoxDNIBuscar.Text = string.Empty;
-            txtNombre.Text = string.Empty;
-            txtApellido.Text = string.Empty;
+            txtNombreUsuario.Text = string.Empty;
+            txtPassword.Text = string.Empty;
             checkBoxInhabilitado.Checked = false;
             comboBoxTipoUsuario.Text = string.Empty;
             checkBoxAltaUser.Checked = false;
