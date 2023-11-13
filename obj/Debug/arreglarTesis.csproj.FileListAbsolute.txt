@@ -52,3 +52,4 @@ C:\Users\juli_\Source\Repos\melisa-gisel-gimenez\TesisArreglada\obj\Debug\arregl
 C:\Users\juli_\Source\Repos\melisa-gisel-gimenez\TesisArreglada\obj\Debug\arreglarTesis.csproj.CoreCompileInputs.cache
 C:\Users\juli_\Source\Repos\melisa-gisel-gimenez\TesisArreglada\obj\Debug\arreglarTesis.exe
 C:\Users\juli_\Source\Repos\melisa-gisel-gimenez\TesisArreglada\obj\Debug\arreglarTesis.pdb
+C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\arreglarTesis.PPAdministracion.resources

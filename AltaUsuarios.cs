@@ -15,8 +15,8 @@ namespace Iglesia
     public partial class AltaUsuarios : Form
     {
         private OleDbConnection conexion;
-        //private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
-        private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\juli_\OneDrive\Escritorio\pepe\BaseIglesiaproduccion.mdb";
+        private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
+        //private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\juli_\OneDrive\Escritorio\pepe\BaseIglesiaproduccion.mdb";
         public AltaUsuarios()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace Iglesia
 
             if (!string.IsNullOrEmpty(dniABuscar))
             {
-                string consulta = "SELECT * FROM Usuarios WHERE DNI = @DNI_User";
+                string consulta = "SELECT * FROM Miembros WHERE DNI = @DNI_User";
 
                 using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
                 {
@@ -42,8 +42,8 @@ namespace Iglesia
 
                         if (reader.Read())
                         {
-                            txtNombreUsuario.Text = reader["NombreUsuario"].ToString();
-                            txtPassword.Text = reader["Contraseña"].ToString();
+                            //txtNombreUsuario.Text = reader["NombreUsuario"].ToString();
+                            //txtPassword.Text = reader["Contraseña"].ToString();
                             checkBoxInhabilitado.Checked = Convert.ToBoolean(reader["inhabilitado"]);
                             buttonAceptar.Enabled = true;
                         }
@@ -94,7 +94,7 @@ namespace Iglesia
         }
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values ('" + int.Parse(textBoxDNIBuscar.Text) + "', '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', '" + checkBoxAltaUser.Checked.ToString() + "')";
+            string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values (" + int.Parse(textBoxDNIBuscar.Text) + ", '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', " + checkBoxAltaUser.Checked + ")";
             //string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values ('" + textBoxDNIBuscar.Text + "', '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', '" + checkBoxAltaUser.Checked + "')";
             OleDbCommand comando = new OleDbCommand(consulta2, conexion);
             conexion.Open();
