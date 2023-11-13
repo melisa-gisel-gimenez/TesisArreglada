@@ -16,5 +16,23 @@ namespace arreglarTesis
         {
             InitializeComponent();
         }
+
+        private void mentoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agregarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void modificarPersonasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+      
+        }
     }
 }

@@ -227,8 +227,10 @@
             // 
             // AltaUsuarios
             // 
+            this.AcceptButton = this.buttonAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonCancelar;
             this.ClientSize = new System.Drawing.Size(484, 508);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.buttonCancelar);
@@ -247,7 +249,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxDNIBuscar);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "AltaUsuarios";
             this.Text = "AltaUsuarios";

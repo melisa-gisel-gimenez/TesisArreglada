@@ -94,8 +94,8 @@ namespace Iglesia
         }
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            string consulta2 = "INSERT INTO Usuarios ( DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values ('" + textBoxDNIBuscar.Text + "', " + txtNombreUsuario + ", " + txtPassword + ", " + comboBoxTipoUsuario.Text + ", " + checkBoxAltaUser.Checked + ")";
-
+            string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values ('" + int.Parse(textBoxDNIBuscar.Text) + "', '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', '" + checkBoxAltaUser.Checked.ToString() + "')";
+            //string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values ('" + textBoxDNIBuscar.Text + "', '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', '" + checkBoxAltaUser.Checked + "')";
             OleDbCommand comando = new OleDbCommand(consulta2, conexion);
             conexion.Open();
             int cantidad = comando.ExecuteNonQuery();

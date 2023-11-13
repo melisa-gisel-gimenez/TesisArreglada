@@ -32,8 +32,6 @@ namespace Iglesia
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(paginaprincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.personasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inhabilitarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignarMentorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionPastorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,27 +66,11 @@ namespace Iglesia
             // personasToolStripMenuItem
             // 
             this.personasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarPersonasToolStripMenuItem,
-            this.modificarPersonasToolStripMenuItem,
             this.inhabilitarPersonasToolStripMenuItem,
             this.asignarMentorToolStripMenuItem1});
             this.personasToolStripMenuItem.Name = "personasToolStripMenuItem";
             this.personasToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
             this.personasToolStripMenuItem.Text = "Personas";
-            // 
-            // agregarPersonasToolStripMenuItem
-            // 
-            this.agregarPersonasToolStripMenuItem.Name = "agregarPersonasToolStripMenuItem";
-            this.agregarPersonasToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
-            this.agregarPersonasToolStripMenuItem.Text = "Alta miembros";
-            this.agregarPersonasToolStripMenuItem.Click += new System.EventHandler(this.agregarPersonasToolStripMenuItem_Click);
-            // 
-            // modificarPersonasToolStripMenuItem
-            // 
-            this.modificarPersonasToolStripMenuItem.Name = "modificarPersonasToolStripMenuItem";
-            this.modificarPersonasToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
-            this.modificarPersonasToolStripMenuItem.Text = "Modificar miembros";
-            this.modificarPersonasToolStripMenuItem.Click += new System.EventHandler(this.modificarPersonasToolStripMenuItem_Click);
             // 
             // inhabilitarPersonasToolStripMenuItem
             // 
@@ -118,28 +100,28 @@ namespace Iglesia
             // altaUsuariosToolStripMenuItem
             // 
             this.altaUsuariosToolStripMenuItem.Name = "altaUsuariosToolStripMenuItem";
-            this.altaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.altaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.altaUsuariosToolStripMenuItem.Text = "Alta usuarios";
             this.altaUsuariosToolStripMenuItem.Click += new System.EventHandler(this.altaUsuariosToolStripMenuItem_Click);
             // 
             // revisarPostuladosToolStripMenuItem
             // 
             this.revisarPostuladosToolStripMenuItem.Name = "revisarPostuladosToolStripMenuItem";
-            this.revisarPostuladosToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.revisarPostuladosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.revisarPostuladosToolStripMenuItem.Text = "Revisar Postulados";
             this.revisarPostuladosToolStripMenuItem.Click += new System.EventHandler(this.revisarPostuladosToolStripMenuItem_Click);
             // 
             // altaMentoresToolStripMenuItem
             // 
             this.altaMentoresToolStripMenuItem.Name = "altaMentoresToolStripMenuItem";
-            this.altaMentoresToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.altaMentoresToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.altaMentoresToolStripMenuItem.Text = "Alta mentor";
             this.altaMentoresToolStripMenuItem.Click += new System.EventHandler(this.altaMentoresToolStripMenuItem_Click);
             // 
             // modificarMentoresToolStripMenuItem
             // 
             this.modificarMentoresToolStripMenuItem.Name = "modificarMentoresToolStripMenuItem";
-            this.modificarMentoresToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.modificarMentoresToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.modificarMentoresToolStripMenuItem.Text = "Modificar mentor";
             this.modificarMentoresToolStripMenuItem.Click += new System.EventHandler(this.modificarMentoresToolStripMenuItem_Click);
             // 
@@ -200,8 +182,6 @@ namespace Iglesia
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem personasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarPersonasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarPersonasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inhabilitarPersonasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignarMentorToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem gestionPastorToolStripMenuItem;

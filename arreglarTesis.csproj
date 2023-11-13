@@ -198,6 +198,9 @@
     <EmbeddedResource Include="Modificar_Personas.resx">
       <DependentUpon>Modificar_Personas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PPAdministracion.resx">
+      <DependentUpon>PPAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PPPastor.resx">
       <DependentUpon>PPPastor.cs</DependentUpon>
     </EmbeddedResource>
