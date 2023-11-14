@@ -104,6 +104,28 @@ namespace Iglesia
             labelIDMiembro.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[2].Value.ToString();
             labelIDProxEtapa.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[7].Value.ToString();
             //labelFechaAlta.Text= DGV1.Rows[DGV1.CurrentRow.Index].Cells[9].Value.ToString();
+
+            textBoxNombreM.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[5].Value.ToString();
+            textBoxApellidoM.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[6].Value.ToString();
+            textBoxProxEtapa.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[8].Value.ToString();
+            textBoxFechaAltaEtapa.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[9].Value.ToString();
+
+            if (labelIDProxEtapa.Text == "1")
+            {
+                textBoxEtapaActual.Text = "Consolidación";
+            }
+
+            if (labelIDProxEtapa.Text == "2")
+            {
+                textBoxEtapaActual.Text = "Discipulado";
+            }
+            
+            if (labelIDProxEtapa.Text == "3")
+            {
+                textBoxEtapaActual.Text = "Enviado";
+            }
+
+
         }
 
         private void buttonAprobar_Click(object sender, EventArgs e)

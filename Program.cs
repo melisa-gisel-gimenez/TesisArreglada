@@ -17,7 +17,7 @@ namespace arreglarTesis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InhabilitarPersonas());
+            Application.Run(new PostulacionesRevisar());
         }
     }
 }
