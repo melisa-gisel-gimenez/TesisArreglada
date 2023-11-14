@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Iglesia
 {
@@ -49,7 +50,14 @@ namespace Iglesia
 
                             txtNombre.Text = reader["NOMBRE"].ToString();
                             txtApellido.Text = reader["APELLIDO"].ToString();
-                            checkBoxInhabilitado.Checked = Convert.ToBoolean(reader["inhabilitado"]);
+                            
+                            // Lee el valor del campo "inhabilitado"
+                            bool inhabilitado = Convert.ToBoolean(reader["inhabilitado"]);
+                            
+                            // Establece el estado de los CheckBox según el valor de "inhabilitado"
+                            checkBoxInhabilitado.Checked = inhabilitado;
+                            checkboxNo.Checked = !inhabilitado;
+
                             buttonAceptar.Enabled = true;
                         }
                         else
@@ -154,12 +162,29 @@ namespace Iglesia
             txtNombre.Text = string.Empty;
             txtApellido.Text = string.Empty;
             checkBoxInhabilitado.Checked = false;
+            checkboxNo.Checked = false;
             buttonAceptar.Enabled = false;
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void checkBoxInhabilitado_CheckStateChanged(object sender, EventArgs e)
+        {
+            if ((checkBoxInhabilitado.Checked))
+                {
+                checkboxNo.Checked = false;
+            }
+        }
+
+        private void checkboxNo_CheckStateChanged(object sender, EventArgs e)
+        {
+            if ((checkboxNo.Checked))
+            {
+                checkBoxInhabilitado.Checked = false;
+            }
         }
     }
 }
