@@ -52,7 +52,7 @@
             this.textBoxEtapaActual = new System.Windows.Forms.TextBox();
             this.textBoxFechaAltaEtapa = new System.Windows.Forms.TextBox();
             this.textBoxProxEtapa = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -175,7 +175,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.buttonLimpiar);
             this.groupBox1.Controls.Add(this.textBoxProxEtapa);
             this.groupBox1.Controls.Add(this.textBoxFechaAltaEtapa);
             this.groupBox1.Controls.Add(this.textBoxEtapaActual);
@@ -278,14 +278,15 @@
             this.textBoxProxEtapa.Size = new System.Drawing.Size(181, 22);
             this.textBoxProxEtapa.TabIndex = 9;
             // 
-            // button2
+            // buttonLimpiar
             // 
-            this.button2.Location = new System.Drawing.Point(404, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 55);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Limpiar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonLimpiar.Location = new System.Drawing.Point(404, 142);
+            this.buttonLimpiar.Name = "buttonLimpiar";
+            this.buttonLimpiar.Size = new System.Drawing.Size(109, 55);
+            this.buttonLimpiar.TabIndex = 9;
+            this.buttonLimpiar.Text = "Limpiar";
+            this.buttonLimpiar.UseVisualStyleBackColor = true;
+            this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
             // PostulacionesRevisar
             // 
@@ -338,7 +339,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNombreM;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonLimpiar;
         private System.Windows.Forms.TextBox textBoxProxEtapa;
         private System.Windows.Forms.TextBox textBoxFechaAltaEtapa;
         private System.Windows.Forms.TextBox textBoxEtapaActual;

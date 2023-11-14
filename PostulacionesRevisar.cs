@@ -119,7 +119,7 @@ namespace Iglesia
             {
                 textBoxEtapaActual.Text = "Discipulado";
             }
-            
+
             if (labelIDProxEtapa.Text == "3")
             {
                 textBoxEtapaActual.Text = "Enviado";
@@ -271,11 +271,31 @@ namespace Iglesia
                 ConfigurarDGV1();
 
             }
+            Limpiar();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Limpiar()
+        {
+            labelIDPostulacion.Text = "";
+            labelIDMiembro.Text = "";
+            labelIDProxEtapa.Text = "";
+            textBoxNombreM.Text = "";
+            textBoxApellidoM.Text = "";
+            textBoxEtapaActual.Text = "";
+            textBoxProxEtapa.Text = "";
+            textBoxFechaAltaEtapa.Text = "";
+        }
     }
+
+    
 }
