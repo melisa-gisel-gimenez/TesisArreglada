@@ -100,6 +100,24 @@
     <Compile Include="InhabilitarPersonas.Designer.cs">
       <DependentUpon>InhabilitarPersonas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaMentores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMentores.Designer.cs">
+      <DependentUpon>ListaMentores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaMentoreados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMentoreados.Designer.cs">
+      <DependentUpon>ListaMentoreados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaMiembros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMiembros.Designer.cs">
+      <DependentUpon>ListaMiembros.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InhabilitarPersonas.resx">
       <DependentUpon>InhabilitarPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaMiembros.resx">
+      <DependentUpon>ListaMiembros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
