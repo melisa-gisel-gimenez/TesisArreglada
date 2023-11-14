@@ -42,8 +42,8 @@ namespace Iglesia
 
                         if (reader.Read())
                         {
-                            //txtNombreUsuario.Text = reader["NombreUsuario"].ToString();
-                            //txtPassword.Text = reader["Contraseña"].ToString();
+                            txtNombre.Text = reader["nombre"].ToString();
+                            txtApellido.Text = reader["apellido"].ToString();
                             checkBoxInhabilitado.Checked = Convert.ToBoolean(reader["inhabilitado"]);
                             buttonAceptar.Enabled = true;
                         }
@@ -124,6 +124,11 @@ namespace Iglesia
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AltaUsuarios_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
