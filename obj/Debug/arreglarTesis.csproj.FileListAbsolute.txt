@@ -114,3 +114,15 @@ C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\BouncyCastle.Cryptography.dl
 C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\itext.bouncy-castle-adapter.dll
 C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\BouncyCastle.Cryptography.xml
 C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\itext.bouncy-castle-adapter.xml
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\ClosedXML.dll
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\ExcelNumberFormat.dll
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\Irony.dll
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\SixLabors.Fonts.dll
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\System.IO.Packaging.dll
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\XLParser.dll
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\ClosedXML.xml
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\ExcelNumberFormat.xml
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\SixLabors.Fonts.xml
+C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\System.IO.Packaging.xml

@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxDNI = new System.Windows.Forms.TextBox();
             this.botonBuscar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.DGVMiembros = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonDescargar = new System.Windows.Forms.Button();
@@ -41,7 +40,11 @@
             this.checkBoxHabilitado = new System.Windows.Forms.CheckBox();
             this.checkBoxInhabilitado = new System.Windows.Forms.CheckBox();
             this.checkBoxTodos = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMiembros)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -56,37 +59,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 85);
+            this.label2.Location = new System.Drawing.Point(6, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 16);
+            this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Buscar por DNI:";
+            this.label2.Text = "Ingresar DNI:";
             // 
             // textBoxDNI
             // 
-            this.textBoxDNI.Location = new System.Drawing.Point(130, 79);
+            this.textBoxDNI.Location = new System.Drawing.Point(97, 37);
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(100, 22);
             this.textBoxDNI.TabIndex = 2;
             // 
             // botonBuscar
             // 
-            this.botonBuscar.Location = new System.Drawing.Point(247, 79);
+            this.botonBuscar.Location = new System.Drawing.Point(217, 41);
             this.botonBuscar.Name = "botonBuscar";
             this.botonBuscar.Size = new System.Drawing.Size(75, 23);
             this.botonBuscar.TabIndex = 3;
             this.botonBuscar.Text = "Buscar";
             this.botonBuscar.UseVisualStyleBackColor = true;
             this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(427, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Filtrar por:";
             // 
             // DGVMiembros
             // 
@@ -131,9 +125,9 @@
             // 
             // buttonFiltrar
             // 
-            this.buttonFiltrar.Location = new System.Drawing.Point(510, 176);
+            this.buttonFiltrar.Location = new System.Drawing.Point(91, 127);
             this.buttonFiltrar.Name = "buttonFiltrar";
-            this.buttonFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonFiltrar.Size = new System.Drawing.Size(97, 36);
             this.buttonFiltrar.TabIndex = 10;
             this.buttonFiltrar.Text = "Filtrar";
             this.buttonFiltrar.UseVisualStyleBackColor = true;
@@ -142,7 +136,7 @@
             // checkBoxHabilitado
             // 
             this.checkBoxHabilitado.AutoSize = true;
-            this.checkBoxHabilitado.Location = new System.Drawing.Point(526, 74);
+            this.checkBoxHabilitado.Location = new System.Drawing.Point(6, 35);
             this.checkBoxHabilitado.Name = "checkBoxHabilitado";
             this.checkBoxHabilitado.Size = new System.Drawing.Size(91, 20);
             this.checkBoxHabilitado.TabIndex = 11;
@@ -152,7 +146,7 @@
             // checkBoxInhabilitado
             // 
             this.checkBoxInhabilitado.AutoSize = true;
-            this.checkBoxInhabilitado.Location = new System.Drawing.Point(526, 102);
+            this.checkBoxInhabilitado.Location = new System.Drawing.Point(103, 35);
             this.checkBoxInhabilitado.Name = "checkBoxInhabilitado";
             this.checkBoxInhabilitado.Size = new System.Drawing.Size(98, 20);
             this.checkBoxInhabilitado.TabIndex = 12;
@@ -162,34 +156,57 @@
             // checkBoxTodos
             // 
             this.checkBoxTodos.AutoSize = true;
-            this.checkBoxTodos.Location = new System.Drawing.Point(526, 128);
+            this.checkBoxTodos.Location = new System.Drawing.Point(6, 78);
             this.checkBoxTodos.Name = "checkBoxTodos";
             this.checkBoxTodos.Size = new System.Drawing.Size(69, 20);
             this.checkBoxTodos.TabIndex = 13;
             this.checkBoxTodos.Text = "Todos";
             this.checkBoxTodos.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBoxDNI);
+            this.groupBox1.Controls.Add(this.botonBuscar);
+            this.groupBox1.Location = new System.Drawing.Point(12, 85);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(333, 100);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtrar por DNI";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.checkBoxHabilitado);
+            this.groupBox2.Controls.Add(this.checkBoxInhabilitado);
+            this.groupBox2.Controls.Add(this.checkBoxTodos);
+            this.groupBox2.Controls.Add(this.buttonFiltrar);
+            this.groupBox2.Location = new System.Drawing.Point(395, 66);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(383, 169);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Filtrar por:";
+            // 
             // ListaMiembros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 556);
-            this.Controls.Add(this.checkBoxTodos);
-            this.Controls.Add(this.checkBoxInhabilitado);
-            this.Controls.Add(this.checkBoxHabilitado);
-            this.Controls.Add(this.buttonFiltrar);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonDescargar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.DGVMiembros);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.botonBuscar);
-            this.Controls.Add(this.textBoxDNI);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Name = "ListaMiembros";
             this.Text = "ListaMiembros";
             ((System.ComponentModel.ISupportInitialize)(this.DGVMiembros)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,7 +218,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxDNI;
         private System.Windows.Forms.Button botonBuscar;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView DGVMiembros;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonDescargar;
@@ -210,5 +226,7 @@
         private System.Windows.Forms.CheckBox checkBoxHabilitado;
         private System.Windows.Forms.CheckBox checkBoxInhabilitado;
         private System.Windows.Forms.CheckBox checkBoxTodos;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
