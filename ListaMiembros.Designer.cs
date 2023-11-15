@@ -30,15 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxDNI = new System.Windows.Forms.TextBox();
+            this.botonBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGVMiembros = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVMiembros)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,21 +59,22 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Buscar por DNI:";
             // 
-            // textBox1
+            // textBoxDNI
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 2;
+            this.textBoxDNI.Location = new System.Drawing.Point(130, 79);
+            this.textBoxDNI.Name = "textBoxDNI";
+            this.textBoxDNI.Size = new System.Drawing.Size(100, 22);
+            this.textBoxDNI.TabIndex = 2;
             // 
-            // button1
+            // botonBuscar
             // 
-            this.button1.Location = new System.Drawing.Point(247, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.botonBuscar.Location = new System.Drawing.Point(247, 79);
+            this.botonBuscar.Name = "botonBuscar";
+            this.botonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.botonBuscar.TabIndex = 3;
+            this.botonBuscar.Text = "button1";
+            this.botonBuscar.UseVisualStyleBackColor = true;
+            this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
             // 
             // label3
             // 
@@ -96,18 +97,18 @@
             this.checkedListBox1.Size = new System.Drawing.Size(247, 55);
             this.checkedListBox1.TabIndex = 5;
             // 
-            // dataGridView1
+            // DGVMiembros
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 186);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(752, 211);
-            this.dataGridView1.TabIndex = 6;
+            this.DGVMiembros.AllowUserToAddRows = false;
+            this.DGVMiembros.AllowUserToDeleteRows = false;
+            this.DGVMiembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVMiembros.Location = new System.Drawing.Point(26, 186);
+            this.DGVMiembros.Name = "DGVMiembros";
+            this.DGVMiembros.ReadOnly = true;
+            this.DGVMiembros.RowHeadersWidth = 51;
+            this.DGVMiembros.RowTemplate.Height = 24;
+            this.DGVMiembros.Size = new System.Drawing.Size(752, 211);
+            this.DGVMiembros.TabIndex = 6;
             // 
             // label4
             // 
@@ -144,16 +145,16 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGVMiembros);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.botonBuscar);
+            this.Controls.Add(this.textBoxDNI);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ListaMiembros";
             this.Text = "ListaMiembros";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVMiembros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,11 +164,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxDNI;
+        private System.Windows.Forms.Button botonBuscar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGVMiembros;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

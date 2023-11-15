@@ -100,18 +100,6 @@
     <Compile Include="InhabilitarPersonas.Designer.cs">
       <DependentUpon>InhabilitarPersonas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaMentores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListaMentores.Designer.cs">
-      <DependentUpon>ListaMentores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListaMentoreados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListaMentoreados.Designer.cs">
-      <DependentUpon>ListaMentoreados.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListaMiembros.cs">
       <SubType>Form</SubType>
     </Compile>
