@@ -158,6 +158,16 @@ namespace Iglesia
                 }
             }
         }
+
+        private void txtMONTO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada no es un dígito numérico o una tecla de control
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Si no es un número o una tecla de control, ignora la tecla presionada
+                e.Handled = true;
+            }
+        }
     }
 }
 

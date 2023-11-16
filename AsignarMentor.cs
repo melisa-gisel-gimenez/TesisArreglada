@@ -183,7 +183,7 @@ namespace Iglesia
 
             textBoxIDMiembro.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[0].Value.ToString();
             textBoxDNI.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[1].Value.ToString();
-            textBoxNombre.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[2].Value.ToString();
+            textBoxNombre.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[2].Value.ToString() + " " + DGV1.Rows[DGV1.CurrentRow.Index].Cells[3].Value.ToString();
 
             dni = int.Parse(textBoxDNI.Text);
             nombreM = textBoxNombre.Text;
@@ -202,7 +202,7 @@ namespace Iglesia
             int cantidadMentoreados;
 
             textBoxIdMentor.Text = DGV2.Rows[DGV2.CurrentRow.Index].Cells[0].Value.ToString();
-            textBoxNombreMentor.Text = DGV2.Rows[DGV2.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxNombreMentor.Text = DGV2.Rows[DGV2.CurrentRow.Index].Cells[1].Value.ToString()+ " "+ DGV2.Rows[DGV2.CurrentRow.Index].Cells[2].Value.ToString();
             textBoxCantidad.Text = DGV2.Rows[DGV2.CurrentRow.Index].Cells[4].Value.ToString();
             cantidadMentoreados = int.Parse(textBoxCantidad.Text);
 
@@ -291,12 +291,13 @@ namespace Iglesia
 
                     CargarMiembros();
                     CargarMentores();
+                    Limpiar();
                 }
             }
 
         }
 
-        private void buttonLimpiar_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
             textBoxIDMiembro.Text = "";
             textBoxDNI.Text = "";
@@ -304,6 +305,10 @@ namespace Iglesia
             textBoxIdMentor.Text = "";
             textBoxNombreMentor.Text = "";
             button1.Enabled = false;
+        }
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -178,6 +178,7 @@
             this.txtMONTO.Name = "txtMONTO";
             this.txtMONTO.Size = new System.Drawing.Size(132, 23);
             this.txtMONTO.TabIndex = 3;
+            this.txtMONTO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMONTO_KeyPress);
             // 
             // button3Limpiar
             // 

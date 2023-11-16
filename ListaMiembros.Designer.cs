@@ -71,6 +71,8 @@
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(100, 22);
             this.textBoxDNI.TabIndex = 2;
+            this.textBoxDNI.TextChanged += new System.EventHandler(this.textBoxDNI_TextChanged);
+            this.textBoxDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDNI_KeyPress);
             // 
             // botonBuscar
             // 

@@ -34,17 +34,91 @@ namespace arreglarTesis
         private void botonBuscar_Click(object sender, EventArgs e)
         {
             string dniABuscar = textBoxDNI.Text.Trim();
-
-            if (!string.IsNullOrEmpty(dniABuscar))
+            if (textBoxDNI.Text.Length < 8 || textBoxDNI.Text == "")
             {
-                string consulta = "SELECT * FROM miembros WHERE DNI = @DNI";
+                MessageBox.Show("El DNI debe tener 8 dígitos. Por favor revise los datos ingresados.");
+            }
+            else
+            {
 
+                if (!string.IsNullOrEmpty(dniABuscar))
+                {
+                    string consulta = "SELECT * FROM miembros WHERE DNI = @DNI";
+
+                    using (OleDbConnection conexion = new OleDbConnection(cadenaConexion))
+                    {
+                        using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
+                        {
+                            comando.Parameters.AddWithValue("@DNI", dniABuscar);
+
+                            try
+                            {
+                                // Limpiar el DataSet antes de llenarlo
+                                dataSet.Clear();
+
+                                adaptador.SelectCommand = comando;
+                                adaptador.Fill(dataSet, "miembros");
+
+                                if (dataSet.Tables["miembros"].Rows.Count > 0)
+                                {
+                                    // Se encontraron registros, mostrar en el DataGridView
+                                    DGVMiembros.DataSource = dataSet.Tables["miembros"];
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se encontró ningún registro con el DNI proporcionado.");
+                                    // Limpiar el DataGridView
+                                    DGVMiembros.DataSource = null;
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingresa un DNI válido.");
+                }
+            }
+        }
+
+        private void buttonFiltrar_Click_1(object sender, EventArgs e)
+        {
+            // Limpiar el DataGridView
+            DGVMiembros.DataSource = null;
+
+            // Obtener el estado de los CheckBox
+            bool habilitado = checkBoxHabilitado.Checked;
+            bool inhabilitado = checkBoxInhabilitado.Checked;
+
+            if (checkBoxHabilitado.Checked == false && checkBoxInhabilitado.Checked == false && checkBoxTodos.Checked == false)
+            {
+                MessageBox.Show("Debe seleccionar una opción para filtrar. Por favor haga lick en una opción (habilitados, inahibilados o todos.");
+            }
+
+            else
+            {
+
+                string consulta = "SELECT * FROM miembros";
+
+                // Aplicar el filtro según las opciones seleccionadas
+                if (habilitado && !inhabilitado)
+                {
+                    // Mostrar solo los registros con inhabilitado = false
+                    consulta += " WHERE inhabilitado = false";
+                }
+                else if (!habilitado && inhabilitado)
+                {
+                    // Mostrar solo los registros con inhabilitado = true
+                    consulta += " WHERE inhabilitado = true";
+                }
                 using (OleDbConnection conexion = new OleDbConnection(cadenaConexion))
                 {
                     using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
                     {
-                        comando.Parameters.AddWithValue("@DNI", dniABuscar);
-
                         try
                         {
                             // Limpiar el DataSet antes de llenarlo
@@ -60,9 +134,7 @@ namespace arreglarTesis
                             }
                             else
                             {
-                                MessageBox.Show("No se encontró ningún registro con el DNI proporcionado.");
-                                // Limpiar el DataGridView
-                                DGVMiembros.DataSource = null;
+                                MessageBox.Show("No se encontraron registros según los filtros seleccionados.");
                             }
                         }
                         catch (Exception ex)
@@ -72,67 +144,17 @@ namespace arreglarTesis
                     }
                 }
             }
-            else
-            {
-                MessageBox.Show("Por favor, ingresa un DNI válido.");
-            }
-        }
-
-        private void buttonFiltrar_Click_1(object sender, EventArgs e)
-        {
-            // Limpiar el DataGridView
-            DGVMiembros.DataSource = null;
-
-            // Obtener el estado de los CheckBox
-            bool habilitado = checkBoxHabilitado.Checked;
-            bool inhabilitado = checkBoxInhabilitado.Checked;
-
-            string consulta = "SELECT * FROM miembros";
-
-            // Aplicar el filtro según las opciones seleccionadas
-            if (habilitado && !inhabilitado)
-            {
-                // Mostrar solo los registros con inhabilitado = false
-                consulta += " WHERE inhabilitado = false";
-            }
-            else if (!habilitado && inhabilitado)
-            {
-                // Mostrar solo los registros con inhabilitado = true
-                consulta += " WHERE inhabilitado = true";
-            }
-            using (OleDbConnection conexion = new OleDbConnection(cadenaConexion))
-            {
-                using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
-                {
-                    try
-                    {
-                        // Limpiar el DataSet antes de llenarlo
-                        dataSet.Clear();
-
-                        adaptador.SelectCommand = comando;
-                        adaptador.Fill(dataSet, "miembros");
-
-                        if (dataSet.Tables["miembros"].Rows.Count > 0)
-                        {
-                            // Se encontraron registros, mostrar en el DataGridView
-                            DGVMiembros.DataSource = dataSet.Tables["miembros"];
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se encontraron registros según los filtros seleccionados.");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
-                    }
-                }
-            }
         }
 
 
         private void buttonDescargar_Click(object sender, EventArgs e)
         {
+            if (DGVMiembros.DataSource == null || DGVMiembros.Rows.Count == 0)
+            {
+                MessageBox.Show("Por favor, busca un miembro por DNI o selecciona algún filtro antes de descargar. La tabla está vacía.");
+                return;
+            }
+
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Archivos Excel|*.xlsx";
             saveFileDialog.Title = "Guardar como Excel";
@@ -179,6 +201,28 @@ namespace arreglarTesis
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBoxDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada no es un dígito numérico o una tecla de control
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Si no es un número o una tecla de control, ignora la tecla presionada
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxDNI_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxDNI.Text.Length > 8)
+            {
+                // Si es mayor a 8, recorta el texto para que solo tenga 8 caracteres
+                //txtDNI.Text = txtDNI.Text.Substring(0, 8);
+                // Coloca el cursor al final del texto
+                //txtDNI.SelectionStart = txtDNI.Text.Length;
+                MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
+            }
         }
     }
 }
