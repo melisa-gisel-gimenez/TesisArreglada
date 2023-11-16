@@ -24,98 +24,7 @@ namespace Iglesia
             conexion = new OleDbConnection(cadenaConexion);
         }
 
-        /*
-        private void buttonBuscar_Click(object sender, EventArgs e)
-        {
-            string dniABuscar = textBoxDNIBuscar.Text.Trim();
-
-            if (textBoxDNIBuscar.Text.Length < 8 || textBoxDNIBuscar.Text == "")
-            {
-                MessageBox.Show("El DNI debe tener 8 dígitos. Por favor revise los datos ingresados.");
-            }
-            else
-            {
-                if (!string.IsNullOrEmpty(dniABuscar))
-                {
-                    string consulta = "SELECT * FROM usuarios WHERE DNI_User = @DNI_User";
-
-                    using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
-                    {
-                        comando.Parameters.AddWithValue("@DNI_User", dniABuscar);
-                        try
-                        {
-                            conexion.Open();
-                            OleDbDataReader reader = comando.ExecuteReader();
-
-                            if (reader.Read())
-                            {
-                                MessageBox.Show("Esta persona ya está dada de alta como Usuario. Verifique el DNI ingresado");
-                                
-                            }
-                            else
-                            {
-                                string consulta2 = "SELECT * FROM Miembros WHERE DNI = @DNI_User";
-
-                                using (OleDbCommand comando2 = new OleDbCommand(consulta2, conexion))
-                                {
-                                    comando2.Parameters.AddWithValue("@DNI_User", dniABuscar);
-
-                                    try
-                                    {
-                                        conexion.Open();
-                                        OleDbDataReader reader2 = comando2.ExecuteReader();
-
-                                        if (reader2.Read())
-                                        {
-                                            txtNombre.Text = reader2["nombre"].ToString();
-                                            txtApellido.Text = reader2["apellido"].ToString();
-
-                                            // Lee el valor del campo "inhabilitado"
-                                            bool inhabilitado = Convert.ToBoolean(reader2["inhabilitado"]);
-
-                                            // Establece el estado de los CheckBox según el valor de "inhabilitado"
-                                            checkBoxInhabilitado.Checked = inhabilitado;
-                                            checkBoxNo.Checked = !inhabilitado;
-
-                                            buttonAceptar.Enabled = true;
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("No se encontró ningún registro con el DNI proporcionado.");
-                                            conexion.Close();
-                                        }
-
-                                        reader2.Close();
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
-                                    }
-                                    finally
-                                    {
-                                        conexion.Close();
-                                    }
-                                }
-                            }
-                        }
-                        finally
-                        {
-                            conexion.Close();
-                        }
-                    }
-
-
-
-
-                }
-                
-                else
-                {
-                    MessageBox.Show("Por favor, ingresa un DNI válido.");
-                }
-            }
-        }
-        */
+        
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
@@ -185,9 +94,7 @@ namespace Iglesia
                     }
                 }
             }
-        }
-
-                            
+        }         
                                    
 
 
