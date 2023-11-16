@@ -25,7 +25,7 @@ namespace Iglesia
 
         private void postulacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PostulacionesRevisar Form1 = new PostulacionesRevisar();
+            PostularADiscipulado Form1 = new PostularADiscipulado();
             Form1.ShowDialog();
         }
 

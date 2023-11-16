@@ -1,4 +1,5 @@
-﻿using System;
+﻿using arreglarTesis;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,6 +76,12 @@ namespace Iglesia
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AcercaDe Form1 = new AcercaDe();
+            Form1.ShowDialog();
+        }
+
+        private void miembrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaMiembros Form1 = new ListaMiembros();
             Form1.ShowDialog();
         }
     }

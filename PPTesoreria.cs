@@ -28,10 +28,7 @@ namespace Iglesia
             Form1.ShowDialog();
         }
 
-        private void modificarIngresosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void agregarIngresosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -45,9 +42,6 @@ namespace Iglesia
             Form1.ShowDialog();
         }
 
-        private void modificarEgresosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }

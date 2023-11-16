@@ -42,5 +42,11 @@ namespace arreglarTesis
             AcercaDe form1 = new AcercaDe();
             form1.ShowDialog();
         }
+
+        private void miembrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaMiembros Form1 = new ListaMiembros();
+            Form1.ShowDialog();
+        }
     }
 }
