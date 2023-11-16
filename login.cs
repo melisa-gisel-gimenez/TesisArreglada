@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
-
+using arreglarTesis;
 
 namespace Iglesia
 {
@@ -97,7 +97,7 @@ namespace Iglesia
             {
                 if (rol.Equals("Administrador"))
                 {
-                    paginaprincipal form = new paginaprincipal();
+                    PPAdministracion form = new PPAdministracion();
                     form.Show();
                     this.Hide();
                 }
@@ -112,6 +112,13 @@ namespace Iglesia
                 if (rol.Equals("Mentor"))
                 {
                     PPmentor form = new PPmentor();
+                    form.Show();
+                    this.Hide();
+                }
+
+                if (rol.Equals("Pastor"))
+                {
+                    paginaprincipal form = new paginaprincipal();
                     form.Show();
                     this.Hide();
                 }

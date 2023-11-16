@@ -48,7 +48,7 @@ namespace Iglesia
                             textFechaAlta.Text = reader["fecha_alta"].ToString();
                             textIDMentor.Text = reader["id_mentor"].ToString();
                             textBoxIDMiembro.Text = reader["id_miembro"].ToString();
-                            textBoxIDMinisterio.Text = reader["id_ministerio"].ToString();
+                            textBoxIDMinisterio.Text = reader["Id_ministerio"].ToString();
                             checkBoxSI.Checked = Convert.ToBoolean(reader["inhabilitado"]);
                         }
                         else
@@ -101,7 +101,7 @@ namespace Iglesia
                 if (textBoxIDMinisterio.Text != "")
                 {
                     string idMinisterio = textBoxIDMinisterio.Text;
-                    string consulta = "SELECT nombreMinisterio FROM Ministerios WHERE id_ministerio = @IdMinisterio";
+                    string consulta = "SELECT nombreMinisterio FROM Ministerios WHERE Id_ministerio = @IdMinisterio";
 
                     try
                     {
@@ -288,7 +288,7 @@ namespace Iglesia
                         MessageBox.Show("Se registro la postulación con exito!");
                     }
 
-                    string consulta3 = "UPDATE Miembros SET id_ministerio =" + textBoxIDMinisterio.Text + " WHERE id_miembro=" + textBoxIDMiembro.Text + ";";
+                    string consulta3 = "UPDATE Miembros SET Id_ministerio =" + textBoxIDMinisterio.Text + " WHERE id_miembro=" + textBoxIDMiembro.Text + ";";
                     OleDbCommand comando2 = new OleDbCommand(consulta3, conexion);
                     //conexion.Open();
 
@@ -376,6 +376,44 @@ namespace Iglesia
 
         private void MostrarIdMinisterio(string nombreMinisterio)
         {
+            string consulta = "SELECT Id_ministerio FROM Ministerios WHERE nombreMinisterio = @NombreMinisterio";
+
+            using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
+            {
+                comando.Parameters.AddWithValue("@NombreMinisterio", nombreMinisterio);
+
+                try
+                {
+                    if (conexion.State == ConnectionState.Closed)
+                    {
+                        conexion.Open();
+                    }
+
+                    object resultado = comando.ExecuteScalar();
+
+                    if (resultado != null)
+                    {
+                        textBoxIDMinisterio.Text = resultado.ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener el ID del ministerio: " + ex.Message);
+                }
+                finally
+                {
+                    if (conexion.State == ConnectionState.Open)
+                    {
+                        conexion.Close();
+                    }
+                }
+            }
+        }
+
+
+        /*
+        private void MostrarIdMinisterio(string nombreMinisterio)
+        {
             string consulta = "SELECT Id_Ministerio FROM Ministerios WHERE nombreMinisterio = @NombreMinisterio";
 
             using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
@@ -405,6 +443,7 @@ namespace Iglesia
                 }
             }
         }
+        */
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {

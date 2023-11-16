@@ -271,6 +271,12 @@
     <Compile Include="ModificarMentor.Designer.cs">
       <DependentUpon>ModificarMentor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modificar_Ingresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar_Ingresos.designer.cs">
+      <DependentUpon>Modificar_Ingresos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modificar_Personas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarMentor.resx">
       <DependentUpon>ModificarMentor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar_Ingresos.resx">
+      <DependentUpon>Modificar_Ingresos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar_Personas.resx">
       <DependentUpon>Modificar_Personas.cs</DependentUpon>
