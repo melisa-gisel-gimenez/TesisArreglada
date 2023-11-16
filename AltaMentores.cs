@@ -150,5 +150,10 @@ namespace Iglesia
             textBoxDNI.Text = "";
             buttonAceptar.Enabled = false;
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

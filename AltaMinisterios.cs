@@ -92,5 +92,10 @@ namespace Iglesia
         {
             buttonCrearMinisterio.Enabled = true;
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -46,10 +46,9 @@ namespace Iglesia
             // 
             // textBoxDNIBuscar
             // 
-            this.textBoxDNIBuscar.Location = new System.Drawing.Point(189, 70);
-            this.textBoxDNIBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxDNIBuscar.Location = new System.Drawing.Point(168, 56);
             this.textBoxDNIBuscar.Name = "textBoxDNIBuscar";
-            this.textBoxDNIBuscar.Size = new System.Drawing.Size(112, 26);
+            this.textBoxDNIBuscar.Size = new System.Drawing.Size(100, 22);
             this.textBoxDNIBuscar.TabIndex = 0;
             this.textBoxDNIBuscar.TextChanged += new System.EventHandler(this.textBoxDNIBuscar_TextChanged_1);
             this.textBoxDNIBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDNIBuscar_KeyPress);
@@ -57,28 +56,27 @@ namespace Iglesia
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 78);
+            this.label1.Location = new System.Drawing.Point(52, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 20);
+            this.label1.Size = new System.Drawing.Size(82, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingresar DNI";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 143);
+            this.label2.Location = new System.Drawing.Point(52, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre ";
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(189, 140);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxNombre.Location = new System.Drawing.Point(168, 112);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.ReadOnly = true;
-            this.textBoxNombre.Size = new System.Drawing.Size(112, 26);
+            this.textBoxNombre.Size = new System.Drawing.Size(100, 22);
             this.textBoxNombre.TabIndex = 4;
             // 
             // buttonBuscar
@@ -86,10 +84,9 @@ namespace Iglesia
             this.buttonBuscar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonBuscar.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.Color.Black;
-            this.buttonBuscar.Location = new System.Drawing.Point(318, 61);
-            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonBuscar.Location = new System.Drawing.Point(283, 49);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(84, 44);
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 35);
             this.buttonBuscar.TabIndex = 5;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = false;
@@ -98,37 +95,35 @@ namespace Iglesia
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 177);
+            this.label4.Location = new System.Drawing.Point(52, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.Size = new System.Drawing.Size(57, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Apellido";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 211);
+            this.label5.Location = new System.Drawing.Point(58, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 20);
+            this.label5.Size = new System.Drawing.Size(30, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "DNI";
             // 
             // textBoxApellido
             // 
-            this.textBoxApellido.Location = new System.Drawing.Point(189, 174);
-            this.textBoxApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxApellido.Location = new System.Drawing.Point(168, 139);
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.ReadOnly = true;
-            this.textBoxApellido.Size = new System.Drawing.Size(112, 26);
+            this.textBoxApellido.Size = new System.Drawing.Size(100, 22);
             this.textBoxApellido.TabIndex = 8;
             // 
             // textBoxDNI
             // 
-            this.textBoxDNI.Location = new System.Drawing.Point(189, 208);
-            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxDNI.Location = new System.Drawing.Point(168, 166);
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.ReadOnly = true;
-            this.textBoxDNI.Size = new System.Drawing.Size(112, 26);
+            this.textBoxDNI.Size = new System.Drawing.Size(100, 22);
             this.textBoxDNI.TabIndex = 9;
             // 
             // buttonAceptar
@@ -137,10 +132,9 @@ namespace Iglesia
             this.buttonAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.YellowGreen;
             this.buttonAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAceptar.Location = new System.Drawing.Point(50, 299);
-            this.buttonAceptar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonAceptar.Location = new System.Drawing.Point(44, 239);
             this.buttonAceptar.Name = "buttonAceptar";
-            this.buttonAceptar.Size = new System.Drawing.Size(84, 64);
+            this.buttonAceptar.Size = new System.Drawing.Size(75, 51);
             this.buttonAceptar.TabIndex = 10;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
@@ -152,21 +146,20 @@ namespace Iglesia
             this.buttonCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.buttonCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Location = new System.Drawing.Point(321, 299);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCancelar.Location = new System.Drawing.Point(285, 239);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(84, 64);
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 51);
             this.buttonCancelar.TabIndex = 11;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonLimpiar
             // 
             this.buttonLimpiar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonLimpiar.Location = new System.Drawing.Point(189, 299);
-            this.buttonLimpiar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonLimpiar.Location = new System.Drawing.Point(168, 239);
             this.buttonLimpiar.Name = "buttonLimpiar";
-            this.buttonLimpiar.Size = new System.Drawing.Size(84, 64);
+            this.buttonLimpiar.Size = new System.Drawing.Size(75, 51);
             this.buttonLimpiar.TabIndex = 12;
             this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.UseVisualStyleBackColor = false;
@@ -174,9 +167,9 @@ namespace Iglesia
             // 
             // AltaMentores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 378);
+            this.ClientSize = new System.Drawing.Size(392, 302);
             this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAceptar);
@@ -190,7 +183,7 @@ namespace Iglesia
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxDNIBuscar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AltaMentores";
             this.Text = "AltaMentores";
             this.ResumeLayout(false);
