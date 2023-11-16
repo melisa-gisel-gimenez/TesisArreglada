@@ -1,4 +1,5 @@
-﻿using System;
+﻿using arreglarTesis;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,9 @@ namespace Iglesia
 
         private void generarInformesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //ACA FALTA  MOSTRAR LO QUE GENERA LOS INFORMES. 
+            InformeTesoreria form1 = new InformeTesoreria();
+            form1.ShowDialog(); 
+                
         }
 
         private void acercaDeToolStripMenuItem_Click_1(object sender, EventArgs e)

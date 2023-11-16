@@ -247,6 +247,12 @@
     <Compile Include="AsignarMentor.Designer.cs">
       <DependentUpon>AsignarMentor.cs</DependentUpon>
     </Compile>
+    <Compile Include="InformeTesoreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeTesoreria.Designer.cs">
+      <DependentUpon>InformeTesoreria.cs</DependentUpon>
+    </Compile>
     <Compile Include="InhabilitarPersonas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AsignarMentor.resx">
       <DependentUpon>AsignarMentor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeTesoreria.resx">
+      <DependentUpon>InformeTesoreria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InhabilitarPersonas.resx">
       <DependentUpon>InhabilitarPersonas.cs</DependentUpon>
