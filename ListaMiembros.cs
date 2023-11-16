@@ -11,7 +11,6 @@ using iText.Layout.Borders;
 using iText.Layout.Properties;
 using ClosedXML.Excel;
 
-//using ClosedXML.Excel;
 
 
 namespace arreglarTesis
@@ -175,6 +174,11 @@ namespace arreglarTesis
 
                 MessageBox.Show("Archivo Excel generado con éxito.");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,52 +24,172 @@ namespace Iglesia
             conexion = new OleDbConnection(cadenaConexion);
         }
 
+        /*
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
             string dniABuscar = textBoxDNIBuscar.Text.Trim();
 
-            if (!string.IsNullOrEmpty(dniABuscar))
+            if (textBoxDNIBuscar.Text.Length < 8 || textBoxDNIBuscar.Text == "")
             {
-                string consulta = "SELECT * FROM Miembros WHERE DNI = @DNI_User";
-
-                using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
-                {
-                    comando.Parameters.AddWithValue("@DNI_User", dniABuscar);
-
-                    try
-                    {
-                        conexion.Open();
-                        OleDbDataReader reader = comando.ExecuteReader();
-
-                        if (reader.Read())
-                        {
-                            txtNombre.Text = reader["nombre"].ToString();
-                            txtApellido.Text = reader["apellido"].ToString();
-                            checkBoxInhabilitado.Checked = Convert.ToBoolean(reader["inhabilitado"]);
-                            buttonAceptar.Enabled = true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se encontró ningún registro con el DNI proporcionado.");
-                        }
-
-                        reader.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
-                    }
-                    finally
-                    {
-                        conexion.Close();
-                    }
-                }
+                MessageBox.Show("El DNI debe tener 8 dígitos. Por favor revise los datos ingresados.");
             }
             else
             {
-                MessageBox.Show("Por favor, ingresa un DNI válido.");
+                if (!string.IsNullOrEmpty(dniABuscar))
+                {
+                    string consulta = "SELECT * FROM usuarios WHERE DNI_User = @DNI_User";
+
+                    using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@DNI_User", dniABuscar);
+                        try
+                        {
+                            conexion.Open();
+                            OleDbDataReader reader = comando.ExecuteReader();
+
+                            if (reader.Read())
+                            {
+                                MessageBox.Show("Esta persona ya está dada de alta como Usuario. Verifique el DNI ingresado");
+                                
+                            }
+                            else
+                            {
+                                string consulta2 = "SELECT * FROM Miembros WHERE DNI = @DNI_User";
+
+                                using (OleDbCommand comando2 = new OleDbCommand(consulta2, conexion))
+                                {
+                                    comando2.Parameters.AddWithValue("@DNI_User", dniABuscar);
+
+                                    try
+                                    {
+                                        conexion.Open();
+                                        OleDbDataReader reader2 = comando2.ExecuteReader();
+
+                                        if (reader2.Read())
+                                        {
+                                            txtNombre.Text = reader2["nombre"].ToString();
+                                            txtApellido.Text = reader2["apellido"].ToString();
+
+                                            // Lee el valor del campo "inhabilitado"
+                                            bool inhabilitado = Convert.ToBoolean(reader2["inhabilitado"]);
+
+                                            // Establece el estado de los CheckBox según el valor de "inhabilitado"
+                                            checkBoxInhabilitado.Checked = inhabilitado;
+                                            checkBoxNo.Checked = !inhabilitado;
+
+                                            buttonAceptar.Enabled = true;
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("No se encontró ningún registro con el DNI proporcionado.");
+                                            conexion.Close();
+                                        }
+
+                                        reader2.Close();
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
+                                    }
+                                    finally
+                                    {
+                                        conexion.Close();
+                                    }
+                                }
+                            }
+                        }
+                        finally
+                        {
+                            conexion.Close();
+                        }
+                    }
+
+
+
+
+                }
+                
+                else
+                {
+                    MessageBox.Show("Por favor, ingresa un DNI válido.");
+                }
             }
         }
+        */
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            string dniABuscar = textBoxDNIBuscar.Text.Trim();
+
+            if (textBoxDNIBuscar.Text.Length < 8 || textBoxDNIBuscar.Text == "")
+            {
+                MessageBox.Show("El DNI debe tener 8 dígitos. Por favor revise los datos ingresados.");
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(dniABuscar))
+                {
+                    using (OleDbConnection conexion = new OleDbConnection(cadenaConexion))
+                    {
+                        conexion.Open();
+                        string consulta = "SELECT * FROM usuarios WHERE DNI_User = @DNI_User";
+                        using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
+                        {
+                            comando.Parameters.AddWithValue("@DNI", dniABuscar);
+                            try
+                            {
+                                OleDbDataReader reader = comando.ExecuteReader();
+                                if (reader.Read())
+                                {
+                                    MessageBox.Show("Esta persona ya está dada de alta como usuario, por favor verifique el DNI ingresado.");
+                                }
+                                else
+                                {
+                                    string consulta2 = "SELECT * FROM miembros WHERE DNI = @DNI";
+                                    using (OleDbCommand comando2 = new OleDbCommand(consulta2, conexion))
+                                    {
+                                        comando2.Parameters.AddWithValue("@DNI", dniABuscar);
+                                        try
+                                        {
+                                            OleDbDataReader reader2 = comando2.ExecuteReader();
+                                            if (reader2.Read())
+                                            {
+                                                txtNombre.Text = reader2["NOMBRE"].ToString();
+                                                txtApellido.Text = reader2["APELLIDO"].ToString();
+
+                                                // Lee el valor del campo "inhabilitado"
+                                                bool inhabilitado = Convert.ToBoolean(reader2["inhabilitado"]);
+
+                                                // Establece el estado de los CheckBox según el valor de "inhabilitado"
+                                                checkBoxInhabilitado.Checked = inhabilitado;
+                                                checkBoxNo.Checked = !inhabilitado;
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("No se encontró ninguna persona registrada con el DNI proporcionado.");
+                                            }
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
+                                        }
+                                    }
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error al buscar el DNI en la base de datos: " + ex.Message);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+                            
+                                   
+
 
         private void textBoxDNIBuscar_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -92,24 +213,81 @@ namespace Iglesia
                 MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
             }
         }
+
+        //GUARDA LA PASS ENCRIPTADA
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values (" + int.Parse(textBoxDNIBuscar.Text) + ", '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', " + checkBoxAltaUser.Checked + ")";
-            //string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values ('" + textBoxDNIBuscar.Text + "', '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', '" + checkBoxAltaUser.Checked + "')";
-            OleDbCommand comando = new OleDbCommand(consulta2, conexion);
-            conexion.Open();
-            int cantidad = comando.ExecuteNonQuery();
-
-            if (cantidad < 1)
+            if (txtNombre.Text == "" || txtApellido.Text == "" || txtNombreUsuario.Text == "" || txtPassword.Text == "" || checkBoxAltaUser.Checked == false)
             {
-                MessageBox.Show("Ocurrió un problema");
+                MessageBox.Show("No debe dejar campos vacíos. Por favor complete todos los campos.");
             }
             else
             {
-                MessageBox.Show("Se registró el usuario con exito");
-                this.Close();
+                try
+                {
+                    // Encripta la contraseña
+                    string contraseñaEncriptada = EncriptarContraseña(txtPassword.Text);
+
+                    // Prepara la consulta SQL con la contraseña encriptada
+                    string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) VALUES (" + int.Parse(textBoxDNIBuscar.Text) + ", '" + txtNombreUsuario.Text + "', '" + contraseñaEncriptada + "', '" + comboBoxTipoUsuario.Text + "', " + checkBoxAltaUser.Checked + ")";
+
+                    using (OleDbCommand comando = new OleDbCommand(consulta2, conexion))
+                    {
+                        conexion.Open();
+                        int cantidad = comando.ExecuteNonQuery();
+
+                        if (cantidad < 1)
+                        {
+                            MessageBox.Show("Ocurrió un problema");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Se registró el usuario con éxito");
+                            this.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar en la base de datos: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close();
+                }
             }
         }
+
+        //guarda la pass comun
+        /*
+        private void buttonAceptar_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "" || txtApellido.Text == "" || txtNombreUsuario.Text == "" || txtPassword.Text == "" || checkBoxAltaUser.Checked == false)
+            {
+                MessageBox.Show("No debe dejar campos vacíos. Por favor complete todos los campos.");
+            }
+            else
+            {
+
+
+                string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values (" + int.Parse(textBoxDNIBuscar.Text) + ", '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', " + checkBoxAltaUser.Checked + ")";
+                //string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values ('" + textBoxDNIBuscar.Text + "', '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', '" + checkBoxAltaUser.Checked + "')";
+                OleDbCommand comando = new OleDbCommand(consulta2, conexion);
+                conexion.Open();
+                int cantidad = comando.ExecuteNonQuery();
+
+                if (cantidad < 1)
+                {
+                    MessageBox.Show("Ocurrió un problema");
+                }
+                else
+                {
+                    MessageBox.Show("Se registró el usuario con exito");
+                    this.Close();
+                }
+            }
+        }
+        */
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
@@ -129,6 +307,26 @@ namespace Iglesia
         private void AltaUsuarios_Load(object sender, EventArgs e)
         {
 
+        }
+        private string EncriptarContraseña(string contraseña)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                // Convierte la contraseña a bytes
+                byte[] bytes = Encoding.UTF8.GetBytes(contraseña);
+
+                // Calcula el hash SHA256
+                byte[] hashBytes = sha256.ComputeHash(bytes);
+
+                // Convierte el hash a una cadena hexadecimal
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in hashBytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
         }
     }
 }

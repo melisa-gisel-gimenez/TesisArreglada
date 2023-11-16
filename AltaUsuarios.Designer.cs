@@ -51,6 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxNo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -167,7 +168,8 @@
             // checkBoxInhabilitado
             // 
             this.checkBoxInhabilitado.AutoSize = true;
-            this.checkBoxInhabilitado.Location = new System.Drawing.Point(130, 155);
+            this.checkBoxInhabilitado.Enabled = false;
+            this.checkBoxInhabilitado.Location = new System.Drawing.Point(110, 155);
             this.checkBoxInhabilitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBoxInhabilitado.Name = "checkBoxInhabilitado";
             this.checkBoxInhabilitado.Size = new System.Drawing.Size(41, 20);
@@ -237,6 +239,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(140, 148);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombre.Name = "txtNombre";
@@ -245,6 +248,7 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.Enabled = false;
             this.txtApellido.Location = new System.Drawing.Point(128, 103);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtApellido.Name = "txtApellido";
@@ -271,6 +275,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBoxNo);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtApellido);
             this.groupBox1.Controls.Add(this.label6);
@@ -293,6 +298,18 @@
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos para el login";
+            // 
+            // checkBoxNo
+            // 
+            this.checkBoxNo.AutoSize = true;
+            this.checkBoxNo.Enabled = false;
+            this.checkBoxNo.Location = new System.Drawing.Point(157, 155);
+            this.checkBoxNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBoxNo.Name = "checkBoxNo";
+            this.checkBoxNo.Size = new System.Drawing.Size(49, 20);
+            this.checkBoxNo.TabIndex = 21;
+            this.checkBoxNo.Text = "NO";
+            this.checkBoxNo.UseVisualStyleBackColor = true;
             // 
             // AltaUsuarios
             // 
@@ -357,5 +374,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox checkBoxNo;
     }
 }
