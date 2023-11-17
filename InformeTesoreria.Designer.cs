@@ -36,6 +36,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DGVEgresos = new System.Windows.Forms.DataGridView();
             this.btnDescargar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVIngresos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVEgresos)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +73,7 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(328, 68);
+            this.btnFiltrar.Location = new System.Drawing.Point(306, 68);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(89, 30);
             this.btnFiltrar.TabIndex = 3;
@@ -110,19 +114,60 @@
             // 
             // btnDescargar
             // 
-            this.btnDescargar.Location = new System.Drawing.Point(220, 560);
+            this.btnDescargar.Location = new System.Drawing.Point(70, 563);
             this.btnDescargar.Name = "btnDescargar";
-            this.btnDescargar.Size = new System.Drawing.Size(89, 30);
+            this.btnDescargar.Size = new System.Drawing.Size(117, 45);
             this.btnDescargar.TabIndex = 7;
             this.btnDescargar.Text = "Descargar";
             this.btnDescargar.UseVisualStyleBackColor = true;
             this.btnDescargar.Click += new System.EventHandler(this.btnDescargar_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Ingresos:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 367);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Egresos:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(267, 563);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 45);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(152, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(172, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Reporte de Tesorería:";
+            // 
             // InformeTesoreria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 602);
+            this.ClientSize = new System.Drawing.Size(527, 631);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnDescargar);
             this.Controls.Add(this.DGVEgresos);
             this.Controls.Add(this.label2);
@@ -150,5 +195,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView DGVEgresos;
         private System.Windows.Forms.Button btnDescargar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
     }
 }
