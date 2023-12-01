@@ -109,6 +109,8 @@ namespace Iglesia
             this.Name = "PPmentor";
             this.Text = "PPmentor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PPmentor_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PPmentor_FormClosed);
+            this.Load += new System.EventHandler(this.PPmentor_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

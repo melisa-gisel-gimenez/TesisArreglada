@@ -87,10 +87,19 @@ namespace Iglesia
 
         private void paginaprincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Application.OpenForms.Count == 0)
-            {
+            
                 Application.Exit();
-            }
+            
+        }
+
+        private void paginaprincipal_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += paginaprincipal_FormClosed;
+        }
+
+        private void paginaprincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

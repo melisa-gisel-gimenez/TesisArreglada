@@ -51,10 +51,17 @@ namespace arreglarTesis
 
         private void PPAdministracion_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Application.OpenForms.Count == 0)
-            {
-                Application.Exit();
-            }
+            Application.Exit();
+        }
+
+        private void PPAdministracion_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += PPAdministracion_FormClosed;
+        }
+
+        private void PPAdministracion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

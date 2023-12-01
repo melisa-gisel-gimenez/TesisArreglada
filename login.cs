@@ -95,35 +95,63 @@ namespace Iglesia
             bool areCredentialsValid = VerifyCredentials(username, EncriptarContraseña(password));
             if (areCredentialsValid)
             {
+                /* CODIGO JULI
+                 if (rol.Equals("Administrador"))
+                 {
+                     PPAdministracion form = new PPAdministracion();
+                     form.Show();
+                     this.Hide();
+                 }
+
+                 if (rol.Equals("Tesorero"))
+                 {
+                     PPTesoreria form = new PPTesoreria();
+                     form.Show();
+                     this.Close();
+                 }
+
+                 if (rol.Equals("Mentor"))
+                 {
+                     PPmentor form = new PPmentor();
+                     form.Show();
+                     this.Hide();
+                 }
+
+                 if (rol.Equals("Pastor"))
+                 {
+                     paginaprincipal form = new paginaprincipal();
+                     form.Show();
+                     this.Hide();
+                 }
+                 // Aquí puedes abrir la ventana principal de tu aplicación.
+                */
                 if (rol.Equals("Administrador"))
                 {
                     PPAdministracion form = new PPAdministracion();
                     form.Show();
                     this.Hide();
                 }
-
-                if (rol.Equals("Tesorero"))
+                else if (rol.Equals("Tesorero"))
                 {
                     PPTesoreria form = new PPTesoreria();
                     form.Show();
                     this.Hide();
                 }
-
-                if (rol.Equals("Mentor"))
+                else if (rol.Equals("Mentor"))
                 {
                     PPmentor form = new PPmentor();
                     form.Show();
                     this.Hide();
                 }
-
-                if (rol.Equals("Pastor"))
+                else if (rol.Equals("Pastor"))
                 {
                     paginaprincipal form = new paginaprincipal();
                     form.Show();
                     this.Hide();
-                }
-                // Aquí puedes abrir la ventana principal de tu aplicación.
+                }                               
+                
             }
+        
             else
             {
                 MessageBox.Show("Nombre de usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.");

@@ -53,7 +53,7 @@ namespace arreglarTesis
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(711, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(711, 30);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -126,6 +126,8 @@ namespace arreglarTesis
             this.Name = "PPAdministracion";
             this.Text = "PPAdministracion";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PPAdministracion_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PPAdministracion_FormClosed);
+            this.Load += new System.EventHandler(this.PPAdministracion_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
