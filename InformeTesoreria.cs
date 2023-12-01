@@ -9,6 +9,8 @@ using System.IO;
 using iText.Layout.Borders;
 using iText.Layout.Properties;
 using ClosedXML.Excel;
+using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace arreglarTesis
 {
@@ -22,7 +24,11 @@ namespace arreglarTesis
         }
         private void CargarDatosIngresos(DateTime fechaDesde, DateTime fechaHasta)
         {
-            string consulta = "SELECT * FROM Ingresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
+            //string consulta = "SELECT * FROM Ingresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
+            string consulta = "SELECT I.Id_ingreso as 'Nro Ingreso', I.fecha as Fecha, I.id_tipoIngreso as 'Codigo', T.tipo_ingreso as 'Tipo Ingreso', I.detalle AS Detalle, I.monto AS Monto " +
+                "FROM Ingresos I "+
+                "INNER JOIN TipoIngreso T ON I.id_tipoIngreso = T.Id_tipoIngreso " +
+                "WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
 
             using (OleDbConnection conexion = new OleDbConnection(cadenaConexion))
             {
@@ -48,7 +54,12 @@ namespace arreglarTesis
 
         private void CargarDatosEgresos(DateTime fechaDesde, DateTime fechaHasta)
         {
-            string consulta = "SELECT * FROM Egresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
+            //string consulta = "SELECT * FROM Egresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
+            //string consulta = "SELECT Id_egreso as 'Nro Egreso', fecha as Fecha, Id_tipoEgreso as 'Codigo tipo Egreso',  detalle AS Detalle, monto AS Monto FROM Egresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
+            string consulta = "SELECT E.Id_egreso as 'Nro Egreso', E.fecha as Fecha, E.Id_tipoEgreso as 'Codigo', T.tipo_Egreso as 'Tipo Egreso', E.detalle AS Detalle, E.monto AS Monto " +
+                "FROM Egresos E " +
+                "INNER JOIN TipoEgreso T ON E.Id_tipoEgreso = T.Id_tipoEgreso " +
+                "WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
 
             using (OleDbConnection conexion = new OleDbConnection(cadenaConexion))
             {
@@ -128,43 +139,26 @@ namespace arreglarTesis
 
                         // Agregar tabla para Egresos
                         document.Add(new Paragraph("Egresos"));
-                        document.Add(DGVToTable(DGVEgresos));
+                        document.Add(DGVToTable(DGVEgresos));                                                
+
+                        
                     }
                 }
 
                 MessageBox.Show("Informe generado y guardado como '" + Path.GetFileName(filePath) + "'");
-            }
-        }
 
-
-        /*
-        private void DescargarInformePDF()
-        {
-            string fechaDescarga = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-
-            using (PdfWriter writer = new PdfWriter("InformeTesoreria.pdf"))
-            {
-                using (PdfDocument pdf = new PdfDocument(writer))
+                // Abrir automáticamente el archivo PDF después de guardarlo
+                try
                 {
-                    Document document = new Document(pdf);
-
-                    // Agregar título e información de fecha
-                    document.Add(new Paragraph("Informe de Tesorería"));
-                    document.Add(new Paragraph("Fecha de Descarga: " + fechaDescarga));
-
-                    // Agregar tabla para Ingresos
-                    document.Add(new Paragraph("Ingresos"));
-                    document.Add(DGVToTable(DGVIngresos));
-
-                    // Agregar tabla para Egresos
-                    document.Add(new Paragraph("Egresos"));
-                    document.Add(DGVToTable(DGVEgresos));
+                    Process.Start(filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al abrir el archivo: " + ex.Message);
                 }
             }
-
-            MessageBox.Show("Informe generado y guardado como 'InformeTesoreria.pdf'");
         }
-        */
+
 
         private Table DGVToTable(DataGridView dgv)
         {
@@ -186,6 +180,12 @@ namespace arreglarTesis
             }
 
             return table;
+        }
+
+        
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
