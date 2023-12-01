@@ -39,7 +39,6 @@
             this.buttonFiltrar = new System.Windows.Forms.Button();
             this.checkBoxHabilitado = new System.Windows.Forms.CheckBox();
             this.checkBoxInhabilitado = new System.Windows.Forms.CheckBox();
-            this.checkBoxTodos = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMiembros)).BeginInit();
@@ -128,7 +127,7 @@
             // 
             // buttonFiltrar
             // 
-            this.buttonFiltrar.Location = new System.Drawing.Point(91, 127);
+            this.buttonFiltrar.Location = new System.Drawing.Point(59, 83);
             this.buttonFiltrar.Name = "buttonFiltrar";
             this.buttonFiltrar.Size = new System.Drawing.Size(97, 36);
             this.buttonFiltrar.TabIndex = 10;
@@ -156,16 +155,6 @@
             this.checkBoxInhabilitado.Text = "Inhabilitado";
             this.checkBoxInhabilitado.UseVisualStyleBackColor = true;
             // 
-            // checkBoxTodos
-            // 
-            this.checkBoxTodos.AutoSize = true;
-            this.checkBoxTodos.Location = new System.Drawing.Point(6, 78);
-            this.checkBoxTodos.Name = "checkBoxTodos";
-            this.checkBoxTodos.Size = new System.Drawing.Size(69, 20);
-            this.checkBoxTodos.TabIndex = 13;
-            this.checkBoxTodos.Text = "Todos";
-            this.checkBoxTodos.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
@@ -182,11 +171,10 @@
             // 
             this.groupBox2.Controls.Add(this.checkBoxHabilitado);
             this.groupBox2.Controls.Add(this.checkBoxInhabilitado);
-            this.groupBox2.Controls.Add(this.checkBoxTodos);
             this.groupBox2.Controls.Add(this.buttonFiltrar);
             this.groupBox2.Location = new System.Drawing.Point(395, 66);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(383, 169);
+            this.groupBox2.Size = new System.Drawing.Size(260, 141);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtrar por:";
@@ -228,7 +216,6 @@
         private System.Windows.Forms.Button buttonFiltrar;
         private System.Windows.Forms.CheckBox checkBoxHabilitado;
         private System.Windows.Forms.CheckBox checkBoxInhabilitado;
-        private System.Windows.Forms.CheckBox checkBoxTodos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
     }

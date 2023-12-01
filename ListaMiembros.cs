@@ -10,6 +10,10 @@ using System.IO;
 using iText.Layout.Borders;
 using iText.Layout.Properties;
 using ClosedXML.Excel;
+using System.Diagnostics;
+using System.Collections.Generic;
+
+
 
 
 
@@ -195,7 +199,23 @@ namespace arreglarTesis
                 }
 
                 MessageBox.Show("Archivo Excel generado con éxito.");
+
+                // Obtener la ruta completa del archivo guardado
+                string filePath = Path.GetFullPath(saveFileDialog.FileName);
+
+                // Abrir automáticamente el archivo excel después de guardarlo
+                try
+                {
+                    Process.Start(filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al abrir el archivo: " + ex.Message);
+                }
+
             }
+
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
