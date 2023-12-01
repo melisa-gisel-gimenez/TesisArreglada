@@ -84,5 +84,13 @@ namespace Iglesia
             ListaMiembros Form1 = new ListaMiembros();
             Form1.ShowDialog();
         }
+
+        private void paginaprincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

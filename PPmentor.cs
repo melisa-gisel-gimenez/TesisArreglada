@@ -34,5 +34,13 @@ namespace Iglesia
             AcercaDe Form1 = new AcercaDe();
             Form1.ShowDialog();
         }
+
+        private void PPmentor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

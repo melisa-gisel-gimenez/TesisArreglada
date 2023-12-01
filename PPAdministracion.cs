@@ -48,5 +48,13 @@ namespace arreglarTesis
             ListaMiembros Form1 = new ListaMiembros();
             Form1.ShowDialog();
         }
+
+        private void PPAdministracion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
