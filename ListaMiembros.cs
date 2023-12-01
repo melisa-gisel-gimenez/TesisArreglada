@@ -100,7 +100,7 @@ namespace arreglarTesis
 
             if (checkBoxHabilitado.Checked == false && checkBoxInhabilitado.Checked == false)
             {
-                MessageBox.Show("Debe seleccionar una opción para filtrar. Por favor haga lick en una opción (habilitados, inahibilados o todos.");
+                MessageBox.Show("Debe seleccionar una opción para filtrar. Por favor haga lick en una opción (habilitados, inahibilados o ambas.");
             }
 
             else
@@ -240,9 +240,20 @@ namespace arreglarTesis
                 // Si es mayor a 8, recorta el texto para que solo tenga 8 caracteres
                 //txtDNI.Text = txtDNI.Text.Substring(0, 8);
                 // Coloca el cursor al final del texto
-                //txtDNI.SelectionStart = txtDNI.Text.Length;
+                textBoxDNI.SelectionStart = textBoxDNI.Text.Length;
                 MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
             }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            textBoxDNI.Text = "";
+        }
+
+        private void btnLimpiarCheck_Click(object sender, EventArgs e)
+        {
+            checkBoxHabilitado.Checked = false;
+            checkBoxInhabilitado.Checked = false;
         }
     }
 }

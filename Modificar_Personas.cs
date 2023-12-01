@@ -44,25 +44,11 @@ namespace Iglesia
         }
         private void Modificar_Personas_Load(object sender, EventArgs e)
         {
-
+            txtNombre.CharacterCasing = CharacterCasing.Upper;
+            txtApellido.CharacterCasing = CharacterCasing.Upper;
         }
 
-        /*
-         * private void button1_Click(object sender, EventArgs e)
-        {
-            ModificarBD();
-            txtDNI.Text = "";
-            txtApellido.Text = "";
-            txtBarrio.Text = "";
-            txtDireccion.Text = "";
-            txtNombre.Text = "";
-            txtTelefono.Text = "";
-            dateTimePicker1.Text = "";
-            textBoxBuscarDNI.Text="";
-                      
-        }
-        */
-
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -109,6 +95,7 @@ namespace Iglesia
                             textBoxFechaNac.Text = reader["FECHA_NAC"].ToString();
                             checkBoxBautizado.Checked = Convert.ToBoolean(reader["bautizado"]);
 
+                            txtDNI.Enabled = true;
 
 
                         }
@@ -128,6 +115,7 @@ namespace Iglesia
                         conexion.Close();
                     }
                 }
+                
             }
             else
             {
@@ -153,7 +141,7 @@ namespace Iglesia
                 // Si es mayor a 8, recorta el texto para que solo tenga 8 caracteres
                 //txtDNI.Text = txtDNI.Text.Substring(0, 8);
                 // Coloca el cursor al final del texto
-                //txtDNI.SelectionStart = txtDNI.Text.Length;
+                txtDNI.SelectionStart = txtDNI.Text.Length;
                 MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
             }
         }
@@ -230,8 +218,30 @@ namespace Iglesia
                 // Si es mayor a 8, recorta el texto para que solo tenga 8 caracteres
                 //txtDNI.Text = txtDNI.Text.Substring(0, 8);
                 // Coloca el cursor al final del texto
-                //txtDNI.SelectionStart = txtDNI.Text.Length;
+                txtDNI.SelectionStart = txtDNI.Text.Length;
                 MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
+            }
+        }
+
+        private void txtDNI_Leave(object sender, EventArgs e)
+        {
+            if (txtDNI.Text.Length < 8)
+            {
+                // Coloca el cursor al final del texto
+                txtDNI.SelectionStart = txtDNI.Text.Length;
+
+                MessageBox.Show("El DNI debe tener al menos 8 números. Por favor, verifique el DNI ingresado");
+            }
+        }
+
+        private void textBoxBuscarDNI_Leave(object sender, EventArgs e)
+        {
+            if (textBoxBuscarDNI.Text.Length < 8)
+            {
+                // Coloca el cursor al final del texto
+                textBoxBuscarDNI.SelectionStart = textBoxBuscarDNI.Text.Length;
+
+                MessageBox.Show("El DNI debe tener al menos 8 números. Por favor, verifique el DNI ingresado");
             }
         }
     }

@@ -101,6 +101,7 @@
             this.textNombreMentor.Name = "textNombreMentor";
             this.textNombreMentor.Size = new System.Drawing.Size(167, 22);
             this.textNombreMentor.TabIndex = 59;
+            this.textNombreMentor.Visible = false;
             // 
             // label9
             // 
@@ -241,6 +242,7 @@
             this.txtDNIBuscar.TabIndex = 43;
             this.txtDNIBuscar.TextChanged += new System.EventHandler(this.txtDNIBuscar_TextChanged);
             this.txtDNIBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNIBuscar_KeyPress);
+            this.txtDNIBuscar.Leave += new System.EventHandler(this.txtDNIBuscar_Leave);
             // 
             // label1
             // 
@@ -260,6 +262,7 @@
             this.label10.Size = new System.Drawing.Size(67, 16);
             this.label10.TabIndex = 63;
             this.label10.Text = "ID Mentor:";
+            this.label10.Visible = false;
             // 
             // textIDMentor
             // 
@@ -268,6 +271,7 @@
             this.textIDMentor.Name = "textIDMentor";
             this.textIDMentor.Size = new System.Drawing.Size(100, 22);
             this.textIDMentor.TabIndex = 65;
+            this.textIDMentor.Visible = false;
             // 
             // label11
             // 
@@ -296,6 +300,7 @@
             this.label12.Size = new System.Drawing.Size(91, 16);
             this.label12.TabIndex = 68;
             this.label12.Text = "Nro. Miembro:";
+            this.label12.Visible = false;
             // 
             // textBoxIDMiembro
             // 
@@ -304,6 +309,7 @@
             this.textBoxIDMiembro.Name = "textBoxIDMiembro";
             this.textBoxIDMiembro.Size = new System.Drawing.Size(72, 22);
             this.textBoxIDMiembro.TabIndex = 69;
+            this.textBoxIDMiembro.Visible = false;
             // 
             // label13
             // 
