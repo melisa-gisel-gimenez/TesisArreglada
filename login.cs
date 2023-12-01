@@ -188,6 +188,11 @@ namespace Iglesia
                 return builder.ToString();
             }
         }
+
+        private void LoginJuli_Load(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = '*';
+        }
     }
 }
 

@@ -60,10 +60,10 @@
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(338, 211);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(300, 169);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(266, 65);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(236, 52);
             this.btnIniciarSesion.TabIndex = 3;
             this.btnIniciarSesion.Text = "Iniciar Sesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
@@ -71,18 +71,18 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(316, 88);
+            this.txtUsername.Location = new System.Drawing.Point(281, 70);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(311, 26);
+            this.txtUsername.Size = new System.Drawing.Size(277, 22);
             this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(316, 149);
+            this.txtPassword.Location = new System.Drawing.Point(281, 119);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(311, 26);
+            this.txtPassword.Size = new System.Drawing.Size(277, 22);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -93,10 +93,10 @@
             this.buttonCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.buttonCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.buttonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCerrar.Location = new System.Drawing.Point(638, 0);
+            this.buttonCerrar.Location = new System.Drawing.Point(567, 0);
             this.buttonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCerrar.Name = "buttonCerrar";
-            this.buttonCerrar.Size = new System.Drawing.Size(60, 48);
+            this.buttonCerrar.Size = new System.Drawing.Size(53, 38);
             this.buttonCerrar.TabIndex = 10;
             this.buttonCerrar.Text = "X";
             this.buttonCerrar.UseVisualStyleBackColor = false;
@@ -105,9 +105,9 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(459, 186);
+            this.linkLabel1.Location = new System.Drawing.Point(408, 149);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(168, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(141, 16);
             this.linkLabel1.TabIndex = 11;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Recuperar contraseña";
@@ -120,7 +120,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(701, 48);
+            this.panel1.Size = new System.Drawing.Size(623, 38);
             this.panel1.TabIndex = 12;
             // 
             // pictureBox2
@@ -132,7 +132,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(253, 300);
+            this.pictureBox2.Size = new System.Drawing.Size(225, 240);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -141,10 +141,10 @@
             // pbOcultar
             // 
             this.pbOcultar.Image = ((System.Drawing.Image)(resources.GetObject("pbOcultar.Image")));
-            this.pbOcultar.Location = new System.Drawing.Point(633, 149);
+            this.pbOcultar.Location = new System.Drawing.Point(564, 113);
             this.pbOcultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbOcultar.Name = "pbOcultar";
-            this.pbOcultar.Size = new System.Drawing.Size(40, 32);
+            this.pbOcultar.Size = new System.Drawing.Size(36, 32);
             this.pbOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbOcultar.TabIndex = 7;
             this.pbOcultar.TabStop = false;
@@ -153,10 +153,10 @@
             // pbMostrar
             // 
             this.pbMostrar.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrar.Image")));
-            this.pbMostrar.Location = new System.Drawing.Point(633, 149);
+            this.pbMostrar.Location = new System.Drawing.Point(564, 113);
             this.pbMostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbMostrar.Name = "pbMostrar";
-            this.pbMostrar.Size = new System.Drawing.Size(40, 29);
+            this.pbMostrar.Size = new System.Drawing.Size(36, 32);
             this.pbMostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMostrar.TabIndex = 6;
             this.pbMostrar.TabStop = false;
@@ -165,10 +165,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(260, 141);
+            this.pictureBox4.Location = new System.Drawing.Point(231, 113);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 41);
+            this.pictureBox4.Size = new System.Drawing.Size(40, 33);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -176,38 +176,39 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(260, 79);
+            this.pictureBox3.Location = new System.Drawing.Point(231, 63);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
             // LoginJuli
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(700, 300);
+            this.ClientSize = new System.Drawing.Size(622, 240);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.pbOcultar);
-            this.Controls.Add(this.pbMostrar);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pbMostrar);
+            this.Controls.Add(this.pbOcultar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(700, 300);
-            this.MinimumSize = new System.Drawing.Size(700, 300);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(622, 240);
+            this.MinimumSize = new System.Drawing.Size(622, 240);
             this.Name = "LoginJuli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "login";
+            this.Load += new System.EventHandler(this.LoginJuli_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
