@@ -42,9 +42,9 @@ namespace Iglesia
             this.ministeriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaMinisteriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -103,28 +103,28 @@ namespace Iglesia
             // altaUsuariosToolStripMenuItem
             // 
             this.altaUsuariosToolStripMenuItem.Name = "altaUsuariosToolStripMenuItem";
-            this.altaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.altaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.altaUsuariosToolStripMenuItem.Text = "Alta usuarios";
             this.altaUsuariosToolStripMenuItem.Click += new System.EventHandler(this.altaUsuariosToolStripMenuItem_Click);
             // 
             // revisarPostuladosToolStripMenuItem
             // 
             this.revisarPostuladosToolStripMenuItem.Name = "revisarPostuladosToolStripMenuItem";
-            this.revisarPostuladosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.revisarPostuladosToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.revisarPostuladosToolStripMenuItem.Text = "Revisar Postulados";
             this.revisarPostuladosToolStripMenuItem.Click += new System.EventHandler(this.revisarPostuladosToolStripMenuItem_Click);
             // 
             // altaMentoresToolStripMenuItem
             // 
             this.altaMentoresToolStripMenuItem.Name = "altaMentoresToolStripMenuItem";
-            this.altaMentoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.altaMentoresToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.altaMentoresToolStripMenuItem.Text = "Alta mentor";
             this.altaMentoresToolStripMenuItem.Click += new System.EventHandler(this.altaMentoresToolStripMenuItem_Click);
             // 
             // modificarMentoresToolStripMenuItem
             // 
             this.modificarMentoresToolStripMenuItem.Name = "modificarMentoresToolStripMenuItem";
-            this.modificarMentoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modificarMentoresToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.modificarMentoresToolStripMenuItem.Text = "Modificar mentor";
             this.modificarMentoresToolStripMenuItem.Click += new System.EventHandler(this.modificarMentoresToolStripMenuItem_Click);
             // 
@@ -139,7 +139,7 @@ namespace Iglesia
             // altaMinisteriosToolStripMenuItem
             // 
             this.altaMinisteriosToolStripMenuItem.Name = "altaMinisteriosToolStripMenuItem";
-            this.altaMinisteriosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.altaMinisteriosToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.altaMinisteriosToolStripMenuItem.Text = "Alta ministerios";
             this.altaMinisteriosToolStripMenuItem.Click += new System.EventHandler(this.altaMinisteriosToolStripMenuItem_Click);
             // 
@@ -149,17 +149,6 @@ namespace Iglesia
             this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(656, 419);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // listasToolStripMenuItem
             // 
@@ -172,9 +161,20 @@ namespace Iglesia
             // miembrosToolStripMenuItem
             // 
             this.miembrosToolStripMenuItem.Name = "miembrosToolStripMenuItem";
-            this.miembrosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.miembrosToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.miembrosToolStripMenuItem.Text = "Miembros";
             this.miembrosToolStripMenuItem.Click += new System.EventHandler(this.miembrosToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(656, 419);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // paginaprincipal
             // 
@@ -190,6 +190,7 @@ namespace Iglesia
             this.Name = "paginaprincipal";
             this.Text = "MCD Gestion";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.paginaprincipal_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -45,6 +45,12 @@ namespace Iglesia
             Form1.ShowDialog();
         }
 
-       
+        private void PPTesoreria_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

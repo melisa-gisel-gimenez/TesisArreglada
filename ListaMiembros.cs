@@ -98,7 +98,7 @@ namespace arreglarTesis
             bool habilitado = checkBoxHabilitado.Checked;
             bool inhabilitado = checkBoxInhabilitado.Checked;
 
-            if (checkBoxHabilitado.Checked == false && checkBoxInhabilitado.Checked == false && checkBoxTodos.Checked == false)
+            if (checkBoxHabilitado.Checked == false && checkBoxInhabilitado.Checked == false)
             {
                 MessageBox.Show("Debe seleccionar una opción para filtrar. Por favor haga lick en una opción (habilitados, inahibilados o todos.");
             }
