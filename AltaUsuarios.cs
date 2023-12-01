@@ -116,7 +116,7 @@ namespace Iglesia
                 // Si es mayor a 8, recorta el texto para que solo tenga 8 caracteres
                 //txtDNI.Text = txtDNI.Text.Substring(0, 8);
                 // Coloca el cursor al final del texto
-                //txtDNI.SelectionStart = txtDNI.Text.Length;
+                textBoxDNIBuscar.SelectionStart = textBoxDNIBuscar.Text.Length;
                 MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
             }
         }
@@ -164,37 +164,7 @@ namespace Iglesia
                 }
             }
         }
-
-        //guarda la pass comun
-        /*
-        private void buttonAceptar_Click(object sender, EventArgs e)
-        {
-            if (txtNombre.Text == "" || txtApellido.Text == "" || txtNombreUsuario.Text == "" || txtPassword.Text == "" || checkBoxAltaUser.Checked == false)
-            {
-                MessageBox.Show("No debe dejar campos vacíos. Por favor complete todos los campos.");
-            }
-            else
-            {
-
-
-                string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values (" + int.Parse(textBoxDNIBuscar.Text) + ", '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', " + checkBoxAltaUser.Checked + ")";
-                //string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) values ('" + textBoxDNIBuscar.Text + "', '" + txtNombreUsuario.Text + "', '" + txtPassword.Text + "', '" + comboBoxTipoUsuario.Text + "', '" + checkBoxAltaUser.Checked + "')";
-                OleDbCommand comando = new OleDbCommand(consulta2, conexion);
-                conexion.Open();
-                int cantidad = comando.ExecuteNonQuery();
-
-                if (cantidad < 1)
-                {
-                    MessageBox.Show("Ocurrió un problema");
-                }
-                else
-                {
-                    MessageBox.Show("Se registró el usuario con exito");
-                    this.Close();
-                }
-            }
-        }
-        */
+        
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {

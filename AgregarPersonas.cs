@@ -152,7 +152,8 @@ namespace Iglesia
 
         private void Agregar_Personas_Load(object sender, EventArgs e)
         {
-
+            txtNombre.CharacterCasing = CharacterCasing.Upper;
+            txtApellido.CharacterCasing = CharacterCasing.Upper;
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -259,7 +260,7 @@ namespace Iglesia
                 // Si es mayor a 8, recorta el texto para que solo tenga 8 caracteres
                 //txtDNI.Text = txtDNI.Text.Substring(0, 8);
                 // Coloca el cursor al final del texto
-                //txtDNI.SelectionStart = txtDNI.Text.Length;
+                txtDNI.SelectionStart = txtDNI.Text.Length;
                 MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
             }
         }
@@ -292,7 +293,23 @@ namespace Iglesia
 
         private void textemail_MouseLeave(object sender, EventArgs e)
         {
+            //ValidarCorreoElectronico();
+        }
+
+        private void textemail_Leave(object sender, EventArgs e)
+        {
             ValidarCorreoElectronico();
+        }
+
+        private void txtDNI_Leave(object sender, EventArgs e)
+        {
+            if (txtDNI.Text.Length < 8)
+            {
+                // Coloca el cursor al final del texto
+                txtDNI.SelectionStart = txtDNI.Text.Length;
+
+                MessageBox.Show("El DNI debe tener al menos 8 números. Por favor, verifique el DNI ingresado");
+            }
         }
     }
 }

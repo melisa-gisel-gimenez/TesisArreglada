@@ -81,9 +81,9 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox2.Location = new System.Drawing.Point(4, 90);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(653, 305);
             this.groupBox2.TabIndex = 50;
             this.groupBox2.TabStop = false;
@@ -94,7 +94,7 @@
             this.textBoxFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFechaNac.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBoxFechaNac.Location = new System.Drawing.Point(7, 273);
-            this.textBoxFechaNac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFechaNac.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFechaNac.Name = "textBoxFechaNac";
             this.textBoxFechaNac.Size = new System.Drawing.Size(155, 23);
             this.textBoxFechaNac.TabIndex = 37;
@@ -127,7 +127,7 @@
             this.textemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textemail.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textemail.Location = new System.Drawing.Point(284, 133);
-            this.textemail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textemail.Margin = new System.Windows.Forms.Padding(4);
             this.textemail.Name = "textemail";
             this.textemail.Size = new System.Drawing.Size(196, 23);
             this.textemail.TabIndex = 34;
@@ -135,7 +135,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(513, 112);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(89, 43);
             this.button3.TabIndex = 49;
@@ -220,7 +220,7 @@
             this.txtBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBarrio.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtBarrio.Location = new System.Drawing.Point(283, 272);
-            this.txtBarrio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBarrio.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarrio.Name = "txtBarrio";
             this.txtBarrio.Size = new System.Drawing.Size(196, 23);
             this.txtBarrio.TabIndex = 25;
@@ -254,7 +254,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtNombre.Location = new System.Drawing.Point(8, 60);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(196, 23);
             this.txtNombre.TabIndex = 7;
@@ -264,7 +264,7 @@
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtApellido.Location = new System.Drawing.Point(284, 60);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(196, 23);
             this.txtApellido.TabIndex = 8;
@@ -274,29 +274,31 @@
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtTelefono.Location = new System.Drawing.Point(8, 207);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(196, 23);
             this.txtTelefono.TabIndex = 11;
             // 
             // txtDNI
             // 
+            this.txtDNI.Enabled = false;
             this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtDNI.Location = new System.Drawing.Point(8, 132);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(155, 23);
             this.txtDNI.TabIndex = 9;
             this.txtDNI.TextChanged += new System.EventHandler(this.txtDNI_TextChanged);
             this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
+            this.txtDNI.Leave += new System.EventHandler(this.txtDNI_Leave);
             // 
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtDireccion.Location = new System.Drawing.Point(284, 207);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(196, 23);
             this.txtDireccion.TabIndex = 10;
@@ -304,7 +306,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(377, 428);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(84, 39);
             this.button2.TabIndex = 48;
@@ -317,7 +319,7 @@
             this.button1.BackColor = System.Drawing.Color.Yellow;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(113, 425);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 42);
             this.button1.TabIndex = 47;
@@ -342,17 +344,18 @@
             this.textBoxBuscarDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBuscarDNI.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBoxBuscarDNI.Location = new System.Drawing.Point(113, 39);
-            this.textBoxBuscarDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxBuscarDNI.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBuscarDNI.Name = "textBoxBuscarDNI";
             this.textBoxBuscarDNI.Size = new System.Drawing.Size(132, 23);
             this.textBoxBuscarDNI.TabIndex = 35;
             this.textBoxBuscarDNI.TextChanged += new System.EventHandler(this.textBoxBuscarDNI_TextChanged);
             this.textBoxBuscarDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBuscarDNI_KeyPress);
+            this.textBoxBuscarDNI.Leave += new System.EventHandler(this.textBoxBuscarDNI_Leave);
             // 
             // botonBuscar
             // 
             this.botonBuscar.Location = new System.Drawing.Point(267, 36);
-            this.botonBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.botonBuscar.Name = "botonBuscar";
             this.botonBuscar.Size = new System.Drawing.Size(77, 28);
             this.botonBuscar.TabIndex = 51;
@@ -372,7 +375,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Modificar_Personas";
             this.Text = "Modificar Personas";
             this.Load += new System.EventHandler(this.Modificar_Personas_Load);

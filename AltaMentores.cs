@@ -38,7 +38,7 @@ namespace Iglesia
                 // Si es mayor a 8, recorta el texto para que solo tenga 8 caracteres
                 //txtDNI.Text = txtDNI.Text.Substring(0, 8);
                 // Coloca el cursor al final del texto
-                //txtDNI.SelectionStart = txtDNI.Text.Length;
+                textBoxDNIBuscar.SelectionStart = textBoxDNIBuscar.Text.Length;
                 MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
             }
             
@@ -154,6 +154,11 @@ namespace Iglesia
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AltaMentores_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

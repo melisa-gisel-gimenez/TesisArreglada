@@ -252,7 +252,7 @@ namespace Iglesia
                 // Si es mayor a 8, recorta el texto para que solo tenga 8 caracteres
                 //txtDNI.Text = txtDNI.Text.Substring(0, 8);
                 // Coloca el cursor al final del texto
-                //txtDNI.SelectionStart = txtDNI.Text.Length;
+                txtDNIBuscar.SelectionStart = txtDNIBuscar.Text.Length;
                 MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
             }
         }
@@ -473,6 +473,22 @@ namespace Iglesia
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtDNIBuscar_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDNIBuscar_Leave(object sender, EventArgs e)
+        {
+            if (txtDNIBuscar.Text.Length < 8)
+            {
+                // Coloca el cursor al final del texto
+                txtDNIBuscar.SelectionStart = txtDNIBuscar.Text.Length;
+
+                MessageBox.Show("El DNI debe tener al menos 8 números. Por favor, verifique el DNI ingresado");
+            }
         }
     }
 }

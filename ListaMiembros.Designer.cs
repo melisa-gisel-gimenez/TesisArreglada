@@ -41,6 +41,8 @@
             this.checkBoxInhabilitado = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnLimpiarCheck = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMiembros)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -127,7 +129,7 @@
             // 
             // buttonFiltrar
             // 
-            this.buttonFiltrar.Location = new System.Drawing.Point(59, 83);
+            this.buttonFiltrar.Location = new System.Drawing.Point(27, 83);
             this.buttonFiltrar.Name = "buttonFiltrar";
             this.buttonFiltrar.Size = new System.Drawing.Size(97, 36);
             this.buttonFiltrar.TabIndex = 10;
@@ -157,18 +159,20 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLimpiar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBoxDNI);
             this.groupBox1.Controls.Add(this.botonBuscar);
             this.groupBox1.Location = new System.Drawing.Point(12, 85);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(333, 100);
+            this.groupBox1.Size = new System.Drawing.Size(333, 122);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar por DNI";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnLimpiarCheck);
             this.groupBox2.Controls.Add(this.checkBoxHabilitado);
             this.groupBox2.Controls.Add(this.checkBoxInhabilitado);
             this.groupBox2.Controls.Add(this.buttonFiltrar);
@@ -178,6 +182,26 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtrar por:";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(97, 77);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 4;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnLimpiarCheck
+            // 
+            this.btnLimpiarCheck.Location = new System.Drawing.Point(162, 90);
+            this.btnLimpiarCheck.Name = "btnLimpiarCheck";
+            this.btnLimpiarCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiarCheck.TabIndex = 5;
+            this.btnLimpiarCheck.Text = "Limpiar";
+            this.btnLimpiarCheck.UseVisualStyleBackColor = true;
+            this.btnLimpiarCheck.Click += new System.EventHandler(this.btnLimpiarCheck_Click);
             // 
             // ListaMiembros
             // 
@@ -218,5 +242,7 @@
         private System.Windows.Forms.CheckBox checkBoxInhabilitado;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnLimpiarCheck;
     }
 }
