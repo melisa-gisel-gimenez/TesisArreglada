@@ -137,6 +137,8 @@ namespace Iglesia
             this.Name = "PPTesoreria";
             this.Text = "PPTesoreria";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PPTesoreria_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PPTesoreria_FormClosed);
+            this.Load += new System.EventHandler(this.PPTesoreria_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -37,10 +37,17 @@ namespace Iglesia
 
         private void PPmentor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Application.OpenForms.Count == 0)
-            {
-                Application.Exit();
-            }
+            Application.Exit();
+        }
+
+        private void PPmentor_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += PPmentor_FormClosed;
+        }
+
+        private void PPmentor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

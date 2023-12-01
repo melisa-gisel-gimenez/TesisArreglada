@@ -47,10 +47,19 @@ namespace Iglesia
 
         private void PPTesoreria_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Application.OpenForms.Count == 0)
-            {
+            
                 Application.Exit();
-            }
+            
+        }
+
+        private void PPTesoreria_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += PPTesoreria_FormClosed;
+        }
+
+        private void PPTesoreria_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
