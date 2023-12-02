@@ -11,6 +11,9 @@ using iText.Layout.Properties;
 using ClosedXML.Excel;
 using System.Diagnostics;
 using System.Collections.Generic;
+using iText.Kernel.Colors;
+
+
 
 namespace arreglarTesis
 {
@@ -26,7 +29,7 @@ namespace arreglarTesis
         {
             //string consulta = "SELECT * FROM Ingresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
             string consulta = "SELECT I.Id_ingreso as 'Nro Ingreso', I.fecha as Fecha, I.id_tipoIngreso as 'Codigo', T.tipo_ingreso as 'Tipo Ingreso', I.detalle AS Detalle, I.monto AS Monto " +
-                "FROM Ingresos I "+
+                "FROM Ingresos I " +
                 "INNER JOIN TipoIngreso T ON I.id_tipoIngreso = T.Id_tipoIngreso " +
                 "WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
 
@@ -99,13 +102,173 @@ namespace arreglarTesis
             CargarDatosEgresos(fechaDesde, fechaHasta);
         }
 
-        
+
 
         private void btnDescargar_Click(object sender, EventArgs e)
         {
             DescargarInformePDF();
         }
 
+        private void DescargarInformePDF()
+        {
+            string fechaDescarga = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            // Configurar SaveFileDialog
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Archivos PDF|*.pdf",
+                Title = "Guardar Informe de Tesorería",
+                FileName = "InformeTesoreria_" + fechaDescarga.Replace(":", "").Replace(" ", "_") + ".pdf"
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Obtener la ruta y el nombre de archivo seleccionados
+                string filePath = saveFileDialog.FileName;
+
+                using (PdfWriter writer = new PdfWriter(filePath))
+                {
+                    using (PdfDocument pdf = new PdfDocument(writer))
+                    {
+                        Document document = new Document(pdf);
+
+                        // Agregar título e información de fecha
+                        document.Add(new Paragraph("Informe de Tesorería"));
+                        document.Add(new Paragraph("Fecha de Descarga: " + fechaDescarga));
+
+                        // Agregar tabla para Ingresos con estilo personalizado
+                        document.Add(new Paragraph("Ingresos"));
+                        document.Add(DGVToTable(DGVIngresos, true));
+
+                        // Agregar tabla para Egresos sin estilo adicional
+                        document.Add(new Paragraph("Egresos"));
+                        document.Add(DGVToTable(DGVEgresos, false));
+
+
+
+                    }
+                }
+
+                MessageBox.Show("Informe generado y guardado como '" + Path.GetFileName(filePath) + "'");
+
+                // Abrir automáticamente el archivo PDF después de guardarlo
+                try
+                {
+                    Process.Start(filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al abrir el archivo: " + ex.Message);
+                }
+            }
+        }
+
+        private Table DGVToTable(DataGridView dgv, bool isIncomeTable)
+        {
+            Table table = new Table(dgv.ColumnCount);
+
+            // Configurar el color de fondo y el estilo de fuente para los encabezados de columna
+            iText.Kernel.Colors.Color backgroundColor;
+            if (isIncomeTable)
+            {
+                // Para la tabla de ingresos
+                backgroundColor = new DeviceRgb(0, 128, 0); // Verde
+            }
+            else
+            {
+                // Para la tabla de egresos
+                backgroundColor = new DeviceRgb(255, 0, 0); // Rojo
+            }
+
+            iText.Kernel.Colors.Color fontColor = iText.Kernel.Colors.ColorConstants.WHITE;
+
+            // Configurar el estilo de fuente para los encabezados de columna
+            Style headerCellStyle = new Style()
+                .SetBackgroundColor(backgroundColor)
+                .SetFontColor(fontColor)
+                .SetBold();
+
+            // Agregar encabezados de columna
+            foreach (DataGridViewColumn column in dgv.Columns)
+            {
+                Cell headerCell = new Cell().Add(new Paragraph(column.HeaderText));
+
+                // Aplicar el estilo de encabezado
+                headerCell.SetBackgroundColor((DeviceRgb)backgroundColor);
+                headerCell.SetFontColor((DeviceRgb)fontColor);
+                headerCell.SetBold();
+
+                table.AddHeaderCell(headerCell);
+            }
+
+            // Agregar datos
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    table.AddCell(new Cell().Add(new Paragraph(cell.Value.ToString())));
+                }
+            }
+
+            return table;
+        }
+
+        /*
+        private Table DGVToTable(DataGridView dgv, bool isIncomeTable)
+        {
+            Table table = new Table(dgv.ColumnCount);
+
+            // Configurar el color de fondo y el estilo de fuente para los encabezados de columna de ingresos
+            iText.Kernel.Colors.Color backgroundColor = new DeviceRgb(0, 128, 0);
+            iText.Kernel.Colors.Color fontColor = iText.Kernel.Colors.ColorConstants.WHITE;
+
+            // Configurar el estilo de fuente para los encabezados de columna de ingresos
+            Style headerCellStyle = new Style()
+                .SetBackgroundColor(backgroundColor)
+                .SetFontColor(fontColor)
+                .SetBold();
+
+            // Agregar encabezados de columna
+            foreach (DataGridViewColumn column in dgv.Columns)
+            {
+                Cell headerCell = new Cell().Add(new Paragraph(column.HeaderText));
+
+                // Aplicar el estilo de encabezado solo para la tabla de ingresos
+                if (isIncomeTable)
+                {
+                    headerCell.SetBackgroundColor((DeviceRgb)backgroundColor);
+                    headerCell.SetFontColor((DeviceRgb)fontColor);
+                    headerCell.SetBold();
+                }
+
+                table.AddHeaderCell(headerCell);
+            }
+
+            // Agregar datos
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    table.AddCell(new Cell().Add(new Paragraph(cell.Value.ToString())));
+                }
+            }
+
+            return table;
+        }
+        */
+
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+
+    
+}
+
+
+        /* codigo viejo
         private void DescargarInformePDF()
         {
             string fechaDescarga = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -158,34 +321,37 @@ namespace arreglarTesis
                 }
             }
         }
+        */
 
 
-        private Table DGVToTable(DataGridView dgv)
+/* codigo viejo
+private Table DGVToTable(DataGridView dgv)
+{
+    Table table = new Table(dgv.ColumnCount);
+
+    // Agregar encabezados de columna
+    foreach (DataGridViewColumn column in dgv.Columns)
+    {
+        table.AddHeaderCell(new Cell().Add(new Paragraph(column.HeaderText)));
+    }
+
+    // Agregar datos
+    foreach (DataGridViewRow row in dgv.Rows)
+    {
+        foreach (DataGridViewCell cell in row.Cells)
         {
-            Table table = new Table(dgv.ColumnCount);
-
-            // Agregar encabezados de columna
-            foreach (DataGridViewColumn column in dgv.Columns)
-            {
-                table.AddHeaderCell(new Cell().Add(new Paragraph(column.HeaderText)));
-            }
-
-            // Agregar datos
-            foreach (DataGridViewRow row in dgv.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    table.AddCell(new Cell().Add(new Paragraph(cell.Value.ToString())));
-                }
-            }
-
-            return table;
-        }
-
-        
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            table.AddCell(new Cell().Add(new Paragraph(cell.Value.ToString())));
         }
     }
+
+    return table;
 }
+
+
+private void btnSalir_Click(object sender, EventArgs e)
+{
+    this.Close();
+}
+}
+}
+*/
