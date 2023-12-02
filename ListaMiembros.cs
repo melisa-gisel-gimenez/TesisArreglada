@@ -47,7 +47,13 @@ namespace arreglarTesis
 
                 if (!string.IsNullOrEmpty(dniABuscar))
                 {
-                    string consulta = "SELECT * FROM miembros WHERE DNI = @DNI";
+                    //string consulta = "SELECT * FROM miembros WHERE DNI = @DNI";
+                    string consulta = "SELECT M.id_miembro as 'Nro Miembro', M.fecha_alta as 'Fecha de alta', M.nombre as Nombre, M.apellido AS Apellido, M.DNI, M.direccion AS Direccion, M.barrio AS Barrio, M.telefono AS Telefono, M.email AS Email, M.fecha_nac AS 'Fecha de nacimiento', M.bautizado AS 'Está bautizado?', M.id_mentor AS 'Codigo mentor', Me.nombre AS 'NombreMentor', Me.apellido AS 'ApellidoMentor', M.id_etapaespiritual AS 'Codigo Etapa', E.etapaespiritual, M.id_ministerio AS 'Codigo Ministerio', Mi.nombreMinisterio, M.id_celula AS 'Nro Celula', M.inhabilitado AS 'Esta inhabilitado?', M.id_rolg AS 'Rol general', M.id_roli AS 'Rol interno', M.id_rol2 AS 'Rol secundario' " +
+                                      "FROM ((Miembros M " +
+                                      "INNER JOIN Mentores Me ON M.id_mentor = Me.id_mentor) " +
+                                      "INNER JOIN EtapaEspiritual E ON M.id_etapaespiritual = E.id_etapaespiritual) " +
+                                      "LEFT JOIN Ministerios Mi ON M.id_ministerio = Mi.Id_ministerio " +
+                                      "WHERE DNI = @DNI";
 
                     using (OleDbConnection conexion = new OleDbConnection(cadenaConexion))
                     {
@@ -106,7 +112,12 @@ namespace arreglarTesis
             else
             {
 
-                string consulta = "SELECT * FROM miembros";
+                //string consulta = "SELECT * FROM miembros";
+                string consulta = "SELECT M.id_miembro as 'Nro Miembro', M.fecha_alta as 'Fecha de alta', M.nombre as Nombre, M.apellido AS Apellido, M.DNI, M.direccion AS Direccion, M.barrio AS Barrio, M.telefono AS Telefono, M.email AS Email, M.fecha_nac AS 'Fecha de nacimiento', M.bautizado AS 'Está bautizado?', M.id_mentor AS 'Codigo mentor', Me.nombre AS 'NombreMentor', Me.apellido AS 'ApellidoMentor', M.id_etapaespiritual AS 'Codigo Etapa', E.etapaespiritual, M.id_ministerio AS 'Codigo Ministerio', Mi.nombreMinisterio, M.id_celula AS 'Nro Celula', M.inhabilitado AS 'Esta inhabilitado?', M.id_rolg AS 'Rol general', M.id_roli AS 'Rol interno', M.id_rol2 AS 'Rol secundario' " +
+                                      "FROM ((Miembros M " +
+                                      "INNER JOIN Mentores Me ON M.id_mentor = Me.id_mentor) " +
+                                      "INNER JOIN EtapaEspiritual E ON M.id_etapaespiritual = E.id_etapaespiritual) " +
+                                      "LEFT JOIN Ministerios Mi ON M.id_ministerio = Mi.Id_ministerio ";
 
                 // Aplicar el filtro según las opciones seleccionadas
                 if (habilitado && !inhabilitado)
@@ -150,7 +161,6 @@ namespace arreglarTesis
             }
         }
 
-
         private void buttonDescargar_Click(object sender, EventArgs e)
         {
             if (DGVMiembros.DataSource == null || DGVMiembros.Rows.Count == 0)
@@ -172,6 +182,103 @@ namespace arreglarTesis
                     // Agregar una hoja al libro
                     var worksheet = workbook.Worksheets.Add("Miembros");
 
+                    // Establecer el estilo para el encabezado de las columnas
+                    var headerStyle = worksheet.Style;
+                    headerStyle.Font.FontColor = XLColor.White;
+                    headerStyle.Fill.BackgroundColor = XLColor.Blue;
+                    headerStyle.Font.Bold = true;
+
+                    // Establecer el estilo para las filas de datos
+                    var dataStyle = workbook.Style;
+                    dataStyle.Font.FontColor = XLColor.Black;
+                    dataStyle.Fill.BackgroundColor = XLColor.FromHtml("#E0E0E0");
+
+                    // Agregar título y fecha
+                    worksheet.Cell("A1").Value = "Reporte de Miembros";
+                    worksheet.Cell("A2").Value = "Fecha de Descarga: " + DateTime.Now.ToString();
+
+                    // Configurar encabezados de columna
+                    for (int col = 1; col <= DGVMiembros.Columns.Count; col++)
+                    {
+                        var cell = worksheet.Cell(4, col);
+                        cell.Value = DGVMiembros.Columns[col - 1].HeaderText;
+                        cell.Style = headerStyle; // Aplicar estilo al encabezado
+                    }
+
+                    // Agregar datos del DataGridView a la tabla
+                    for (int row = 0; row < DGVMiembros.Rows.Count; row++)
+                    {
+                        for (int col = 0; col < DGVMiembros.Columns.Count; col++)
+                        {
+                            var cell = worksheet.Cell(row + 5, col + 1);
+                            cell.Value = DGVMiembros.Rows[row].Cells[col].Value?.ToString();
+                            cell.Style = dataStyle; // Aplicar estilo a las filas de datos
+                        }
+                    }
+
+                    // Establecer bordes para las filas y columnas
+                    worksheet.RangeUsed().Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+                    worksheet.RangeUsed().Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+
+                    // Ajustar el ancho de las columnas al contenido
+                    worksheet.Columns().AdjustToContents();
+
+                    // Guardar el libro de Excel
+                    workbook.SaveAs(saveFileDialog.FileName);
+                }
+
+                MessageBox.Show("Archivo Excel generado con éxito.");
+
+                // Obtener la ruta completa del archivo guardado
+                string filePath = Path.GetFullPath(saveFileDialog.FileName);
+
+                // Abrir automáticamente el archivo excel después de guardarlo
+                try
+                {
+                    Process.Start(filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al abrir el archivo: " + ex.Message);
+                }
+            }
+        }
+
+        /* boton viejo
+        private void buttonDescargar_Click(object sender, EventArgs e)
+        {
+            if (DGVMiembros.DataSource == null || DGVMiembros.Rows.Count == 0)
+            {
+                MessageBox.Show("Por favor, busca un miembro por DNI o selecciona algún filtro antes de descargar. La tabla está vacía.");
+                return;
+            }
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivos Excel|*.xlsx";
+            saveFileDialog.Title = "Guardar como Excel";
+            saveFileDialog.ShowDialog();
+
+            if (saveFileDialog.FileName != "")
+            {
+                // Crear un libro de Excel
+                using (var workbook = new XLWorkbook())
+                {
+                    // Agregar una hoja al libro
+                    var worksheet = workbook.Worksheets.Add("Miembros");
+
+                    // N Establecer el estilo para el encabezado de las columnas
+                    var headerStyle = worksheet.Style;
+                    headerStyle.Font.FontColor = XLColor.White;
+                    headerStyle.Fill.BackgroundColor = XLColor.Blue;
+                    headerStyle.Font.Bold = true;
+                   
+
+                    // N Establecer el estilo para las filas de datos
+                    var dataStyle = workbook.Style;
+                    dataStyle.Font.FontColor = XLColor.Black;
+                    dataStyle.Fill.BackgroundColor = XLColor.FromHtml("#E0E0E0");
+                    
+
                     // Agregar título y fecha
                     worksheet.Cell("A1").Value = "Reporte de Miembros";
                     worksheet.Cell("A2").Value = "Fecha de Descarga: " + DateTime.Now.ToString();
@@ -180,9 +287,12 @@ namespace arreglarTesis
                     DataTable dataTable = dataSet.Tables["miembros"];
 
                     // Configurar encabezados de columna
-                    for (int col = 1; col <= dataTable.Columns.Count; col++)
+                    for (int col = 1; col <= DGVMiembros.Columns.Count; col++)
                     {
-                        worksheet.Cell(4, col).Value = dataTable.Columns[col - 1].ColumnName;
+                        var cell = worksheet.Cell(4, col);
+                        cell.Value = DGVMiembros.Columns[col - 1].HeaderText;
+                        cell.Style = headerStyle; // Aplicar estilo al encabezado
+                                                
                     }
 
                     // Agregar datos del DataGridView a la tabla
@@ -190,9 +300,20 @@ namespace arreglarTesis
                     {
                         for (int col = 1; col <= dataTable.Columns.Count; col++)
                         {
-                            worksheet.Cell(row + 4, col).Value = dataTable.Rows[row - 1][col - 1].ToString();
+                            var cell = worksheet.Cell(row + 4, col);
+                            cell.Value = dataTable.Rows[row - 1][col - 1].ToString();
+                            cell.Style = dataStyle; // Aplicar estilo a las filas de datos
                         }
                     }
+
+                    // Establecer bordes para las filas y columnas
+                    worksheet.RangeUsed().Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
+                    worksheet.RangeUsed().Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+
+
+                    // Ajustar el ancho de las columnas al contenido
+                    worksheet.Columns().AdjustToContents();
+                                       
 
                     // Guardar el libro de Excel
                     workbook.SaveAs(saveFileDialog.FileName);
@@ -217,6 +338,7 @@ namespace arreglarTesis
 
             
         }
+        */
 
         private void button3_Click(object sender, EventArgs e)
         {
