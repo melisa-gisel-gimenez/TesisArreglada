@@ -24,6 +24,7 @@ namespace arreglarTesis
         public InformeTesoreria()
         {
             InitializeComponent();
+            
         }
         private void CargarDatosIngresos(DateTime fechaDesde, DateTime fechaHasta)
         {
@@ -90,19 +91,22 @@ namespace arreglarTesis
         {
             DateTime fechaDesde = dateTimePickerDesde.Value;
             DateTime fechaHasta = dateTimePickerHasta.Value;
+                   
 
-            // Asegúrate de que la fecha hasta sea mayor o igual a la fecha desde
-            if (fechaHasta < fechaDesde)
-            {
-                MessageBox.Show("La fecha hasta debe ser mayor o igual a la fecha desde.");
-                return;
-            }
+                // Asegurarse de que la fecha hasta sea mayor o igual a la fecha desde
+                if (fechaHasta <= fechaDesde)
+                {
+                    MessageBox.Show("La fecha hasta debe ser mayor a la fecha desde.");
+                    return;
+                }
+            
 
+            // Filtrar los datos con las fechas seleccionadas
             CargarDatosIngresos(fechaDesde, fechaHasta);
             CargarDatosEgresos(fechaDesde, fechaHasta);
+
+            btnDescargar.Enabled = true;
         }
-
-
 
         private void btnDescargar_Click(object sender, EventArgs e)
         {
@@ -261,6 +265,17 @@ namespace arreglarTesis
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dateTimePickerDesde_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePickerHasta.Enabled = true;
+
+        }
+
+        private void dateTimePickerHasta_ValueChanged(object sender, EventArgs e)
+        {
+            btnFiltrar.Visible = true;
         }
     }
 
