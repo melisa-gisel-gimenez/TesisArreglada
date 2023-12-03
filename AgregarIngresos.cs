@@ -168,6 +168,26 @@ namespace Iglesia
                 e.Handled = true;
             }
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMONTO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -33,18 +33,26 @@ namespace Iglesia
 
         
 
-        private void agregarIngresosToolStripMenuItem_Click(object sender, EventArgs e)
+        //private void agregarIngresosToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+           
+        //}
+
+        //private void agregarEgresosToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+          
+        //}
+
+        private void ingresosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarIngresos Form1 = new AgregarIngresos();
             Form1.ShowDialog();
         }
 
-        private void agregarEgresosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void egresosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AgregarEgresos Form1 = new AgregarEgresos();
             Form1.ShowDialog();
         }
-
-       
     }
 }

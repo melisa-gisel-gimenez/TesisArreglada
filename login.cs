@@ -17,8 +17,8 @@ namespace Iglesia
     public partial class LoginJuli : Form
     {
         private OleDbConnection conexion;
-        //private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\juli_\OneDrive\Escritorio\pepe\BaseIglesiaproduccion.mdb";
-        private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
+        private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\juli_\OneDrive\Escritorio\pepe\BaseIglesiaproduccion.mdb";
+        //private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
         private string rol = "";
 
         public LoginJuli()
@@ -52,16 +52,16 @@ namespace Iglesia
 
         }
 
-        private void btnIniciarSesion_MouseEnter(object sender, EventArgs e)
-        {
-            btnIniciarSesion.ForeColor = Color.White;
-        }
+        //private void btnIniciarSesion_MouseEnter(object sender, EventArgs e)
+        //{
+        //    btnIniciarSesion.ForeColor = Color.White;
+        //}
 
-        private void btnIniciarSesion_MouseLeave(object sender, EventArgs e)
-        {
-            btnIniciarSesion.ForeColor = Color.Black;
+        //private void btnIniciarSesion_MouseLeave(object sender, EventArgs e)
+        //{
+        //    btnIniciarSesion.ForeColor = Color.Black;
 
-        }
+        //}
 
         private void pbMostrar_Click(object sender, EventArgs e)
         {

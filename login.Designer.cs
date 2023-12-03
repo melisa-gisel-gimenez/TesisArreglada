@@ -32,20 +32,20 @@
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.buttonCerrar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbOcultar = new System.Windows.Forms.PictureBox();
             this.pbMostrar = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.buttonCerrar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIniciarSesion
@@ -82,25 +82,10 @@
             this.txtPassword.Location = new System.Drawing.Point(316, 149);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(311, 26);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // buttonCerrar
-            // 
-            this.buttonCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.buttonCerrar.FlatAppearance.BorderSize = 0;
-            this.buttonCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
-            this.buttonCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.buttonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCerrar.Location = new System.Drawing.Point(638, 0);
-            this.buttonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonCerrar.Name = "buttonCerrar";
-            this.buttonCerrar.Size = new System.Drawing.Size(60, 48);
-            this.buttonCerrar.TabIndex = 10;
-            this.buttonCerrar.Text = "X";
-            this.buttonCerrar.UseVisualStyleBackColor = false;
-            this.buttonCerrar.Click += new System.EventHandler(this.buttonCerrar_Click);
             // 
             // linkLabel1
             // 
@@ -112,22 +97,11 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Recuperar contraseña";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SandyBrown;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Controls.Add(this.buttonCerrar);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(701, 48);
-            this.panel1.TabIndex = 12;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.SandyBrown;
             this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Image = global::arreglarTesis.Properties.Resources.logo;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = null;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -184,12 +158,38 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
+            // buttonCerrar
+            // 
+            this.buttonCerrar.BackColor = System.Drawing.Color.Chocolate;
+            this.buttonCerrar.FlatAppearance.BorderSize = 0;
+            this.buttonCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
+            this.buttonCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.buttonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCerrar.Location = new System.Drawing.Point(639, 0);
+            this.buttonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCerrar.Name = "buttonCerrar";
+            this.buttonCerrar.Size = new System.Drawing.Size(60, 48);
+            this.buttonCerrar.TabIndex = 10;
+            this.buttonCerrar.Text = "X";
+            this.buttonCerrar.UseVisualStyleBackColor = false;
+            this.buttonCerrar.Click += new System.EventHandler(this.buttonCerrar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(703, 50);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginJuli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(700, 300);
+            this.Controls.Add(this.buttonCerrar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtPassword);
@@ -199,7 +199,7 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnIniciarSesion);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -208,12 +208,12 @@
             this.Name = "LoginJuli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "login";
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,9 +228,9 @@
         private System.Windows.Forms.PictureBox pbOcultar;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button buttonCerrar;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonCerrar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

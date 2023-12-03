@@ -18,17 +18,17 @@ namespace Iglesia
             InitializeComponent();
         }
 
-        private void agregarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarPersonas Form1 = new AgregarPersonas();
-            Form1.ShowDialog();
-        }
+        //private void agregarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    AgregarPersonas Form1 = new AgregarPersonas();
+        //    Form1.ShowDialog();
+        //}
 
-        private void modificarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Modificar_Personas Form1 = new Modificar_Personas();
-            Form1.ShowDialog();
-        }
+        //private void modificarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    Modificar_Personas Form1 = new Modificar_Personas();
+        //    Form1.ShowDialog();
+        //}
 
         private void inhabilitarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
         {

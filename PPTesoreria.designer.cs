@@ -33,9 +33,7 @@ namespace Iglesia
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tesoreriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarIngresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.egresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarInformesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,14 +44,15 @@ namespace Iglesia
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tesoreriaToolStripMenuItem,
             this.acercaDeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(660, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(738, 33);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,50 +63,34 @@ namespace Iglesia
             this.egresosToolStripMenuItem,
             this.generarInformesToolStripMenuItem});
             this.tesoreriaToolStripMenuItem.Name = "tesoreriaToolStripMenuItem";
-            this.tesoreriaToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.tesoreriaToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
             this.tesoreriaToolStripMenuItem.Text = "Tesoreria";
             // 
             // ingresosToolStripMenuItem
             // 
-            this.ingresosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarIngresosToolStripMenuItem});
             this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
-            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.ingresosToolStripMenuItem.Text = "Ingresos";
-            // 
-            // agregarIngresosToolStripMenuItem
-            // 
-            this.agregarIngresosToolStripMenuItem.Name = "agregarIngresosToolStripMenuItem";
-            this.agregarIngresosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.agregarIngresosToolStripMenuItem.Text = "Agregar Ingresos";
-            this.agregarIngresosToolStripMenuItem.Click += new System.EventHandler(this.agregarIngresosToolStripMenuItem_Click);
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.ingresosToolStripMenuItem.Text = "Agregar Ingresos";
+            this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosToolStripMenuItem_Click);
             // 
             // egresosToolStripMenuItem
             // 
-            this.egresosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarEgresosToolStripMenuItem});
             this.egresosToolStripMenuItem.Name = "egresosToolStripMenuItem";
-            this.egresosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.egresosToolStripMenuItem.Text = "Egresos";
-            // 
-            // agregarEgresosToolStripMenuItem
-            // 
-            this.agregarEgresosToolStripMenuItem.Name = "agregarEgresosToolStripMenuItem";
-            this.agregarEgresosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.agregarEgresosToolStripMenuItem.Text = "Agregar Egresos";
-            this.agregarEgresosToolStripMenuItem.Click += new System.EventHandler(this.agregarEgresosToolStripMenuItem_Click);
+            this.egresosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.egresosToolStripMenuItem.Text = "Agregar Egresos";
+            this.egresosToolStripMenuItem.Click += new System.EventHandler(this.egresosToolStripMenuItem_Click);
             // 
             // generarInformesToolStripMenuItem
             // 
             this.generarInformesToolStripMenuItem.Name = "generarInformesToolStripMenuItem";
-            this.generarInformesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.generarInformesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.generarInformesToolStripMenuItem.Text = "Generar Informes";
             this.generarInformesToolStripMenuItem.Click += new System.EventHandler(this.generarInformesToolStripMenuItem_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(105, 29);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click_1);
             // 
@@ -117,23 +100,23 @@ namespace Iglesia
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(656, 419);
+            this.pictureBox1.Size = new System.Drawing.Size(738, 524);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // PPTesoreria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 426);
+            this.ClientSize = new System.Drawing.Size(738, 521);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(678, 473);
-            this.MinimumSize = new System.Drawing.Size(678, 473);
+            this.MaximumSize = new System.Drawing.Size(760, 577);
+            this.MinimumSize = new System.Drawing.Size(760, 577);
             this.Name = "PPTesoreria";
             this.Text = "PPTesoreria";
             this.menuStrip1.ResumeLayout(false);
@@ -153,7 +136,5 @@ namespace Iglesia
         private System.Windows.Forms.ToolStripMenuItem generarInformesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem agregarIngresosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarEgresosToolStripMenuItem;
     }
 }
