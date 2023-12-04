@@ -9,6 +9,11 @@ using System.IO;
 using iText.Layout.Borders;
 using iText.Layout.Properties;
 using ClosedXML.Excel;
+using System.Diagnostics;
+using System.Collections.Generic;
+using iText.Kernel.Colors;
+
+
 
 namespace arreglarTesis
 {
@@ -19,10 +24,15 @@ namespace arreglarTesis
         public InformeTesoreria()
         {
             InitializeComponent();
+
         }
         private void CargarDatosIngresos(DateTime fechaDesde, DateTime fechaHasta)
         {
-            string consulta = "SELECT * FROM Ingresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
+            //string consulta = "SELECT * FROM Ingresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
+            string consulta = "SELECT I.Id_ingreso as 'Nro Ingreso', I.fecha as Fecha, I.id_tipoIngreso as 'Codigo', T.tipo_ingreso as 'Tipo Ingreso', I.detalle AS Detalle, I.monto AS Monto " +
+                "FROM Ingresos I " +
+                "INNER JOIN TipoIngreso T ON I.id_tipoIngreso = T.Id_tipoIngreso " +
+                "WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
 
             using (OleDbConnection conexion = new OleDbConnection(cadenaConexion))
             {
@@ -48,7 +58,12 @@ namespace arreglarTesis
 
         private void CargarDatosEgresos(DateTime fechaDesde, DateTime fechaHasta)
         {
-            string consulta = "SELECT * FROM Egresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
+            //string consulta = "SELECT * FROM Egresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
+            //string consulta = "SELECT Id_egreso as 'Nro Egreso', fecha as Fecha, Id_tipoEgreso as 'Codigo tipo Egreso',  detalle AS Detalle, monto AS Monto FROM Egresos WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
+            string consulta = "SELECT E.Id_egreso as 'Nro Egreso', E.fecha as Fecha, E.Id_tipoEgreso as 'Codigo', T.tipo_Egreso as 'Tipo Egreso', E.detalle AS Detalle, E.monto AS Monto " +
+                "FROM Egresos E " +
+                "INNER JOIN TipoEgreso T ON E.Id_tipoEgreso = T.Id_tipoEgreso " +
+                "WHERE Fecha BETWEEN @FechaDesde AND @FechaHasta";
 
             using (OleDbConnection conexion = new OleDbConnection(cadenaConexion))
             {
@@ -77,18 +92,21 @@ namespace arreglarTesis
             DateTime fechaDesde = dateTimePickerDesde.Value;
             DateTime fechaHasta = dateTimePickerHasta.Value;
 
-            // Asegúrate de que la fecha hasta sea mayor o igual a la fecha desde
-            if (fechaHasta < fechaDesde)
+
+            // Asegurarse de que la fecha hasta sea mayor o igual a la fecha desde
+            if (fechaHasta <= fechaDesde)
             {
-                MessageBox.Show("La fecha hasta debe ser mayor o igual a la fecha desde.");
+                MessageBox.Show("La fecha hasta debe ser mayor a la fecha desde.");
                 return;
             }
 
+
+            // Filtrar los datos con las fechas seleccionadas
             CargarDatosIngresos(fechaDesde, fechaHasta);
             CargarDatosEgresos(fechaDesde, fechaHasta);
-        }
 
-        
+            btnDescargar.Enabled = true;
+        }
 
         private void btnDescargar_Click(object sender, EventArgs e)
         {
@@ -122,58 +140,69 @@ namespace arreglarTesis
                         document.Add(new Paragraph("Informe de Tesorería"));
                         document.Add(new Paragraph("Fecha de Descarga: " + fechaDescarga));
 
-                        // Agregar tabla para Ingresos
+                        // Agregar tabla para Ingresos con estilo personalizado
                         document.Add(new Paragraph("Ingresos"));
-                        document.Add(DGVToTable(DGVIngresos));
+                        document.Add(DGVToTable(DGVIngresos, true));
 
-                        // Agregar tabla para Egresos
+                        // Agregar tabla para Egresos sin estilo adicional
                         document.Add(new Paragraph("Egresos"));
-                        document.Add(DGVToTable(DGVEgresos));
+                        document.Add(DGVToTable(DGVEgresos, false));
+
+
+
                     }
                 }
 
                 MessageBox.Show("Informe generado y guardado como '" + Path.GetFileName(filePath) + "'");
-            }
-        }
 
-
-        /*
-        private void DescargarInformePDF()
-        {
-            string fechaDescarga = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-
-            using (PdfWriter writer = new PdfWriter("InformeTesoreria.pdf"))
-            {
-                using (PdfDocument pdf = new PdfDocument(writer))
+                // Abrir automáticamente el archivo PDF después de guardarlo
+                try
                 {
-                    Document document = new Document(pdf);
-
-                    // Agregar título e información de fecha
-                    document.Add(new Paragraph("Informe de Tesorería"));
-                    document.Add(new Paragraph("Fecha de Descarga: " + fechaDescarga));
-
-                    // Agregar tabla para Ingresos
-                    document.Add(new Paragraph("Ingresos"));
-                    document.Add(DGVToTable(DGVIngresos));
-
-                    // Agregar tabla para Egresos
-                    document.Add(new Paragraph("Egresos"));
-                    document.Add(DGVToTable(DGVEgresos));
+                    Process.Start(filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al abrir el archivo: " + ex.Message);
                 }
             }
-
-            MessageBox.Show("Informe generado y guardado como 'InformeTesoreria.pdf'");
         }
-        */
 
-        private Table DGVToTable(DataGridView dgv)
+        private Table DGVToTable(DataGridView dgv, bool isIncomeTable)
         {
             Table table = new Table(dgv.ColumnCount);
+
+            // Configurar el color de fondo y el estilo de fuente para los encabezados de columna
+            iText.Kernel.Colors.Color backgroundColor;
+            if (isIncomeTable)
+            {
+                // Para la tabla de ingresos
+                backgroundColor = new DeviceRgb(0, 128, 0); // Verde
+            }
+            else
+            {
+                // Para la tabla de egresos
+                backgroundColor = new DeviceRgb(255, 0, 0); // Rojo
+            }
+
+            iText.Kernel.Colors.Color fontColor = iText.Kernel.Colors.ColorConstants.WHITE;
+
+            // Configurar el estilo de fuente para los encabezados de columna
+            Style headerCellStyle = new Style()
+                .SetBackgroundColor(backgroundColor)
+                .SetFontColor(fontColor)
+                .SetBold();
 
             // Agregar encabezados de columna
             foreach (DataGridViewColumn column in dgv.Columns)
             {
-                table.AddHeaderCell(new Cell().Add(new Paragraph(column.HeaderText)));
+                Cell headerCell = new Cell().Add(new Paragraph(column.HeaderText));
+
+                // Aplicar el estilo de encabezado
+                headerCell.SetBackgroundColor((DeviceRgb)backgroundColor);
+                headerCell.SetFontColor((DeviceRgb)fontColor);
+                headerCell.SetBold();
+
+                table.AddHeaderCell(headerCell);
             }
 
             // Agregar datos
