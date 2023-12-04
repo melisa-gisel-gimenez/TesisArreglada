@@ -111,6 +111,7 @@
             this.label9.Size = new System.Drawing.Size(51, 16);
             this.label9.TabIndex = 58;
             this.label9.Text = "Mentor:";
+            this.label9.Visible = false;
             // 
             // textFechaAlta
             // 

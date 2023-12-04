@@ -193,6 +193,13 @@ namespace Iglesia
         {
             txtPassword.PasswordChar = '*';
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OlvideContraseña form = new OlvideContraseña();
+            form.ShowDialog();
+            
+        }
     }
 }
 

@@ -283,6 +283,12 @@
     <Compile Include="Modificar_Personas.Designer.cs">
       <DependentUpon>Modificar_Personas.cs</DependentUpon>
     </Compile>
+    <Compile Include="OlvideContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OlvideContraseña.Designer.cs">
+      <DependentUpon>OlvideContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="PPAdministracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar_Personas.resx">
       <DependentUpon>Modificar_Personas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OlvideContraseña.resx">
+      <DependentUpon>OlvideContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPAdministracion.resx">
       <DependentUpon>PPAdministracion.cs</DependentUpon>
