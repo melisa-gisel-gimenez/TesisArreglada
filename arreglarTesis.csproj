@@ -208,7 +208,7 @@
     <Compile Include="AgregarEgresos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarEgresos.Designer.cs">
+    <Compile Include="AgregarEgresos.designer.cs">
       <DependentUpon>AgregarEgresos.cs</DependentUpon>
     </Compile>
     <Compile Include="AgregarIngresos.cs">

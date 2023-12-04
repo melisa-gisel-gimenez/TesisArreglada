@@ -20,7 +20,7 @@ namespace Iglesia
         private string connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
 
         private Dictionary<string, int> tiposEgresoDictionary = new Dictionary<string, int>();
-        
+
 
         public AgregarEgresos()
         {
@@ -111,7 +111,7 @@ namespace Iglesia
         {
             comboBox1TipoEgreso.Text = "";
             txtMONTO.Text = "";
-      
+
             txtDetalle.Text = "";
             dateTimePicker1Fecha.Text = "";
 
