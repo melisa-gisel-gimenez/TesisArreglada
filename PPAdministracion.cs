@@ -25,7 +25,7 @@ namespace arreglarTesis
 
         private void agregarPersonasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AgregarPersonasM Form1 = new AgregarPersonasM();
+            AgregarPersonas Form1 = new AgregarPersonas();
             Form1.ShowDialog();
         }
 

@@ -217,12 +217,6 @@
     <Compile Include="AgregarIngresos.designer.cs">
       <DependentUpon>AgregarIngresos.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarPersonas-M.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarPersonas-M.designer.cs">
-      <DependentUpon>AgregarPersonas-M.cs</DependentUpon>
-    </Compile>
     <Compile Include="AgregarPersonas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,9 +341,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarIngresos.resx">
       <DependentUpon>AgregarIngresos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarPersonas-M.resx">
-      <DependentUpon>AgregarPersonas-M.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarPersonas.resx">
       <DependentUpon>AgregarPersonas.cs</DependentUpon>
