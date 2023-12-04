@@ -35,7 +35,7 @@ namespace Iglesia
 
         private void agregarIngresosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AgregarIngresosM Form1 = new AgregarIngresosM();
+            AgregarIngresos Form1 = new AgregarIngresos();
             Form1.ShowDialog();
         }
 

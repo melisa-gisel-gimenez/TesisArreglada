@@ -12,11 +12,11 @@ using System.Text.RegularExpressions;
 
 namespace Iglesia
 {
-    public partial class AgregarPersonas : Form
+    public partial class AgregarPersonasM : Form
     {
         private OleDbConnection conexion;
         private string cadenaConexion = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
-        public AgregarPersonas()
+        public AgregarPersonasM()
         {
             InitializeComponent();
             conexion = new OleDbConnection(cadenaConexion);
@@ -290,7 +290,11 @@ namespace Iglesia
                 // Muestra un mensaje de error o realiza alguna acción de validación adicional
             }
         }
-               
+
+        private void textemail_MouseLeave(object sender, EventArgs e)
+        {
+            //ValidarCorreoElectronico();
+        }
 
         private void textemail_Leave(object sender, EventArgs e)
         {
