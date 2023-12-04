@@ -21,18 +21,18 @@ namespace Iglesia
         int idTipoIngreso;
         private OleDbConnection conexion;
         private string connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
-        
+
         private Dictionary<string, int> tiposIngresoDictionary = new Dictionary<string, int>();
         public AgregarIngresos()
         {
             InitializeComponent();
-            
+
             CargarDatosComboboxIngresos();
         }
 
         private void button1Guardar_Click(object sender, EventArgs e)
         {
-            
+
             {
                 GuardarBD();
 
@@ -40,7 +40,7 @@ namespace Iglesia
 
         }
 
-        
+
         private void CargarDatosComboboxIngresos()
         {
             string consulta = "SELECT Id_tipoIngreso, tipo_ingreso FROM TipoIngreso";
@@ -87,9 +87,9 @@ namespace Iglesia
                 //DateTime fechaAlta = DateTime.Now;
 
                 OleDbConnection cn = new OleDbConnection(connectionString);
-                 
+
                 cn.Open();
-                String consulta = "insert into Ingresos ( id_tipoIngreso, MONTO, DETALLE, FECHA) values ('"+ idTipoIngreso +"','"+ int.Parse(txtMONTO.Text) + "', "  + " '" + txtDetalle.Text + "', '" + dateTimePicker1.Value + "' )";
+                String consulta = "insert into Ingresos ( id_tipoIngreso, MONTO, DETALLE, FECHA) values ('" + idTipoIngreso + "','" + int.Parse(txtMONTO.Text) + "', " + " '" + txtDetalle.Text + "', '" + dateTimePicker1.Value + "' )";
 
 
                 OleDbCommand comando1 = new OleDbCommand(consulta, cn);
@@ -167,6 +167,28 @@ namespace Iglesia
                 // Si no es un número o una tecla de control, ignora la tecla presionada
                 e.Handled = true;
             }
+        }
+    
+
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMONTO_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
