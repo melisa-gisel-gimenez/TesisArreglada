@@ -35,26 +35,26 @@ namespace arreglarTesis
             this.mentoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reunionesDeMentoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postulacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pastorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ministeriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tesoreriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inhabilitarMiembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignarMentorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pastorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.revisarPostuladosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaMentorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarMentorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ministeriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaMinisteriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaDeMiembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificacionDeMiembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tesoreriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarIngresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarEgresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarInformesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,8 +65,8 @@ namespace arreglarTesis
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(831, 521);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.Size = new System.Drawing.Size(745, 521);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -88,7 +88,7 @@ namespace arreglarTesis
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(831, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(745, 32);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,26 +98,20 @@ namespace arreglarTesis
             this.reunionesDeMentoriasToolStripMenuItem,
             this.postulacionesToolStripMenuItem});
             this.mentoresToolStripMenuItem.Name = "mentoresToolStripMenuItem";
-            this.mentoresToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.mentoresToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
             this.mentoresToolStripMenuItem.Text = "Mentores";
             // 
             // reunionesDeMentoriasToolStripMenuItem
             // 
             this.reunionesDeMentoriasToolStripMenuItem.Name = "reunionesDeMentoriasToolStripMenuItem";
-            this.reunionesDeMentoriasToolStripMenuItem.Size = new System.Drawing.Size(332, 34);
+            this.reunionesDeMentoriasToolStripMenuItem.Size = new System.Drawing.Size(340, 34);
             this.reunionesDeMentoriasToolStripMenuItem.Text = "Reuniones de mentorias";
             // 
             // postulacionesToolStripMenuItem
             // 
             this.postulacionesToolStripMenuItem.Name = "postulacionesToolStripMenuItem";
-            this.postulacionesToolStripMenuItem.Size = new System.Drawing.Size(332, 34);
+            this.postulacionesToolStripMenuItem.Size = new System.Drawing.Size(340, 34);
             this.postulacionesToolStripMenuItem.Text = "Postulaciones de miembros";
-            // 
-            // acercaDeToolStripMenuItem
-            // 
-            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(105, 29);
-            this.acercaDeToolStripMenuItem.Text = "Acerca de";
             // 
             // personasToolStripMenuItem
             // 
@@ -125,8 +119,20 @@ namespace arreglarTesis
             this.inhabilitarMiembrosToolStripMenuItem,
             this.asignarMentorToolStripMenuItem});
             this.personasToolStripMenuItem.Name = "personasToolStripMenuItem";
-            this.personasToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
+            this.personasToolStripMenuItem.Size = new System.Drawing.Size(101, 28);
             this.personasToolStripMenuItem.Text = "Personas";
+            // 
+            // inhabilitarMiembrosToolStripMenuItem
+            // 
+            this.inhabilitarMiembrosToolStripMenuItem.Name = "inhabilitarMiembrosToolStripMenuItem";
+            this.inhabilitarMiembrosToolStripMenuItem.Size = new System.Drawing.Size(286, 34);
+            this.inhabilitarMiembrosToolStripMenuItem.Text = "Inhabilitar miembros";
+            // 
+            // asignarMentorToolStripMenuItem
+            // 
+            this.asignarMentorToolStripMenuItem.Name = "asignarMentorToolStripMenuItem";
+            this.asignarMentorToolStripMenuItem.Size = new System.Drawing.Size(286, 34);
+            this.asignarMentorToolStripMenuItem.Text = "Asignar mentor";
             // 
             // pastorToolStripMenuItem
             // 
@@ -136,24 +142,60 @@ namespace arreglarTesis
             this.altaMentorToolStripMenuItem,
             this.modificarMentorToolStripMenuItem});
             this.pastorToolStripMenuItem.Name = "pastorToolStripMenuItem";
-            this.pastorToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
+            this.pastorToolStripMenuItem.Size = new System.Drawing.Size(79, 28);
             this.pastorToolStripMenuItem.Text = "Pastor";
+            // 
+            // altaUsuarioToolStripMenuItem
+            // 
+            this.altaUsuarioToolStripMenuItem.Name = "altaUsuarioToolStripMenuItem";
+            this.altaUsuarioToolStripMenuItem.Size = new System.Drawing.Size(268, 34);
+            this.altaUsuarioToolStripMenuItem.Text = "Alta usuario";
+            // 
+            // revisarPostuladosToolStripMenuItem
+            // 
+            this.revisarPostuladosToolStripMenuItem.Name = "revisarPostuladosToolStripMenuItem";
+            this.revisarPostuladosToolStripMenuItem.Size = new System.Drawing.Size(268, 34);
+            this.revisarPostuladosToolStripMenuItem.Text = "Revisar postulados";
+            // 
+            // altaMentorToolStripMenuItem
+            // 
+            this.altaMentorToolStripMenuItem.Name = "altaMentorToolStripMenuItem";
+            this.altaMentorToolStripMenuItem.Size = new System.Drawing.Size(268, 34);
+            this.altaMentorToolStripMenuItem.Text = "Alta Mentor";
+            // 
+            // modificarMentorToolStripMenuItem
+            // 
+            this.modificarMentorToolStripMenuItem.Name = "modificarMentorToolStripMenuItem";
+            this.modificarMentorToolStripMenuItem.Size = new System.Drawing.Size(268, 34);
+            this.modificarMentorToolStripMenuItem.Text = "Modificar Mentor";
             // 
             // ministeriosToolStripMenuItem
             // 
             this.ministeriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaMinisteriosToolStripMenuItem});
             this.ministeriosToolStripMenuItem.Name = "ministeriosToolStripMenuItem";
-            this.ministeriosToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
+            this.ministeriosToolStripMenuItem.Size = new System.Drawing.Size(120, 28);
             this.ministeriosToolStripMenuItem.Text = "Ministerios";
+            // 
+            // altaMinisteriosToolStripMenuItem
+            // 
+            this.altaMinisteriosToolStripMenuItem.Name = "altaMinisteriosToolStripMenuItem";
+            this.altaMinisteriosToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.altaMinisteriosToolStripMenuItem.Text = "Alta ministerios";
             // 
             // listasToolStripMenuItem
             // 
             this.listasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miembrosToolStripMenuItem});
             this.listasToolStripMenuItem.Name = "listasToolStripMenuItem";
-            this.listasToolStripMenuItem.Size = new System.Drawing.Size(71, 29);
+            this.listasToolStripMenuItem.Size = new System.Drawing.Size(72, 28);
             this.listasToolStripMenuItem.Text = "Listas";
+            // 
+            // miembrosToolStripMenuItem
+            // 
+            this.miembrosToolStripMenuItem.Name = "miembrosToolStripMenuItem";
+            this.miembrosToolStripMenuItem.Size = new System.Drawing.Size(195, 34);
+            this.miembrosToolStripMenuItem.Text = "Miembros";
             // 
             // administracionToolStripMenuItem
             // 
@@ -161,8 +203,20 @@ namespace arreglarTesis
             this.altaDeMiembrosToolStripMenuItem,
             this.modificacionDeMiembrosToolStripMenuItem});
             this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
-            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(147, 29);
+            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(153, 28);
             this.administracionToolStripMenuItem.Text = "Administracion";
+            // 
+            // altaDeMiembrosToolStripMenuItem
+            // 
+            this.altaDeMiembrosToolStripMenuItem.Name = "altaDeMiembrosToolStripMenuItem";
+            this.altaDeMiembrosToolStripMenuItem.Size = new System.Drawing.Size(333, 34);
+            this.altaDeMiembrosToolStripMenuItem.Text = "Alta de miembros";
+            // 
+            // modificacionDeMiembrosToolStripMenuItem
+            // 
+            this.modificacionDeMiembrosToolStripMenuItem.Name = "modificacionDeMiembrosToolStripMenuItem";
+            this.modificacionDeMiembrosToolStripMenuItem.Size = new System.Drawing.Size(333, 34);
+            this.modificacionDeMiembrosToolStripMenuItem.Text = "Modificacion de miembros";
             // 
             // tesoreriaToolStripMenuItem
             // 
@@ -171,96 +225,44 @@ namespace arreglarTesis
             this.agregarEgresosToolStripMenuItem,
             this.generarInformesToolStripMenuItem});
             this.tesoreriaToolStripMenuItem.Name = "tesoreriaToolStripMenuItem";
-            this.tesoreriaToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
+            this.tesoreriaToolStripMenuItem.Size = new System.Drawing.Size(102, 28);
             this.tesoreriaToolStripMenuItem.Text = "Tesoreria";
-            // 
-            // inhabilitarMiembrosToolStripMenuItem
-            // 
-            this.inhabilitarMiembrosToolStripMenuItem.Name = "inhabilitarMiembrosToolStripMenuItem";
-            this.inhabilitarMiembrosToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
-            this.inhabilitarMiembrosToolStripMenuItem.Text = "Inhabilitar miembros";
-            // 
-            // asignarMentorToolStripMenuItem
-            // 
-            this.asignarMentorToolStripMenuItem.Name = "asignarMentorToolStripMenuItem";
-            this.asignarMentorToolStripMenuItem.Size = new System.Drawing.Size(278, 34);
-            this.asignarMentorToolStripMenuItem.Text = "Asignar mentor";
-            // 
-            // altaUsuarioToolStripMenuItem
-            // 
-            this.altaUsuarioToolStripMenuItem.Name = "altaUsuarioToolStripMenuItem";
-            this.altaUsuarioToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.altaUsuarioToolStripMenuItem.Text = "Alta usuario";
-            // 
-            // revisarPostuladosToolStripMenuItem
-            // 
-            this.revisarPostuladosToolStripMenuItem.Name = "revisarPostuladosToolStripMenuItem";
-            this.revisarPostuladosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.revisarPostuladosToolStripMenuItem.Text = "Revisar postulados";
-            // 
-            // altaMentorToolStripMenuItem
-            // 
-            this.altaMentorToolStripMenuItem.Name = "altaMentorToolStripMenuItem";
-            this.altaMentorToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.altaMentorToolStripMenuItem.Text = "Alta Mentor";
-            // 
-            // modificarMentorToolStripMenuItem
-            // 
-            this.modificarMentorToolStripMenuItem.Name = "modificarMentorToolStripMenuItem";
-            this.modificarMentorToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.modificarMentorToolStripMenuItem.Text = "Modificar Mentor";
-            // 
-            // altaMinisteriosToolStripMenuItem
-            // 
-            this.altaMinisteriosToolStripMenuItem.Name = "altaMinisteriosToolStripMenuItem";
-            this.altaMinisteriosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.altaMinisteriosToolStripMenuItem.Text = "Alta ministerios";
-            // 
-            // miembrosToolStripMenuItem
-            // 
-            this.miembrosToolStripMenuItem.Name = "miembrosToolStripMenuItem";
-            this.miembrosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.miembrosToolStripMenuItem.Text = "Miembros";
-            // 
-            // altaDeMiembrosToolStripMenuItem
-            // 
-            this.altaDeMiembrosToolStripMenuItem.Name = "altaDeMiembrosToolStripMenuItem";
-            this.altaDeMiembrosToolStripMenuItem.Size = new System.Drawing.Size(327, 34);
-            this.altaDeMiembrosToolStripMenuItem.Text = "Alta de miembros";
-            // 
-            // modificacionDeMiembrosToolStripMenuItem
-            // 
-            this.modificacionDeMiembrosToolStripMenuItem.Name = "modificacionDeMiembrosToolStripMenuItem";
-            this.modificacionDeMiembrosToolStripMenuItem.Size = new System.Drawing.Size(327, 34);
-            this.modificacionDeMiembrosToolStripMenuItem.Text = "Modificacion de miembros";
             // 
             // agregarIngresosToolStripMenuItem
             // 
             this.agregarIngresosToolStripMenuItem.Name = "agregarIngresosToolStripMenuItem";
-            this.agregarIngresosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarIngresosToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.agregarIngresosToolStripMenuItem.Text = "Agregar Ingresos";
             // 
             // agregarEgresosToolStripMenuItem
             // 
             this.agregarEgresosToolStripMenuItem.Name = "agregarEgresosToolStripMenuItem";
-            this.agregarEgresosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarEgresosToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.agregarEgresosToolStripMenuItem.Text = "Agregar Egresos";
             // 
             // generarInformesToolStripMenuItem
             // 
             this.generarInformesToolStripMenuItem.Name = "generarInformesToolStripMenuItem";
-            this.generarInformesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.generarInformesToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.generarInformesToolStripMenuItem.Text = "Generar informes";
+            // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de";
             // 
             // PPSuperUs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 521);
+            this.ClientSize = new System.Drawing.Size(745, 521);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(767, 577);
+            this.MinimumSize = new System.Drawing.Size(767, 577);
             this.Name = "PPSuperUs";
             this.Text = "MCD Gestion";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
