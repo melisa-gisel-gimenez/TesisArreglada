@@ -205,5 +205,20 @@ namespace Iglesia
                 return builder.ToString();
             }
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
