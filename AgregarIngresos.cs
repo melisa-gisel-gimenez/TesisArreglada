@@ -124,7 +124,7 @@ namespace Iglesia
         {
             string tipoIngresoSeleccionado = comboBox1TipoIngreso.SelectedItem.ToString();
             idTipoIngreso = tiposIngresoDictionary[tipoIngresoSeleccionado];
-            MessageBox.Show($"El Id_tipoIngreso seleccionado es: {idTipoIngreso}");
+         // MessageBox.Show($"El Id_tipoIngreso seleccionado es: {idTipoIngreso}");
 
         }
         private void MostrarTipoIngreso(string TipoIngreso)

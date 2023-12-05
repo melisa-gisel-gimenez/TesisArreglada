@@ -121,7 +121,7 @@ namespace Iglesia
         {
             string tipoEgresoSeleccionado = comboBox1TipoEgreso.SelectedItem.ToString();
             idTipoEgreso = tiposEgresoDictionary[tipoEgresoSeleccionado];
-            MessageBox.Show($"El Id_tipoEgreso seleccionado es: {idTipoEgreso}");
+         // MessageBox.Show($"El Id_tipoEgreso seleccionado es: {idTipoEgreso}");
 
         }
         private void MostrarTipoEgreso(string TipoIngreso)

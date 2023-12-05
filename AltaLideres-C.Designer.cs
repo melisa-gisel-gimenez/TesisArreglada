@@ -41,6 +41,7 @@
             this.btnAltaLider = new System.Windows.Forms.Button();
             this.txtIdCelula = new System.Windows.Forms.TextBox();
             this.txtIdMiembro = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCelulas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,11 +169,22 @@
             this.txtIdMiembro.TabIndex = 12;
             this.txtIdMiembro.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(303, 572);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 43);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Ver Lista Miembros por celula";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AltaCelula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 627);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtIdMiembro);
             this.Controls.Add(this.txtIdCelula);
             this.Controls.Add(this.btnAltaLider);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.Button btnAltaLider;
         private System.Windows.Forms.TextBox txtIdCelula;
         private System.Windows.Forms.TextBox txtIdMiembro;
+        private System.Windows.Forms.Button button1;
     }
 }

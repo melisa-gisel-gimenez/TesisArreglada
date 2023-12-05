@@ -209,6 +209,7 @@ namespace arreglarTesis
                                     txtNombre.Text = reader2["NOMBRE"].ToString();
                                     txtApellido.Text = reader2["APELLIDO"].ToString();
                                     txtIdMiembro.Text = reader2["id_miembro"].ToString();
+                                    btnAltaLider.Enabled = true;
                                 }
                                 else
                                 {
@@ -315,7 +316,8 @@ namespace arreglarTesis
                 using (OleDbConnection conexion = new OleDbConnection(connectionString))
                 {
                     // Establece la consulta para actualizar la tabla Miembros
-                    string consultaActualizarMiembros = "UPDATE Miembros SET id_celula = @IdCelula WHERE id_miembro = @IdMiembro";
+                    string consultaActualizarMiembros = "UPDATE Miembros SET id_celula = @IdCelula, id_rol2 = 1 " +
+                              "WHERE id_miembro = @IdMiembro";
 
                     // Crea y configura el comando con los parámetros necesarios
                     using (OleDbCommand comandoActualizarMiembros = new OleDbCommand(consultaActualizarMiembros, conexion))
@@ -342,6 +344,13 @@ namespace arreglarTesis
             {
                 MessageBox.Show("Error al actualizar la tabla Miembros: " + ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ListaMiembrosCelula form1 = new ListaMiembrosCelula();
+            form1.ShowDialog();
+
         }
     }   
        
