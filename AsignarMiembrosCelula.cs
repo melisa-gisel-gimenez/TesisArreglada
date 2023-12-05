@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace arreglarTesis
 {
-    public partial class MiembrosCelula : Form
+    public partial class AsignarMiembrosCelula : Form
     {
-        public MiembrosCelula()
+        public AsignarMiembrosCelula()
         {
             InitializeComponent();
         }
