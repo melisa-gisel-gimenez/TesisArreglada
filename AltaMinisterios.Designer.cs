@@ -41,19 +41,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 238);
+            this.label2.Font = new System.Drawing.Font("Calibri Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(24, 298);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 24);
+            this.label2.Size = new System.Drawing.Size(196, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre Ministerio:";
             // 
             // textBoxNombreMini
             // 
-            this.textBoxNombreMini.Location = new System.Drawing.Point(209, 239);
-            this.textBoxNombreMini.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxNombreMini.Location = new System.Drawing.Point(235, 299);
+            this.textBoxNombreMini.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textBoxNombreMini.Name = "textBoxNombreMini";
-            this.textBoxNombreMini.Size = new System.Drawing.Size(228, 22);
+            this.textBoxNombreMini.Size = new System.Drawing.Size(256, 26);
             this.textBoxNombreMini.TabIndex = 2;
             this.textBoxNombreMini.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombreMini_KeyPress_1);
             // 
@@ -61,23 +61,27 @@
             // 
             this.DGVMini.AllowUserToAddRows = false;
             this.DGVMini.AllowUserToDeleteRows = false;
+            this.DGVMini.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGVMini.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DGVMini.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.DGVMini.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVMini.Location = new System.Drawing.Point(21, 60);
-            this.DGVMini.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DGVMini.EnableHeadersVisualStyles = false;
+            this.DGVMini.Location = new System.Drawing.Point(24, 75);
+            this.DGVMini.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.DGVMini.Name = "DGVMini";
             this.DGVMini.ReadOnly = true;
             this.DGVMini.RowHeadersWidth = 51;
             this.DGVMini.RowTemplate.Height = 24;
-            this.DGVMini.Size = new System.Drawing.Size(416, 150);
+            this.DGVMini.Size = new System.Drawing.Size(468, 188);
             this.DGVMini.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 30);
+            this.label3.Font = new System.Drawing.Font("Calibri Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(195, 24);
+            this.label3.Size = new System.Drawing.Size(223, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ministerios Existentes:";
             // 
@@ -87,10 +91,10 @@
             this.buttonCrearMinisterio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.YellowGreen;
             this.buttonCrearMinisterio.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonCrearMinisterio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrearMinisterio.Location = new System.Drawing.Point(95, 302);
-            this.buttonCrearMinisterio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCrearMinisterio.Location = new System.Drawing.Point(107, 378);
+            this.buttonCrearMinisterio.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.buttonCrearMinisterio.Name = "buttonCrearMinisterio";
-            this.buttonCrearMinisterio.Size = new System.Drawing.Size(95, 60);
+            this.buttonCrearMinisterio.Size = new System.Drawing.Size(107, 75);
             this.buttonCrearMinisterio.TabIndex = 5;
             this.buttonCrearMinisterio.Text = "Crear Ministerio";
             this.buttonCrearMinisterio.UseVisualStyleBackColor = true;
@@ -101,10 +105,10 @@
             this.buttonCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.buttonCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancelar.Location = new System.Drawing.Point(239, 302);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCancelar.Location = new System.Drawing.Point(269, 378);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(93, 60);
+            this.buttonCancelar.Size = new System.Drawing.Size(105, 75);
             this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -112,9 +116,9 @@
             // 
             // AltaMinisterios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 393);
+            this.ClientSize = new System.Drawing.Size(550, 491);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonCrearMinisterio);
             this.Controls.Add(this.label3);
@@ -122,7 +126,7 @@
             this.Controls.Add(this.textBoxNombreMini);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AltaMinisterios";
