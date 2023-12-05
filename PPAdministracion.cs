@@ -75,5 +75,11 @@ namespace arreglarTesis
             ListaMiembrosCelula form = new ListaMiembrosCelula();
             form.ShowDialog();
         }
+
+        private void listaMiembrosPorMinisteriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MiembrosMinisterios form = new MiembrosMinisterios();   
+            form.ShowDialog();
+        }
     }
 }

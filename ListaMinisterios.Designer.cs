@@ -30,12 +30,11 @@
         {
             this.btnSalir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.comboBoxMini = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMiembrosMini = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxNombreMini = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMiembrosMini)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -46,6 +45,7 @@
             this.btnSalir.TabIndex = 11;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label2
             // 
@@ -56,14 +56,15 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Ministerio  Nro:";
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.Location = new System.Drawing.Point(383, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(281, 72);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // comboBoxMini
             // 
@@ -73,18 +74,18 @@
             this.comboBoxMini.Size = new System.Drawing.Size(121, 24);
             this.comboBoxMini.TabIndex = 8;
             // 
-            // dataGridView1
+            // dgvMiembrosMini
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(430, 150);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvMiembrosMini.AllowUserToAddRows = false;
+            this.dgvMiembrosMini.AllowUserToDeleteRows = false;
+            this.dgvMiembrosMini.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMiembrosMini.Location = new System.Drawing.Point(28, 120);
+            this.dgvMiembrosMini.Name = "dgvMiembrosMini";
+            this.dgvMiembrosMini.ReadOnly = true;
+            this.dgvMiembrosMini.RowHeadersWidth = 51;
+            this.dgvMiembrosMini.RowTemplate.Height = 24;
+            this.dgvMiembrosMini.Size = new System.Drawing.Size(430, 150);
+            this.dgvMiembrosMini.TabIndex = 7;
             // 
             // label1
             // 
@@ -95,29 +96,21 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Filtrar Miembros por Ministerio";
             // 
-            // textBoxNombreMini
-            // 
-            this.textBoxNombreMini.Enabled = false;
-            this.textBoxNombreMini.Location = new System.Drawing.Point(266, 71);
-            this.textBoxNombreMini.Name = "textBoxNombreMini";
-            this.textBoxNombreMini.Size = new System.Drawing.Size(100, 22);
-            this.textBoxNombreMini.TabIndex = 12;
-            // 
             // MiembrosMinisterios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 360);
-            this.Controls.Add(this.textBoxNombreMini);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.comboBoxMini);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMiembrosMini);
             this.Controls.Add(this.label1);
             this.Name = "MiembrosMinisterios";
             this.Text = "MiembrosMinisterios";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.MiembrosMinisterios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMiembrosMini)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,10 +120,9 @@
 
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ComboBox comboBoxMini;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMiembrosMini;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxNombreMini;
     }
 }
