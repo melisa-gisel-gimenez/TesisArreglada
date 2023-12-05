@@ -129,3 +129,8 @@ C:\Users\MELIS\source\repos\arreglarTesis\bin\Debug\System.IO.Packaging.xml
 C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\arreglarTesis.InformeTesoreria.resources
 C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\arreglarTesis.PPSuperUs.resources
 C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\arreglarTesis.OlvideContraseña.resources
+C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\arreglarTesis.AltaCelula.resources
+C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\arreglarTesis.AsignarMiembrosCelula.resources
+C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\arreglarTesis.ListaMentoreados.resources
+C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\arreglarTesis.ListaMiembrosCelula.resources
+C:\Users\MELIS\source\repos\arreglarTesis\obj\Debug\arreglarTesis.MiembrosMinisterios.resources

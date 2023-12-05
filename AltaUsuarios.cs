@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Office2010.PowerPoint;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,6 +73,20 @@ namespace Iglesia
                                                 // Establece el estado de los CheckBox según el valor de "inhabilitado"
                                                 checkBoxInhabilitado.Checked = inhabilitado;
                                                 checkBoxNo.Checked = !inhabilitado;
+
+                                                if (checkBoxInhabilitado.Checked == true)
+                                                {
+                                                    MessageBox.Show("No puede dar de alta como usuario del sistema a una persona inhabilitada. Consulte con Administración o verifique el DNI ingresado");
+                                                }
+
+                                                if (checkBoxNo.Checked == true)
+                                                {
+                                                    txtNombreUsuario.Enabled = true;
+                                                    txtPassword.Enabled = true;
+                                                    comboBoxTipoUsuario.Enabled = true;
+                                                    checkBoxAltaUser.Enabled = true;
+                                                    buttonAceptar.Enabled = true;
+                                                }
                                             }
                                             else
                                             {
@@ -129,11 +144,31 @@ namespace Iglesia
                 MessageBox.Show("No debe dejar campos vacíos. Por favor complete todos los campos.");
             }
             else
-            {
+            {               
+
                 try
                 {
                     // Encripta la contraseña
                     string contraseñaEncriptada = EncriptarContraseña(txtPassword.Text);
+
+                    int idRolG = 0;  // Asigna un valor por defecto, puedes ajustar esto según tus necesidades
+
+                    if (comboBoxTipoUsuario.Text == "Tesorero")
+                    {
+                        idRolG = 1;
+                    }
+                    else if (comboBoxTipoUsuario.Text == "Pastor")
+                    {
+                        idRolG = 2;
+                    }
+                    else if (comboBoxTipoUsuario.Text == "Administrador")
+                    {
+                        idRolG = 3;
+                    }
+                    else if (comboBoxTipoUsuario.Text == "Mentor")
+                    {
+                        idRolG = 4;
+                    }
 
                     // Prepara la consulta SQL con la contraseña encriptada
                     string consulta2 = "INSERT INTO Usuarios (DNI_User, NombreUsuario, Contraseña, tipo_usuario, habilitado) VALUES (" + int.Parse(textBoxDNIBuscar.Text) + ", '" + txtNombreUsuario.Text + "', '" + contraseñaEncriptada + "', '" + comboBoxTipoUsuario.Text + "', " + checkBoxAltaUser.Checked + ")";
@@ -150,9 +185,34 @@ namespace Iglesia
                         else
                         {
                             MessageBox.Show("Se registró el usuario con éxito");
+                            conexion.Close();
+                            this.Close();
+                        }
+                        
+                    }
+
+                    //string dniABuscar = textBoxDNIBuscar.Text.Trim();
+
+                    // SQL para agregar rol a tabla miembros
+                    string consulta3 = "UPDATE Miembros SET id_rolg=" + "'"+ idRolG + "'" + " WHERE DNI=" + int.Parse(textBoxDNIBuscar.Text);
+
+                    using (OleDbCommand comando3 = new OleDbCommand(consulta3, conexion))
+                    {
+                        conexion.Open();
+                        int cantidad = comando3.ExecuteNonQuery();
+
+                        if (cantidad < 1)
+                        {
+                            MessageBox.Show("Ocurrió un problema al actualizar el rol en la tabla miembros");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Se actualizó el rol correctamente");
                             this.Close();
                         }
                     }
+
+
                 }
                 catch (Exception ex)
                 {
