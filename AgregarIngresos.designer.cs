@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarIngresos));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox1TipoIngreso = new System.Windows.Forms.ComboBox();
+            this.button3Limpiar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.button1Guardar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,9 +41,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtDetalle = new System.Windows.Forms.TextBox();
             this.txtMONTO = new System.Windows.Forms.TextBox();
-            this.button3Limpiar = new System.Windows.Forms.Button();
-            this.button1Guardar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -59,11 +61,11 @@
             this.groupBox2.Controls.Add(this.txtMONTO);
             this.groupBox2.Font = new System.Drawing.Font("Calibri Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(61, 43);
+            this.groupBox2.Location = new System.Drawing.Point(97, 27);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(602, 379);
+            this.groupBox2.Size = new System.Drawing.Size(548, 379);
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cargar Datos de Ingresos";
@@ -78,6 +80,18 @@
             this.comboBox1TipoIngreso.TabIndex = 35;
             this.comboBox1TipoIngreso.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // button3Limpiar
+            // 
+            this.button3Limpiar.Font = new System.Drawing.Font("Calibri Light", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3Limpiar.Location = new System.Drawing.Point(383, 230);
+            this.button3Limpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3Limpiar.Name = "button3Limpiar";
+            this.button3Limpiar.Size = new System.Drawing.Size(117, 49);
+            this.button3Limpiar.TabIndex = 47;
+            this.button3Limpiar.Text = "Limpiar";
+            this.button3Limpiar.UseVisualStyleBackColor = true;
+            this.button3Limpiar.Click += new System.EventHandler(this.button3Limpiar_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -89,12 +103,29 @@
             this.label8.Size = new System.Drawing.Size(0, 20);
             this.label8.TabIndex = 34;
             // 
+            // button1Guardar
+            // 
+            this.button1Guardar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1Guardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1Guardar.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1Guardar.Location = new System.Drawing.Point(383, 134);
+            this.button1Guardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1Guardar.Name = "button1Guardar";
+            this.button1Guardar.Size = new System.Drawing.Size(117, 59);
+            this.button1Guardar.TabIndex = 46;
+            this.button1Guardar.Text = "Guardar";
+            this.button1Guardar.UseVisualStyleBackColor = false;
+            this.button1Guardar.Click += new System.EventHandler(this.button1Guardar_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label6.Location = new System.Drawing.Point(97, 56);
+            this.label6.Location = new System.Drawing.Point(124, 58);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 22);
@@ -118,7 +149,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label3.Location = new System.Drawing.Point(153, 282);
+            this.label3.Location = new System.Drawing.Point(160, 282);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 22);
@@ -164,42 +195,22 @@
             // 
             this.txtMONTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMONTO.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtMONTO.Location = new System.Drawing.Point(116, 309);
+            this.txtMONTO.Location = new System.Drawing.Point(112, 309);
             this.txtMONTO.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMONTO.Name = "txtMONTO";
-            this.txtMONTO.Size = new System.Drawing.Size(148, 26);
+            this.txtMONTO.Size = new System.Drawing.Size(152, 26);
             this.txtMONTO.TabIndex = 3;
             this.txtMONTO.TextChanged += new System.EventHandler(this.txtMONTO_TextChanged);
             this.txtMONTO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMONTO_KeyPress);
             // 
-            // button3Limpiar
+            // pictureBox2
             // 
-            this.button3Limpiar.Font = new System.Drawing.Font("Calibri Light", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3Limpiar.Location = new System.Drawing.Point(383, 240);
-            this.button3Limpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3Limpiar.Name = "button3Limpiar";
-            this.button3Limpiar.Size = new System.Drawing.Size(147, 49);
-            this.button3Limpiar.TabIndex = 47;
-            this.button3Limpiar.Text = "Limpiar";
-            this.button3Limpiar.UseVisualStyleBackColor = true;
-            this.button3Limpiar.Click += new System.EventHandler(this.button3Limpiar_Click);
-            // 
-            // button1Guardar
-            // 
-            this.button1Guardar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1Guardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1Guardar.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1Guardar.Location = new System.Drawing.Point(383, 134);
-            this.button1Guardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1Guardar.Name = "button1Guardar";
-            this.button1Guardar.Size = new System.Drawing.Size(147, 59);
-            this.button1Guardar.TabIndex = 46;
-            this.button1Guardar.Text = "Guardar";
-            this.button1Guardar.UseVisualStyleBackColor = false;
-            this.button1Guardar.Click += new System.EventHandler(this.button1Guardar_Click);
+            this.pictureBox2.Image = global::arreglarTesis.Properties.Resources._51;
+            this.pictureBox2.Location = new System.Drawing.Point(-18, 202);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(264, 298);
+            this.pictureBox2.TabIndex = 51;
+            this.pictureBox2.TabStop = false;
             // 
             // AgregarIngresos
             // 
@@ -208,6 +219,7 @@
             this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(733, 461);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -218,6 +230,7 @@
             this.Text = "AgregarIngresos";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,5 +249,6 @@
         private System.Windows.Forms.Button button3Limpiar;
         private System.Windows.Forms.Button button1Guardar;
         private System.Windows.Forms.ComboBox comboBox1TipoIngreso;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
