@@ -75,11 +75,91 @@ namespace Iglesia
                     MessageBox.Show("Se registro el nuevo Ministerio correctamente");
                 }
                 conexion.Close();
+                CargarMinisterios();
 
             }
         }
 
-       
+        private void txtDNIBuscar_TextChanged(object sender, EventArgs e)
+        {
+            // Verifica si la longitud del texto en el TextBox es mayor a 8
+            if (txtDNIBuscar.Text.Length > 8)
+            {
+                // Si es mayor a 8, recorta el texto para que solo tenga 8 caracteres
+                //txtDNI.Text = txtDNI.Text.Substring(0, 8);
+                // Coloca el cursor al final del texto
+                txtDNIBuscar.SelectionStart = txtDNIBuscar.Text.Length;
+                MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
+            }
+
+
+        }
+
+        private void txtDNIBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada no es un dígito numérico o una tecla de control
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Si no es un número o una tecla de control, ignora la tecla presionada
+                e.Handled = true;
+            }
+        }
+
+
+    
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string dniABuscar = txtDNIBuscar.Text.Trim();
+
+            if (txtDNIBuscar.Text.Length < 8 || txtDNIBuscar.Text == "")
+            {
+                MessageBox.Show("El DNI debe tener 8 dígitos. Por favor revise los datos ingresados.");
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(dniABuscar))
+                {
+                    string consulta2 = "SELECT * FROM miembros WHERE DNI = @DNI";
+
+                    // No necesitas abrir la conexión aquí
+                    // Establece la cadena de conexión a tu archivo de base de datos Access (MDB).
+                    string connectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
+
+                    using (OleDbConnection conexion = new OleDbConnection(connectionString))
+                    {
+                        conexion.Open();
+
+                        using (OleDbCommand comando2 = new OleDbCommand(consulta2, conexion))
+                        {
+                            comando2.Parameters.AddWithValue("@DNI", dniABuscar);
+
+                            try
+                            {
+                                OleDbDataReader reader2 = comando2.ExecuteReader();
+
+                                if (reader2.Read())
+                                {
+                                    txtNombre.Text = reader2["NOMBRE"].ToString();
+                                    txtApellido.Text = reader2["APELLIDO"].ToString();
+                                    txtIdMiembro.Text = reader2["id_miembro"].ToString();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se encontró ninguna persona registrada con el DNI proporcionado.");
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
+                            }
+                        }
+                    } // La conexión se cerrará automáticamente al salir del bloque using
+                }
+            }
+        }
+
+
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
@@ -101,6 +181,113 @@ namespace Iglesia
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DGVMini_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdMinisterio.Text = DGVMini.Rows[DGVMini.CurrentRow.Index].Cells[0].Value.ToString();
+        }
+
+        private void btnAsignarLider_Click(object sender, EventArgs e)
+        {
+            // Verifica que ambos TextBox tengan valores
+            if (!string.IsNullOrEmpty(txtIdMinisterio.Text) && !string.IsNullOrEmpty(txtIdMiembro.Text))
+            {
+                // Convierte los valores de los TextBox a tipos adecuados (puede ser int u otro tipo según la estructura de tus tablas)
+                int idministerio = Convert.ToInt32(txtIdMinisterio.Text);
+                int idMiembro = Convert.ToInt32(txtIdMiembro.Text);
+
+                // Establece la cadena de conexión
+                string connectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
+
+                using (OleDbConnection conexion = new OleDbConnection(connectionString))
+                {
+                    // Define la consulta de inserción
+                    string consultaInsertar = "INSERT INTO lideresMinisterios (id_ministerio, Id_miembro) VALUES (@id_ministerio, @IdMiembro)"; 
+
+                    // Crea y configura el comando con los parámetros necesarios
+                    using (OleDbCommand comandoInsertar = new OleDbCommand(consultaInsertar, conexion))
+                    {
+                        comandoInsertar.Parameters.AddWithValue("@id_ministerio", idministerio); 
+                        comandoInsertar.Parameters.AddWithValue("@IdMiembro", idMiembro);
+
+                        try
+                        {
+                            // Abre la conexión, ejecuta la consulta de inserción y cierra la conexión
+                            conexion.Open();
+                            int filasAfectadas = comandoInsertar.ExecuteNonQuery();
+
+                            if (filasAfectadas > 0)
+                            {
+                                MessageBox.Show("Se asignó el líder de la célula con éxito.");
+
+                                
+                            }
+
+                            else
+                            {
+                                MessageBox.Show("No se pudo asignar el líder al ministerio. Verifica los datos e intenta nuevamente.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al asignar líder al ministerio: " + ex.Message);
+                        }
+                        finally
+                        {
+                            conexion.Close();
+                            ActualizarTablaMiembros(); 
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese los valores de Id ministerio e Id Miembro.");
+            }
+        }
+
+        private void ActualizarTablaMiembros()
+        {
+            int idministerio = Convert.ToInt32(txtIdMinisterio.Text);
+            int idMiembro = Convert.ToInt32(txtIdMiembro.Text);
+            // Establece la cadena de conexión
+
+            string connectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
+
+            try
+            {
+                using (OleDbConnection conexion = new OleDbConnection(connectionString))
+                {
+                    // Establece la consulta para actualizar la tabla Miembros
+                    string consultaActualizarMiembros = "UPDATE Miembros SET id_ministerio = @id_ministerio, id_roli = 2  "+
+                              "WHERE id_miembro = @IdMiembro";
+
+                    // Crea y configura el comando con los parámetros necesarios
+                    using (OleDbCommand comandoActualizarMiembros = new OleDbCommand(consultaActualizarMiembros, conexion))
+                    {
+                        comandoActualizarMiembros.Parameters.AddWithValue("@id_ministerio", idministerio);
+                        comandoActualizarMiembros.Parameters.AddWithValue("@IdMiembro", idMiembro);
+
+                        // Abre la conexión, ejecuta la consulta de actualización y cierra la conexión
+                        conexion.Open();
+                        int filasAfectadasActualizarMiembros = comandoActualizarMiembros.ExecuteNonQuery();
+
+                        if (filasAfectadasActualizarMiembros > 0)
+                        {
+                            MessageBox.Show("Se actualizó la tabla Miembros con éxito.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo actualizar la tabla Miembros.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar la tabla Miembros: " + ex.Message);
+            }
         }
     }
 }
