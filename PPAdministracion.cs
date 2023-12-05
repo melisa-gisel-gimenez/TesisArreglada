@@ -63,5 +63,17 @@ namespace arreglarTesis
         {
             Application.Exit();
         }
+
+        private void registrarMiembrosDeCelulasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltaCelula form1 = new AltaCelula();
+            form1.ShowDialog();
+        }
+
+        private void listaDeMiembrosPorCelulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaMiembrosCelula form = new ListaMiembrosCelula();
+            form.ShowDialog();
+        }
     }
 }

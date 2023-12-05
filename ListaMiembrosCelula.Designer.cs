@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboIdCelula = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -59,17 +59,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(430, 150);
             this.dataGridView1.TabIndex = 1;
             // 
-            // comboBox1
+            // comboIdCelula
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(132, 67);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 2;
+            this.comboIdCelula.FormattingEnabled = true;
+            this.comboIdCelula.Location = new System.Drawing.Point(132, 67);
+            this.comboIdCelula.Name = "comboIdCelula";
+            this.comboIdCelula.Size = new System.Drawing.Size(121, 24);
+            this.comboIdCelula.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(259, 68);
+            this.button1.Location = new System.Drawing.Point(282, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -102,11 +102,12 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboIdCelula);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ListaMiembrosCelula";
             this.Text = "ListaMiembrosCelula";
+            this.Load += new System.EventHandler(this.ListaMiembrosCelula_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,7 +118,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboIdCelula;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSalir;
