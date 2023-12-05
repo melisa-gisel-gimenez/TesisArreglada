@@ -40,6 +40,7 @@ namespace arreglarTesis
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listaDeMiembrosPorCelulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaMiembrosPorMinisteriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +96,8 @@ namespace arreglarTesis
             // 
             this.listasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miembrosToolStripMenuItem,
-            this.listaDeMiembrosPorCelulaToolStripMenuItem});
+            this.listaDeMiembrosPorCelulaToolStripMenuItem,
+            this.listaMiembrosPorMinisteriosToolStripMenuItem});
             this.listasToolStripMenuItem.Name = "listasToolStripMenuItem";
             this.listasToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.listasToolStripMenuItem.Text = "Listas";
@@ -133,6 +135,13 @@ namespace arreglarTesis
             this.listaDeMiembrosPorCelulaToolStripMenuItem.Text = "Lista de miembros por celula";
             this.listaDeMiembrosPorCelulaToolStripMenuItem.Click += new System.EventHandler(this.listaDeMiembrosPorCelulaToolStripMenuItem_Click);
             // 
+            // listaMiembrosPorMinisteriosToolStripMenuItem
+            // 
+            this.listaMiembrosPorMinisteriosToolStripMenuItem.Name = "listaMiembrosPorMinisteriosToolStripMenuItem";
+            this.listaMiembrosPorMinisteriosToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.listaMiembrosPorMinisteriosToolStripMenuItem.Text = "Lista Miembros por Ministerios";
+            this.listaMiembrosPorMinisteriosToolStripMenuItem.Click += new System.EventHandler(this.listaMiembrosPorMinisteriosToolStripMenuItem_Click);
+            // 
             // PPAdministracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -168,5 +177,6 @@ namespace arreglarTesis
         private System.Windows.Forms.ToolStripMenuItem miembrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarMiembrosDeCelulasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeMiembrosPorCelulaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaMiembrosPorMinisteriosToolStripMenuItem;
     }
 }
