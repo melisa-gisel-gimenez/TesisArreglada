@@ -58,17 +58,25 @@ namespace Iglesia
             this.buttonLimpiar = new System.Windows.Forms.Button();
             this.buttonCerrar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Calibri Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 20);
+            this.label1.Size = new System.Drawing.Size(155, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Personas sin Mentor";
             // 
@@ -112,10 +120,12 @@ namespace Iglesia
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Calibri Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(60, 394);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 20);
+            this.label2.Size = new System.Drawing.Size(137, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Lista de Mentores";
             // 
@@ -159,49 +169,55 @@ namespace Iglesia
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(662, 84);
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Calibri Light", 11F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(677, 119);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 25);
+            this.label3.Size = new System.Drawing.Size(176, 27);
             this.label3.TabIndex = 4;
             this.label3.Text = "Miembro Elegido";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(664, 428);
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Calibri Light", 11F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(688, 455);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 25);
+            this.label4.Size = new System.Drawing.Size(178, 27);
             this.label4.TabIndex = 5;
             this.label4.Text = "Mentor Asignado";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(572, 224);
+            this.label5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(587, 259);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 20);
+            this.label5.Size = new System.Drawing.Size(65, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Nombre:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(572, 180);
+            this.label6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(587, 215);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 20);
+            this.label6.Size = new System.Drawing.Size(40, 20);
             this.label6.TabIndex = 7;
             this.label6.Text = "DNI:";
             // 
             // textBoxDNI
             // 
             this.textBoxDNI.Enabled = false;
-            this.textBoxDNI.Location = new System.Drawing.Point(705, 180);
+            this.textBoxDNI.Location = new System.Drawing.Point(720, 215);
             this.textBoxDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(198, 26);
@@ -210,7 +226,7 @@ namespace Iglesia
             // textBoxNombre
             // 
             this.textBoxNombre.Enabled = false;
-            this.textBoxNombre.Location = new System.Drawing.Point(705, 224);
+            this.textBoxNombre.Location = new System.Drawing.Point(720, 259);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(198, 26);
@@ -219,7 +235,7 @@ namespace Iglesia
             // textBoxIdMentor
             // 
             this.textBoxIdMentor.Enabled = false;
-            this.textBoxIdMentor.Location = new System.Drawing.Point(696, 472);
+            this.textBoxIdMentor.Location = new System.Drawing.Point(720, 499);
             this.textBoxIdMentor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxIdMentor.Name = "textBoxIdMentor";
             this.textBoxIdMentor.Size = new System.Drawing.Size(198, 26);
@@ -228,7 +244,7 @@ namespace Iglesia
             // textBoxNombreMentor
             // 
             this.textBoxNombreMentor.Enabled = false;
-            this.textBoxNombreMentor.Location = new System.Drawing.Point(696, 528);
+            this.textBoxNombreMentor.Location = new System.Drawing.Point(720, 555);
             this.textBoxNombreMentor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxNombreMentor.Name = "textBoxNombreMentor";
             this.textBoxNombreMentor.Size = new System.Drawing.Size(198, 26);
@@ -237,42 +253,45 @@ namespace Iglesia
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(574, 472);
+            this.label7.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(598, 499);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 20);
+            this.label7.Size = new System.Drawing.Size(118, 20);
             this.label7.TabIndex = 11;
             this.label7.Text = "Nro de Mentor:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(574, 528);
+            this.label8.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(598, 557);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 20);
+            this.label8.Size = new System.Drawing.Size(65, 20);
             this.label8.TabIndex = 12;
             this.label8.Text = "Nombre:";
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderSize = 3;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.YellowGreen;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(696, 629);
+            this.button1.Font = new System.Drawing.Font("Calibri Light", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(754, 600);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 42);
             this.button1.TabIndex = 13;
             this.button1.Text = "Asignar Mentor";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxCantidad
             // 
-            this.textBoxCantidad.Location = new System.Drawing.Point(575, 568);
+            this.textBoxCantidad.Location = new System.Drawing.Point(602, 600);
             this.textBoxCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(74, 26);
@@ -282,29 +301,33 @@ namespace Iglesia
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(375, 758);
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri Light", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(138, 758);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 60);
             this.button2.TabIndex = 16;
             this.button2.Text = "Alta de  Mentores";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(572, 134);
+            this.label9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(587, 169);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 20);
+            this.label9.Size = new System.Drawing.Size(128, 20);
             this.label9.TabIndex = 17;
             this.label9.Text = "Nro de Miembro:";
             // 
             // textBoxIDMiembro
             // 
             this.textBoxIDMiembro.Enabled = false;
-            this.textBoxIDMiembro.Location = new System.Drawing.Point(705, 131);
+            this.textBoxIDMiembro.Location = new System.Drawing.Point(720, 166);
             this.textBoxIDMiembro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxIDMiembro.Name = "textBoxIDMiembro";
             this.textBoxIDMiembro.Size = new System.Drawing.Size(198, 26);
@@ -312,22 +335,27 @@ namespace Iglesia
             // 
             // buttonLimpiar
             // 
-            this.buttonLimpiar.Location = new System.Drawing.Point(666, 728);
+            this.buttonLimpiar.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLimpiar.Font = new System.Drawing.Font("Calibri Light", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLimpiar.Location = new System.Drawing.Point(635, 764);
             this.buttonLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(105, 49);
             this.buttonLimpiar.TabIndex = 19;
             this.buttonLimpiar.Text = "Limpiar";
-            this.buttonLimpiar.UseVisualStyleBackColor = true;
+            this.buttonLimpiar.UseVisualStyleBackColor = false;
             this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
             // buttonCerrar
             // 
             this.buttonCerrar.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonCerrar.Location = new System.Drawing.Point(807, 728);
+            this.buttonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCerrar.Font = new System.Drawing.Font("Calibri Light", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCerrar.Location = new System.Drawing.Point(807, 764);
             this.buttonCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCerrar.Name = "buttonCerrar";
-            this.buttonCerrar.Size = new System.Drawing.Size(115, 49);
+            this.buttonCerrar.Size = new System.Drawing.Size(139, 49);
             this.buttonCerrar.TabIndex = 20;
             this.buttonCerrar.Text = "Cerrar/Volver";
             this.buttonCerrar.UseVisualStyleBackColor = false;
@@ -336,18 +364,49 @@ namespace Iglesia
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(50, 775);
+            this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(60, 733);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(317, 20);
             this.label10.TabIndex = 21;
             this.label10.Text = "No hay mentores disponibles? Ingrese aquí:";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::arreglarTesis.Properties.Resources.Sin_título__400_x_50_px_;
+            this.pictureBox2.Location = new System.Drawing.Point(572, 676);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(394, 43);
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::arreglarTesis.Properties.Resources.Sin_título__400_x_50_px_;
+            this.pictureBox4.Location = new System.Drawing.Point(572, 72);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(394, 43);
+            this.pictureBox4.TabIndex = 27;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::arreglarTesis.Properties.Resources.Sin_título__400_x_50_px_;
+            this.pictureBox3.Location = new System.Drawing.Point(572, 373);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(394, 43);
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
             // AsignarMentor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(978, 831);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.buttonCerrar);
             this.Controls.Add(this.buttonLimpiar);
@@ -370,6 +429,7 @@ namespace Iglesia
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DGV1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -378,6 +438,9 @@ namespace Iglesia
             this.Load += new System.EventHandler(this.AsignarMentor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,5 +470,8 @@ namespace Iglesia
         private System.Windows.Forms.Button buttonLimpiar;
         private System.Windows.Forms.Button buttonCerrar;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
