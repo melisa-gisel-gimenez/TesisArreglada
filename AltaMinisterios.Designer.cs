@@ -49,6 +49,8 @@
             this.txtIdMiembro = new System.Windows.Forms.TextBox();
             this.btnAsignarLider = new System.Windows.Forms.Button();
             this.txtIdMinisterio = new System.Windows.Forms.TextBox();
+            this.txtEtapa = new System.Windows.Forms.TextBox();
+            this.txtRoli = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -289,11 +291,33 @@
             this.txtIdMinisterio.TabIndex = 20;
             this.txtIdMinisterio.Visible = false;
             // 
+            // txtEtapa
+            // 
+            this.txtEtapa.Enabled = false;
+            this.txtEtapa.Location = new System.Drawing.Point(397, 489);
+            this.txtEtapa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEtapa.Name = "txtEtapa";
+            this.txtEtapa.Size = new System.Drawing.Size(64, 22);
+            this.txtEtapa.TabIndex = 21;
+            this.txtEtapa.Visible = false;
+            // 
+            // txtRoli
+            // 
+            this.txtRoli.Enabled = false;
+            this.txtRoli.Location = new System.Drawing.Point(397, 519);
+            this.txtRoli.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRoli.Name = "txtRoli";
+            this.txtRoli.Size = new System.Drawing.Size(64, 22);
+            this.txtRoli.TabIndex = 22;
+            this.txtRoli.Visible = false;
+            // 
             // AltaMinisterios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 615);
+            this.Controls.Add(this.txtRoli);
+            this.Controls.Add(this.txtEtapa);
             this.Controls.Add(this.txtIdMinisterio);
             this.Controls.Add(this.btnAsignarLider);
             this.Controls.Add(this.txtIdMiembro);
@@ -351,5 +375,7 @@
         private System.Windows.Forms.TextBox txtIdMiembro;
         private System.Windows.Forms.Button btnAsignarLider;
         private System.Windows.Forms.TextBox txtIdMinisterio;
+        private System.Windows.Forms.TextBox txtEtapa;
+        private System.Windows.Forms.TextBox txtRoli;
     }
 }
