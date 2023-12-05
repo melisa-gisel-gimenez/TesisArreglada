@@ -42,6 +42,9 @@
             this.txtIdCelula = new System.Windows.Forms.TextBox();
             this.txtIdMiembro = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtEtapa = new System.Windows.Forms.TextBox();
+            this.txtRol2 = new System.Windows.Forms.TextBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCelulas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,7 +146,7 @@
             // btnAltaLider
             // 
             this.btnAltaLider.Enabled = false;
-            this.btnAltaLider.Location = new System.Drawing.Point(135, 507);
+            this.btnAltaLider.Location = new System.Drawing.Point(70, 510);
             this.btnAltaLider.Name = "btnAltaLider";
             this.btnAltaLider.Size = new System.Drawing.Size(164, 43);
             this.btnAltaLider.TabIndex = 10;
@@ -179,11 +182,42 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtEtapa
+            // 
+            this.txtEtapa.Enabled = false;
+            this.txtEtapa.Location = new System.Drawing.Point(343, 299);
+            this.txtEtapa.Name = "txtEtapa";
+            this.txtEtapa.Size = new System.Drawing.Size(90, 22);
+            this.txtEtapa.TabIndex = 14;
+            this.txtEtapa.Visible = false;
+            // 
+            // txtRol2
+            // 
+            this.txtRol2.Enabled = false;
+            this.txtRol2.Location = new System.Drawing.Point(345, 327);
+            this.txtRol2.Name = "txtRol2";
+            this.txtRol2.Size = new System.Drawing.Size(90, 22);
+            this.txtRol2.TabIndex = 15;
+            this.txtRol2.Visible = false;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(288, 438);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(93, 25);
+            this.btnLimpiar.TabIndex = 16;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // AltaCelula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 627);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.txtRol2);
+            this.Controls.Add(this.txtEtapa);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtIdMiembro);
             this.Controls.Add(this.txtIdCelula);
@@ -223,5 +257,8 @@
         private System.Windows.Forms.TextBox txtIdCelula;
         private System.Windows.Forms.TextBox txtIdMiembro;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtEtapa;
+        private System.Windows.Forms.TextBox txtRol2;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

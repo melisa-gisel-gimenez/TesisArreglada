@@ -180,6 +180,87 @@ namespace arreglarTesis
 
             if (txtDNIBuscar.Text.Length < 8 || txtDNIBuscar.Text == "")
             {
+                MessageBox.Show("El DNI debe tener 8 dígitos. Por favor, revise los datos ingresados.");
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(dniABuscar))
+                {
+                    string consulta2 = "SELECT * FROM miembros WHERE DNI = @DNI";
+
+                    // Establece la cadena de conexión a tu archivo de base de datos Access (MDB).
+                    string connectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
+
+                    using (OleDbConnection conexion = new OleDbConnection(connectionString))
+                    {
+                        conexion.Open();
+
+                        using (OleDbCommand comando2 = new OleDbCommand(consulta2, conexion))
+                        {
+                            comando2.Parameters.AddWithValue("@DNI", dniABuscar);
+
+                            try
+                            {
+                                OleDbDataReader reader2 = comando2.ExecuteReader();
+
+                                if (reader2.Read())
+                                {
+                                    txtNombre.Text = reader2["NOMBRE"].ToString();
+                                    txtApellido.Text = reader2["APELLIDO"].ToString();
+                                    txtIdMiembro.Text = reader2["id_miembro"].ToString();
+                                    txtEtapa.Text = reader2["id_etapaespiritual"].ToString();
+                                    txtRol2.Text = reader2["id_rol2"].ToString() ;
+
+
+
+                                    // Verificar las condiciones adicionales
+                                    int idEtapaEspiritual = Convert.ToInt32(reader2["id_etapaespiritual"]);
+                                    int idRol2 = Convert.ToInt32(reader2["id_rol2"]);
+
+                                    if (idEtapaEspiritual > 1 && idRol2 == 0)
+                                    {
+                                        btnAltaLider.Enabled = true;
+                                    }
+
+                                    if (idEtapaEspiritual > 1 && idRol2 > 0)
+                                    {
+                                        btnAltaLider.Enabled = false;
+                                        MessageBox.Show("La persona ya es lider de una celula. Elija otro miembro por favor");
+                                    }
+
+                                    if (idEtapaEspiritual <2)
+                                    {
+                                        btnAltaLider.Enabled = false;
+                                        MessageBox.Show("La persona no tiene el rango suficiente. Por favor elija otro miembro.");
+                                    }
+
+
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se encontro una persona que cumpla con las condiciones indicada. Verifique los datos.");
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error al buscar en la base de datos: " + ex.Message);
+                            }
+                        }
+                    } // La conexión se cerrará automáticamente al salir del bloque using
+                }
+            }
+        }
+
+
+
+        /* codigo q funciona anterior
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string dniABuscar = txtDNIBuscar.Text.Trim();
+
+            if (txtDNIBuscar.Text.Length < 8 || txtDNIBuscar.Text == "")
+            {
                 MessageBox.Show("El DNI debe tener 8 dígitos. Por favor revise los datos ingresados.");
             }
             else
@@ -188,7 +269,7 @@ namespace arreglarTesis
                 {
                     string consulta2 = "SELECT * FROM miembros WHERE DNI = @DNI";
 
-                    // No necesitas abrir la conexión aquí
+                    
                     // Establece la cadena de conexión a tu archivo de base de datos Access (MDB).
                     string connectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
 
@@ -225,6 +306,7 @@ namespace arreglarTesis
                 }
             }
         }
+        */
 
         private void btnAltaLider_Click(object sender, EventArgs e)
         {
@@ -350,6 +432,14 @@ namespace arreglarTesis
         {
             ListaMiembrosCelula form1 = new ListaMiembrosCelula();
             form1.ShowDialog();
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtDNIBuscar.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
 
         }
     }   
