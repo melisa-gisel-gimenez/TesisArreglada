@@ -264,6 +264,7 @@ namespace arreglarTesis
             this.MaximumSize = new System.Drawing.Size(767, 577);
             this.MinimumSize = new System.Drawing.Size(767, 577);
             this.Name = "PPSuperUs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MCD Gestion";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

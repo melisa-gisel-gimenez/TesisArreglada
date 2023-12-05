@@ -109,6 +109,7 @@ namespace Iglesia
             this.MaximumSize = new System.Drawing.Size(764, 588);
             this.MinimumSize = new System.Drawing.Size(764, 588);
             this.Name = "PPmentor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MCD Gestion";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PPmentor_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PPmentor_FormClosed);

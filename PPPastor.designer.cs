@@ -189,6 +189,7 @@ namespace Iglesia
             this.MaximumSize = new System.Drawing.Size(764, 588);
             this.MinimumSize = new System.Drawing.Size(764, 588);
             this.Name = "paginaprincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MCD Gestion";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.paginaprincipal_FormClosing);

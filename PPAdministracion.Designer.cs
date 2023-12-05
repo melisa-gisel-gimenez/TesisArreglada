@@ -126,6 +126,7 @@ namespace arreglarTesis
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PPAdministracion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MCD Gestion";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PPAdministracion_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PPAdministracion_FormClosed);

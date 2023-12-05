@@ -137,6 +137,7 @@ namespace Iglesia
             this.MaximumSize = new System.Drawing.Size(764, 588);
             this.MinimumSize = new System.Drawing.Size(764, 588);
             this.Name = "PPTesoreria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MCD Gestion";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PPTesoreria_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PPTesoreria_FormClosed);
