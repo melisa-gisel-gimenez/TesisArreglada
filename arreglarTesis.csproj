@@ -223,11 +223,11 @@
     <Compile Include="AgregarPersonas.designer.cs">
       <DependentUpon>AgregarPersonas.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltaLideres.cs">
+    <Compile Include="AltaLideres-C.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaLideres.Designer.cs">
-      <DependentUpon>AltaLideres.cs</DependentUpon>
+    <Compile Include="AltaLideres-C.Designer.cs">
+      <DependentUpon>AltaLideres-C.cs</DependentUpon>
     </Compile>
     <Compile Include="AltaMentores.cs">
       <SubType>Form</SubType>
@@ -253,6 +253,12 @@
     <Compile Include="AsignarMentor.Designer.cs">
       <DependentUpon>AsignarMentor.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsignarMiembrosCelula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarMiembrosCelula.Designer.cs">
+      <DependentUpon>AsignarMiembrosCelula.cs</DependentUpon>
+    </Compile>
     <Compile Include="InformeTesoreria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,29 +271,35 @@
     <Compile Include="InhabilitarPersonas.Designer.cs">
       <DependentUpon>InhabilitarPersonas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaMentoreados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMentoreados.Designer.cs">
+      <DependentUpon>ListaMentoreados.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaMiembros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListaMiembros.Designer.cs">
       <DependentUpon>ListaMiembros.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaMiembrosCelula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMiembrosCelula.Designer.cs">
+      <DependentUpon>ListaMiembrosCelula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaMinisterios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMinisterios.Designer.cs">
+      <DependentUpon>ListaMinisterios.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MiembrosCelula.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MiembrosCelula.Designer.cs">
-      <DependentUpon>MiembrosCelula.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MiembrosMinisterios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MiembrosMinisterios.Designer.cs">
-      <DependentUpon>MiembrosMinisterios.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificarMentor.cs">
       <SubType>Form</SubType>
@@ -369,6 +381,9 @@
     <EmbeddedResource Include="AgregarPersonas.resx">
       <DependentUpon>AgregarPersonas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AltaLideres-C.resx">
+      <DependentUpon>AltaLideres-C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltaMentores.resx">
       <DependentUpon>AltaMentores.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,14 +396,26 @@
     <EmbeddedResource Include="AsignarMentor.resx">
       <DependentUpon>AsignarMentor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AsignarMiembrosCelula.resx">
+      <DependentUpon>AsignarMiembrosCelula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InformeTesoreria.resx">
       <DependentUpon>InformeTesoreria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InhabilitarPersonas.resx">
       <DependentUpon>InhabilitarPersonas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaMentoreados.resx">
+      <DependentUpon>ListaMentoreados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaMiembros.resx">
       <DependentUpon>ListaMiembros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaMiembrosCelula.resx">
+      <DependentUpon>ListaMiembrosCelula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaMinisterios.resx">
+      <DependentUpon>ListaMinisterios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

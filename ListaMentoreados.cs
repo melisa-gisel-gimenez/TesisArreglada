@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace arreglarTesis
 {
-    public partial class AltaCelula : Form
+    public partial class ListaMentoreados : Form
     {
-        public AltaCelula()
+        public ListaMentoreados()
         {
             InitializeComponent();
         }

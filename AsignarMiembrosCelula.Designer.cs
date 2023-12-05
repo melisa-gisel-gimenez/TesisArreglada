@@ -159,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 450);
+            this.ClientSize = new System.Drawing.Size(402, 395);
             this.Controls.Add(this.buttonListaCelula);
             this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.buttonAceptar);
@@ -174,7 +174,7 @@
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.label1);
             this.Name = "AsignarMiembrosCelula";
-            this.Text = "MiembrosCelula";
+            this.Text = "AsignarMiembrosCelula";
             this.ResumeLayout(false);
             this.PerformLayout();
 
