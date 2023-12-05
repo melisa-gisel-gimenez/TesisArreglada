@@ -29,61 +29,56 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarEgresos));
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox1TipoEgreso = new System.Windows.Forms.ComboBox();
+            this.buttonGuardar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonLimpiar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.buttonGuardar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1Fecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDetalle = new System.Windows.Forms.TextBox();
             this.txtMONTO = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.comboBox1TipoEgreso);
-            this.groupBox2.Controls.Add(this.buttonGuardar);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.buttonLimpiar);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.dateTimePicker1Fecha);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txtDetalle);
-            this.groupBox2.Controls.Add(this.txtMONTO);
-            this.groupBox2.Font = new System.Drawing.Font("Calibri Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(61, 43);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(602, 379);
-            this.groupBox2.TabIndex = 53;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Carga Datos de Egreso";
             // 
             // comboBox1TipoEgreso
             // 
             this.comboBox1TipoEgreso.FormattingEnabled = true;
-            this.comboBox1TipoEgreso.Location = new System.Drawing.Point(100, 88);
+            this.comboBox1TipoEgreso.Location = new System.Drawing.Point(220, 122);
             this.comboBox1TipoEgreso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1TipoEgreso.Name = "comboBox1TipoEgreso";
-            this.comboBox1TipoEgreso.Size = new System.Drawing.Size(203, 37);
+            this.comboBox1TipoEgreso.Size = new System.Drawing.Size(203, 28);
             this.comboBox1TipoEgreso.TabIndex = 1;
             this.comboBox1TipoEgreso.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonGuardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardar.ForeColor = System.Drawing.Color.Black;
+            this.buttonGuardar.Location = new System.Drawing.Point(502, 162);
+            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(120, 72);
+            this.buttonGuardar.TabIndex = 5;
+            this.buttonGuardar.Text = "Guardar";
+            this.buttonGuardar.UseVisualStyleBackColor = false;
+            this.buttonGuardar.Click += new System.EventHandler(this.button1Guardar_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label8.Location = new System.Drawing.Point(280, 111);
+            this.label8.Location = new System.Drawing.Point(370, 145);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 20);
@@ -92,10 +87,10 @@
             // buttonLimpiar
             // 
             this.buttonLimpiar.Font = new System.Drawing.Font("Calibri Light", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLimpiar.Location = new System.Drawing.Point(412, 237);
+            this.buttonLimpiar.Location = new System.Drawing.Point(502, 264);
             this.buttonLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLimpiar.Name = "buttonLimpiar";
-            this.buttonLimpiar.Size = new System.Drawing.Size(147, 49);
+            this.buttonLimpiar.Size = new System.Drawing.Size(120, 56);
             this.buttonLimpiar.TabIndex = 6;
             this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.UseVisualStyleBackColor = true;
@@ -106,37 +101,31 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label6.Location = new System.Drawing.Point(129, 63);
+            this.label6.Location = new System.Drawing.Point(243, 95);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 22);
             this.label6.TabIndex = 0;
             this.label6.Text = "Tipo de Egreso:";
             // 
-            // buttonGuardar
+            // label2
             // 
-            this.buttonGuardar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonGuardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGuardar.ForeColor = System.Drawing.Color.Black;
-            this.buttonGuardar.Location = new System.Drawing.Point(412, 128);
-            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(147, 59);
-            this.buttonGuardar.TabIndex = 5;
-            this.buttonGuardar.Text = "Guardar";
-            this.buttonGuardar.UseVisualStyleBackColor = false;
-            this.buttonGuardar.Click += new System.EventHandler(this.button1Guardar_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label2.Location = new System.Drawing.Point(286, 181);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 22);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Detalle:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label3.Location = new System.Drawing.Point(172, 297);
+            this.label3.Location = new System.Drawing.Point(286, 329);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 22);
@@ -147,7 +136,7 @@
             // 
             this.dateTimePicker1Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1Fecha.Location = new System.Drawing.Point(127, 247);
+            this.dateTimePicker1Fecha.Location = new System.Drawing.Point(247, 281);
             this.dateTimePicker1Fecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1Fecha.Name = "dateTimePicker1Fecha";
             this.dateTimePicker1Fecha.Size = new System.Drawing.Size(148, 26);
@@ -158,7 +147,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label7.Location = new System.Drawing.Point(137, 222);
+            this.label7.Location = new System.Drawing.Point(251, 254);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(144, 22);
@@ -169,7 +158,7 @@
             // 
             this.txtDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDetalle.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtDetalle.Location = new System.Drawing.Point(100, 174);
+            this.txtDetalle.Location = new System.Drawing.Point(220, 208);
             this.txtDetalle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDetalle.Name = "txtDetalle";
             this.txtDetalle.Size = new System.Drawing.Size(203, 26);
@@ -179,49 +168,67 @@
             // 
             this.txtMONTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMONTO.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtMONTO.Location = new System.Drawing.Point(127, 322);
+            this.txtMONTO.Location = new System.Drawing.Point(247, 356);
             this.txtMONTO.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMONTO.Name = "txtMONTO";
             this.txtMONTO.Size = new System.Drawing.Size(148, 26);
             this.txtMONTO.TabIndex = 4;
             this.txtMONTO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMONTO_KeyPress);
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(157, 149);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Detalle:";
+            this.pictureBox1.Image = global::arreglarTesis.Properties.Resources._81;
+            this.pictureBox1.Location = new System.Drawing.Point(-166, 208);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(420, 277);
+            this.pictureBox1.TabIndex = 54;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 29);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Cargar datos del Egreso";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AgregarEgresos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(733, 461);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(733, 463);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1TipoEgreso);
+            this.Controls.Add(this.buttonGuardar);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.buttonLimpiar);
+            this.Controls.Add(this.txtMONTO);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtDetalle);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dateTimePicker1Fecha);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(755, 517);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(755, 517);
             this.Name = "AgregarEgresos";
             this.Text = "AgregarEgresos";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
@@ -233,5 +240,7 @@
         private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.ComboBox comboBox1TipoEgreso;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
