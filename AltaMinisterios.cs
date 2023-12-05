@@ -143,6 +143,31 @@ namespace Iglesia
                                     txtNombre.Text = reader2["NOMBRE"].ToString();
                                     txtApellido.Text = reader2["APELLIDO"].ToString();
                                     txtIdMiembro.Text = reader2["id_miembro"].ToString();
+                                    txtEtapa.Text = reader2["id_etapaespiritual"].ToString();
+                                    txtRoli.Text = reader2["id_roli"].ToString();
+
+
+
+                                    // Verificar las condiciones adicionales
+                                    int idEtapaEspiritual = Convert.ToInt32(reader2["id_etapaespiritual"]);
+                                    int idRoli = Convert.ToInt32(reader2["id_roli"]);
+
+                                    if (idEtapaEspiritual > 1 && idRoli == 0)
+                                    {
+                                        btnAsignarLider.Enabled = true;
+                                    }
+
+                                    if (idEtapaEspiritual > 1 && idRoli > 0) 
+                                    {
+                                        btnAsignarLider.Enabled = false;
+                                        MessageBox.Show("La persona ya es lider de un ministerio. Elija otro miembro por favor");
+                                    }
+
+                                    if (idEtapaEspiritual < 2)
+                                    {
+                                        btnAsignarLider.Enabled = false;
+                                        MessageBox.Show("La persona no tiene el rango suficiente. Por favor elija otro miembro.");
+                                    }
                                 }
                                 else
                                 {
@@ -219,7 +244,7 @@ namespace Iglesia
 
                             if (filasAfectadas > 0)
                             {
-                                MessageBox.Show("Se asignó el líder de la célula con éxito.");
+                                MessageBox.Show("Se asignó el líder del ministerio con éxito.");
 
                                 
                             }
