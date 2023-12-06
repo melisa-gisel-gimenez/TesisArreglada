@@ -79,6 +79,7 @@
             this.dgvMiembrosMini.AllowUserToAddRows = false;
             this.dgvMiembrosMini.AllowUserToDeleteRows = false;
             this.dgvMiembrosMini.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMiembrosMini.EnableHeadersVisualStyles = false;
             this.dgvMiembrosMini.Location = new System.Drawing.Point(28, 120);
             this.dgvMiembrosMini.Name = "dgvMiembrosMini";
             this.dgvMiembrosMini.ReadOnly = true;

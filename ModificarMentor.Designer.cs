@@ -29,6 +29,10 @@ namespace Iglesia
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarMentor));
             this.label1 = new System.Windows.Forms.Label();
             this.DGV1 = new System.Windows.Forms.DataGridView();
@@ -69,9 +73,21 @@ namespace Iglesia
             // 
             this.DGV1.AllowUserToAddRows = false;
             this.DGV1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.DGV1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DGV1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV1.EnableHeadersVisualStyles = false;
             this.DGV1.Location = new System.Drawing.Point(59, 74);
-            this.DGV1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV1.Margin = new System.Windows.Forms.Padding(4);
             this.DGV1.Name = "DGV1";
             this.DGV1.ReadOnly = true;
             this.DGV1.RowHeadersWidth = 51;
@@ -93,9 +109,21 @@ namespace Iglesia
             // 
             this.DGV2.AllowUserToAddRows = false;
             this.DGV2.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.DGV2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DGV2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV2.EnableHeadersVisualStyles = false;
             this.DGV2.Location = new System.Drawing.Point(64, 389);
-            this.DGV2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV2.Margin = new System.Windows.Forms.Padding(4);
             this.DGV2.Name = "DGV2";
             this.DGV2.ReadOnly = true;
             this.DGV2.RowHeadersWidth = 51;
@@ -140,7 +168,7 @@ namespace Iglesia
             // 
             this.textBoxNombre.Enabled = false;
             this.textBoxNombre.Location = new System.Drawing.Point(535, 142);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(160, 22);
             this.textBoxNombre.TabIndex = 8;
@@ -149,7 +177,7 @@ namespace Iglesia
             // 
             this.textBoxIdMentor.Enabled = false;
             this.textBoxIdMentor.Location = new System.Drawing.Point(535, 427);
-            this.textBoxIdMentor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIdMentor.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIdMentor.Name = "textBoxIdMentor";
             this.textBoxIdMentor.Size = new System.Drawing.Size(160, 22);
             this.textBoxIdMentor.TabIndex = 9;
@@ -158,7 +186,7 @@ namespace Iglesia
             // 
             this.textBoxNombreMentor.Enabled = false;
             this.textBoxNombreMentor.Location = new System.Drawing.Point(535, 478);
-            this.textBoxNombreMentor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNombreMentor.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNombreMentor.Name = "textBoxNombreMentor";
             this.textBoxNombreMentor.Size = new System.Drawing.Size(160, 22);
             this.textBoxNombreMentor.TabIndex = 10;
@@ -188,7 +216,7 @@ namespace Iglesia
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(542, 509);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 56);
             this.button1.TabIndex = 13;
@@ -199,7 +227,7 @@ namespace Iglesia
             // textBoxCantidad
             // 
             this.textBoxCantidad.Location = new System.Drawing.Point(457, 364);
-            this.textBoxCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(43, 22);
             this.textBoxCantidad.TabIndex = 15;
@@ -211,7 +239,7 @@ namespace Iglesia
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(542, 214);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 56);
             this.button2.TabIndex = 16;
@@ -223,7 +251,7 @@ namespace Iglesia
             // 
             this.textBoxMentorAsignado.Enabled = false;
             this.textBoxMentorAsignado.Location = new System.Drawing.Point(535, 186);
-            this.textBoxMentorAsignado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMentorAsignado.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMentorAsignado.Name = "textBoxMentorAsignado";
             this.textBoxMentorAsignado.Size = new System.Drawing.Size(160, 22);
             this.textBoxMentorAsignado.TabIndex = 17;
@@ -252,7 +280,7 @@ namespace Iglesia
             // 
             this.textBoxIDMiembro.Enabled = false;
             this.textBoxIDMiembro.Location = new System.Drawing.Point(535, 98);
-            this.textBoxIDMiembro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDMiembro.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDMiembro.Name = "textBoxIDMiembro";
             this.textBoxIDMiembro.Size = new System.Drawing.Size(160, 22);
             this.textBoxIDMiembro.TabIndex = 20;
@@ -261,7 +289,7 @@ namespace Iglesia
             // 
             this.buttonLimpiar.BackColor = System.Drawing.Color.Transparent;
             this.buttonLimpiar.Location = new System.Drawing.Point(535, 574);
-            this.buttonLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(71, 40);
             this.buttonLimpiar.TabIndex = 21;
@@ -273,7 +301,7 @@ namespace Iglesia
             // 
             this.buttonCancelar.BackColor = System.Drawing.Color.Transparent;
             this.buttonCancelar.Location = new System.Drawing.Point(624, 574);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(71, 40);
             this.buttonCancelar.TabIndex = 22;
@@ -308,7 +336,7 @@ namespace Iglesia
             this.Controls.Add(this.DGV1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ModificarMentor";
             this.Text = "ModificarMentor";
             this.Load += new System.EventHandler(this.AsignarMentor_Load);

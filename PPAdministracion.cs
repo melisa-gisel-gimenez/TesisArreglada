@@ -81,5 +81,11 @@ namespace arreglarTesis
             MiembrosMinisterios form = new MiembrosMinisterios();   
             form.ShowDialog();
         }
+
+        private void asignarMiembrosACelulasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AsignarMiembrosCelula form1 = new AsignarMiembrosCelula();
+            form1.ShowDialog();
+        }
     }
 }

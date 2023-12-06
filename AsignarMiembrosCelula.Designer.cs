@@ -41,6 +41,9 @@
             this.buttonAceptar = new System.Windows.Forms.Button();
             this.buttonLimpiar = new System.Windows.Forms.Button();
             this.buttonListaCelula = new System.Windows.Forms.Button();
+            this.checkBoxInhabilitado = new System.Windows.Forms.CheckBox();
+            this.txtIdMiembro = new System.Windows.Forms.TextBox();
+            this.txtIdCelula = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -60,6 +63,7 @@
             this.buttonBuscar.TabIndex = 1;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // txtDNIBuscar
             // 
@@ -67,6 +71,8 @@
             this.txtDNIBuscar.Name = "txtDNIBuscar";
             this.txtDNIBuscar.Size = new System.Drawing.Size(153, 22);
             this.txtDNIBuscar.TabIndex = 2;
+            this.txtDNIBuscar.TextChanged += new System.EventHandler(this.textBoxDNIBuscar_TextChanged_1);
+            this.txtDNIBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNIBuscar_KeyPress);
             // 
             // label2
             // 
@@ -122,6 +128,7 @@
             // 
             // comboBoxCelula
             // 
+            this.comboBoxCelula.Enabled = false;
             this.comboBoxCelula.FormattingEnabled = true;
             this.comboBoxCelula.Location = new System.Drawing.Point(167, 215);
             this.comboBoxCelula.Name = "comboBoxCelula";
@@ -130,12 +137,14 @@
             // 
             // buttonAceptar
             // 
+            this.buttonAceptar.Enabled = false;
             this.buttonAceptar.Location = new System.Drawing.Point(93, 283);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
             this.buttonAceptar.TabIndex = 10;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // buttonLimpiar
             // 
@@ -150,16 +159,49 @@
             // 
             this.buttonListaCelula.Location = new System.Drawing.Point(81, 330);
             this.buttonListaCelula.Name = "buttonListaCelula";
-            this.buttonListaCelula.Size = new System.Drawing.Size(214, 23);
+            this.buttonListaCelula.Size = new System.Drawing.Size(263, 53);
             this.buttonListaCelula.TabIndex = 12;
             this.buttonListaCelula.Text = "Ver Lista de Miembros por Celula";
             this.buttonListaCelula.UseVisualStyleBackColor = true;
+            this.buttonListaCelula.Click += new System.EventHandler(this.buttonListaCelula_Click);
+            // 
+            // checkBoxInhabilitado
+            // 
+            this.checkBoxInhabilitado.AutoSize = true;
+            this.checkBoxInhabilitado.Enabled = false;
+            this.checkBoxInhabilitado.Location = new System.Drawing.Point(277, 171);
+            this.checkBoxInhabilitado.Name = "checkBoxInhabilitado";
+            this.checkBoxInhabilitado.Size = new System.Drawing.Size(98, 20);
+            this.checkBoxInhabilitado.TabIndex = 13;
+            this.checkBoxInhabilitado.Text = "Inhabilitado";
+            this.checkBoxInhabilitado.UseVisualStyleBackColor = true;
+            // 
+            // txtIdMiembro
+            // 
+            this.txtIdMiembro.Enabled = false;
+            this.txtIdMiembro.Location = new System.Drawing.Point(327, 221);
+            this.txtIdMiembro.Name = "txtIdMiembro";
+            this.txtIdMiembro.Size = new System.Drawing.Size(63, 22);
+            this.txtIdMiembro.TabIndex = 14;
+            this.txtIdMiembro.Visible = false;
+            // 
+            // txtIdCelula
+            // 
+            this.txtIdCelula.Enabled = false;
+            this.txtIdCelula.Location = new System.Drawing.Point(327, 249);
+            this.txtIdCelula.Name = "txtIdCelula";
+            this.txtIdCelula.Size = new System.Drawing.Size(63, 22);
+            this.txtIdCelula.TabIndex = 15;
+            this.txtIdCelula.Visible = false;
             // 
             // AsignarMiembrosCelula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 395);
+            this.Controls.Add(this.txtIdCelula);
+            this.Controls.Add(this.txtIdMiembro);
+            this.Controls.Add(this.checkBoxInhabilitado);
             this.Controls.Add(this.buttonListaCelula);
             this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.buttonAceptar);
@@ -175,6 +217,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AsignarMiembrosCelula";
             this.Text = "AsignarMiembrosCelula";
+            this.Load += new System.EventHandler(this.AsignarMiembrosCelula_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +238,8 @@
         private System.Windows.Forms.Button buttonAceptar;
         private System.Windows.Forms.Button buttonLimpiar;
         private System.Windows.Forms.Button buttonListaCelula;
+        private System.Windows.Forms.CheckBox checkBoxInhabilitado;
+        private System.Windows.Forms.TextBox txtIdMiembro;
+        private System.Windows.Forms.TextBox txtIdCelula;
     }
 }

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -38,10 +40,10 @@
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtIdMentor = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMentoreados = new System.Windows.Forms.DataGridView();
             this.btnCargar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMentoreados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -102,6 +104,8 @@
             this.txtDNIBuscar.Name = "txtDNIBuscar";
             this.txtDNIBuscar.Size = new System.Drawing.Size(153, 22);
             this.txtDNIBuscar.TabIndex = 10;
+            this.txtDNIBuscar.TextChanged += new System.EventHandler(this.textBoxDNIBuscar_TextChanged_1);
+            this.txtDNIBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNIBuscar_KeyPress);
             // 
             // buttonBuscar
             // 
@@ -111,6 +115,7 @@
             this.buttonBuscar.TabIndex = 9;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // label5
             // 
@@ -129,18 +134,29 @@
             this.txtIdMentor.TabIndex = 16;
             this.txtIdMentor.Visible = false;
             // 
-            // dataGridView1
+            // dgvMentoreados
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 320);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(386, 150);
-            this.dataGridView1.TabIndex = 17;
+            this.dgvMentoreados.AllowUserToAddRows = false;
+            this.dgvMentoreados.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvMentoreados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ScrollBar;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMentoreados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMentoreados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMentoreados.Location = new System.Drawing.Point(47, 320);
+            this.dgvMentoreados.Name = "dgvMentoreados";
+            this.dgvMentoreados.ReadOnly = true;
+            this.dgvMentoreados.RowHeadersWidth = 51;
+            this.dgvMentoreados.RowTemplate.Height = 24;
+            this.dgvMentoreados.Size = new System.Drawing.Size(386, 150);
+            this.dgvMentoreados.TabIndex = 17;
             // 
             // btnCargar
             // 
@@ -150,6 +166,7 @@
             this.btnCargar.TabIndex = 18;
             this.btnCargar.Text = "Mostrar ";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnLimpiar
             // 
@@ -159,6 +176,7 @@
             this.btnLimpiar.TabIndex = 19;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // ListaMentoreados
             // 
@@ -167,7 +185,7 @@
             this.ClientSize = new System.Drawing.Size(493, 553);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCargar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMentoreados);
             this.Controls.Add(this.txtIdMentor);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
@@ -180,7 +198,8 @@
             this.Controls.Add(this.label1);
             this.Name = "ListaMentoreados";
             this.Text = "ListaMentoreados";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ListaMentoreados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMentoreados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,7 +217,7 @@
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtIdMentor;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMentoreados;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Button btnLimpiar;
     }

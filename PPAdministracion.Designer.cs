@@ -41,6 +41,7 @@ namespace arreglarTesis
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listaDeMiembrosPorCelulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaMiembrosPorMinisteriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarMiembrosACelulasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +66,8 @@ namespace arreglarTesis
             this.AdministracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarPersonasToolStripMenuItem,
             this.modificarPersonasToolStripMenuItem,
-            this.registrarMiembrosDeCelulasToolStripMenuItem});
+            this.registrarMiembrosDeCelulasToolStripMenuItem,
+            this.asignarMiembrosACelulasToolStripMenuItem});
             this.AdministracionToolStripMenuItem.Name = "AdministracionToolStripMenuItem";
             this.AdministracionToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
             this.AdministracionToolStripMenuItem.Text = "Administracion";
@@ -88,8 +90,8 @@ namespace arreglarTesis
             // registrarMiembrosDeCelulasToolStripMenuItem
             // 
             this.registrarMiembrosDeCelulasToolStripMenuItem.Name = "registrarMiembrosDeCelulasToolStripMenuItem";
-            this.registrarMiembrosDeCelulasToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.registrarMiembrosDeCelulasToolStripMenuItem.Text = "Registrar Miembros de Celulas";
+            this.registrarMiembrosDeCelulasToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.registrarMiembrosDeCelulasToolStripMenuItem.Text = "Alta de celulas";
             this.registrarMiembrosDeCelulasToolStripMenuItem.Click += new System.EventHandler(this.registrarMiembrosDeCelulasToolStripMenuItem_Click);
             // 
             // listasToolStripMenuItem
@@ -142,6 +144,13 @@ namespace arreglarTesis
             this.listaMiembrosPorMinisteriosToolStripMenuItem.Text = "Lista Miembros por Ministerios";
             this.listaMiembrosPorMinisteriosToolStripMenuItem.Click += new System.EventHandler(this.listaMiembrosPorMinisteriosToolStripMenuItem_Click);
             // 
+            // asignarMiembrosACelulasToolStripMenuItem
+            // 
+            this.asignarMiembrosACelulasToolStripMenuItem.Name = "asignarMiembrosACelulasToolStripMenuItem";
+            this.asignarMiembrosACelulasToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.asignarMiembrosACelulasToolStripMenuItem.Text = "Asignar Miembros a Celulas";
+            this.asignarMiembrosACelulasToolStripMenuItem.Click += new System.EventHandler(this.asignarMiembrosACelulasToolStripMenuItem_Click);
+            // 
             // PPAdministracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -178,5 +187,6 @@ namespace arreglarTesis
         private System.Windows.Forms.ToolStripMenuItem registrarMiembrosDeCelulasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeMiembrosPorCelulaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaMiembrosPorMinisteriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarMiembrosACelulasToolStripMenuItem;
     }
 }

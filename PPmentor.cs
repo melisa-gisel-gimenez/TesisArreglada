@@ -1,4 +1,5 @@
-﻿using System;
+﻿using arreglarTesis;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,6 +49,12 @@ namespace Iglesia
         private void PPmentor_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void listaDeMentoreadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaMentoreados form1 = new ListaMentoreados();
+            form1.ShowDialog();
         }
     }
 }
