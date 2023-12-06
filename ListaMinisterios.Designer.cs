@@ -34,14 +34,15 @@
             this.comboBoxMini = new System.Windows.Forms.ComboBox();
             this.dgvMiembrosMini = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDescargar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiembrosMini)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(215, 299);
+            this.btnSalir.Location = new System.Drawing.Point(303, 288);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(92, 31);
             this.btnSalir.TabIndex = 11;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -97,11 +98,22 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Filtrar Miembros por Ministerio";
             // 
+            // btnDescargar
+            // 
+            this.btnDescargar.Location = new System.Drawing.Point(95, 287);
+            this.btnDescargar.Name = "btnDescargar";
+            this.btnDescargar.Size = new System.Drawing.Size(106, 32);
+            this.btnDescargar.TabIndex = 12;
+            this.btnDescargar.Text = "Descargar";
+            this.btnDescargar.UseVisualStyleBackColor = true;
+            this.btnDescargar.Click += new System.EventHandler(this.btnDescargar_Click);
+            // 
             // MiembrosMinisterios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 360);
+            this.Controls.Add(this.btnDescargar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscar);
@@ -125,5 +137,6 @@
         private System.Windows.Forms.ComboBox comboBoxMini;
         private System.Windows.Forms.DataGridView dgvMiembrosMini;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDescargar;
     }
 }
