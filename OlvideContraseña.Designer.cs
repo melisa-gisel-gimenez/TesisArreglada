@@ -145,10 +145,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 23);
+            this.pictureBox1.Image = global::arreglarTesis.Properties.Resources._4_1_;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(569, 385);
+            this.pictureBox1.Size = new System.Drawing.Size(600, 449);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
